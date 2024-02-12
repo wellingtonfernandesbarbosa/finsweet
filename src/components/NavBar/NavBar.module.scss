@@ -1,0 +1,36 @@
+.navbar {
+  width: 100vw;
+  background-color: var(--black);
+  
+  &__Container {
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  &__Logo {
+    color: #FFFFFF;
+    padding: 13px 33px;
+    border-right: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+    font-size: 26px;
+  }
+
+  &__Nav {
+    display: flex;
+    gap: 3em;
+  }
+
+  &__Link {
+    color: #FFFFFF;
+  }
+  
+  &__Items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0 64px;
+  }
+}
