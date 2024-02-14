@@ -1,0 +1,18 @@
+.header {
+  padding: 128px 110px;
+  display: flex;
+  
+  &__container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    width: 52%;
+  }
+
+  &__text {
+    margin: 64px 0 0 0;
+  }
+};

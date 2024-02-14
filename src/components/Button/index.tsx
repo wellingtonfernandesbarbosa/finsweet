@@ -1,15 +1,24 @@
+import { Link } from 'react-router-dom';
 import styles from './Button.module.scss';
+import { ButtonSize } from '../../enum/ButtonSize';
 
 type ButtonProps = {
   children: React.ReactNode;
-  onClick?: () => void;
+  path: string,
+  size: ButtonSize
 };
 
-const Button = ({ children, onClick }: ButtonProps) => {
+const Button = ({ children, path, size=ButtonSize.medium }: ButtonProps) => {
+  
+  const buttonSize = {
+    [ButtonSize.small]: styles.button__small,
+    [ButtonSize.medium]: styles.button__medium
+  };
+  
   return (
-    <button className={styles.button} onClick={onClick}>
+    <Link to={path} className={styles.button + ' ' + buttonSize[size]}>
       {children}
-    </button>
+    </Link>
   );
 };
 

@@ -1,12 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import AppRoutes from "./routes.js";
-
+import ReactDOM from 'react-dom/client';
 import './index.css';
+import AppRoutes from './routes.tsx';
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <AppRoutes />
   </React.StrictMode>,
-  document.getElementById("root")
 );
