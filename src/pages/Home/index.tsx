@@ -3,6 +3,7 @@ import styles from "./Home.module.scss";
 import headerImage from "../../assets/praying.jpeg";
 import { TextColor } from "../../enum/TextColor";
 import WhatDoWeDoSection from "../../components/WhatDoWeDoSection";
+import WelcomeSection from "../../components/WelcomeSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
         />
       <main className={styles.container}>
         <WhatDoWeDoSection />
+        
+        <WelcomeSection />
       </main> 
     </>
   );
