@@ -1,0 +1,44 @@
+.container {
+  text-align: center;
+
+  &__paragraph {
+    width: 80%;
+    margin: 0 auto 56px auto;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  &__images {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+
+    :nth-child(1),
+    :nth-child(3) {
+      height: 384px;
+    }
+
+    :nth-child(2) {
+      position: relative;
+      top: 4em;
+    }
+  }
+
+  &__footer {
+    margin-top: 7em;
+
+    p {
+      text-align: center;
+      width: 40%;
+      margin: 16px auto;
+    }
+  }
+
+  &__readMore {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+}

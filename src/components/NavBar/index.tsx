@@ -38,9 +38,11 @@ const NavBar = () => {
         <div className={styles.navbar__Items}>
           <ul className={styles.navbar__Nav}>
             {routes.map((route, index) => (
+              <li>
               <Link className={styles.navbar__Link} to={route.to} key={index}>
                 {route.label}
               </Link>
+              </li>
             ))}
           </ul>
           

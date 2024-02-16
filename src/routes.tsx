@@ -5,7 +5,7 @@ import Home from './pages/Home/index.tsx';
 
 export default function AppRoutes() {
   return (
-    <main>
+    <main style={{ width: "100%" } }>
       <Router>
         <NavBar />
         <Routes>

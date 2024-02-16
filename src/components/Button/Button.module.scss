@@ -8,6 +8,7 @@
   background-color: var(--primary-color);
   cursor: pointer;
   transition: border-color 0.25s;
+  text-transform: uppercase;
 
   &__small {
     padding: 16px 32px;

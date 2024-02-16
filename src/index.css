@@ -3,11 +3,11 @@
 :root {
   --font-family: 'Roboto Condensed', sans-serif;
 
+
   line-height: 1.5;
   font-weight: 400;
   font-family: var(--font-family);
-  color: rgba(255, 255, 255, 0.87);
-
+  
   --heading1: 64px;
   --heading2: 48px;
   --heading3: 40px;
@@ -18,9 +18,9 @@
   --primary-color: #FFD2A4;
   --white: #FFFFFF;
   --gray: #F5F2F0;
-  --ligth-orange: #FFF5EB;
+  --light-orange: #FFF5EB;
   --black: #161722;
-
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -34,10 +34,14 @@ a {
   text-decoration: inherit;
 }
 
+html {
+
+  width: 100%;
+}
+
 body {
   margin: 0;
   display: flex;
-  min-height: 100vh;
 }
 
 h1 {
