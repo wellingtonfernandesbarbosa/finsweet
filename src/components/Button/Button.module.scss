@@ -5,26 +5,33 @@
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--primary-color);
   cursor: pointer;
   transition: border-color 0.25s;
   text-transform: uppercase;
+
+  &__light {
+    background-color: var(--primary-color);
+  }
+
+  &__dark {
+    background-color: var(--black);
+    color: var(--primary-color);
+  }
 
   &__small {
     padding: 16px 32px;
   }
 
   &__medium {
-    padding: 20px 40px;
+    padding: 24px 64px;
   }
 
   &:hover {
     border-color: var(--primary-color);
   }
-  
+
   &:focus,
   &:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
 }
-

@@ -1,8 +1,6 @@
 import { ButtonSize } from "../../enum/ButtonSize";
 import { TextColor } from "../../enum/TextColor";
 import Button from "../Button";
-import Heading2 from "../Heading2";
-import Heading4 from "../Heading4";
 import Label2 from "../Label2";
 import Paragraph from "../Paragraph";
 import styles from "./WelcomeSection.module.scss";
@@ -10,6 +8,7 @@ import manPraying from "./assets/manPraying.png";
 import peopleSitting from "./assets/peopleSitting.png";
 import readingBook from "./assets/readingBook.png";
 import arrow from "./assets/arrow.svg";
+import { Heading2, Heading4 } from "../Heading";
 
 export default function WelcomeSection() {
   return (

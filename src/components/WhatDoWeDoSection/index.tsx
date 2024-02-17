@@ -1,11 +1,11 @@
 import styles from './WhatDoWeDoSection.module.scss';
-import Heading2 from "../../components/Heading2";
 import { WelcomeCard } from "../../components/Cards";
 import Pray from "./assets/pray.svg";
 import Donate from "./assets/donate.svg";
 import Stream from "./assets/stream.svg";
 import { TextColor } from '../../enum/TextColor';
 import Label2 from '../Label2';
+import { Heading2 } from '../Heading';
 
 export default function WhatDoWeDoSection() {
   return (

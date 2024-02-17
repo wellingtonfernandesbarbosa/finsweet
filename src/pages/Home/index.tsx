@@ -4,6 +4,7 @@ import headerImage from "../../assets/praying.jpeg";
 import { TextColor } from "../../enum/TextColor";
 import WhatDoWeDoSection from "../../components/WhatDoWeDoSection";
 import WelcomeSection from "../../components/WelcomeSection";
+import BenefitsSection from "../../components/BenefitsSection";
 
 export default function Home() {
   return (
@@ -15,12 +16,14 @@ export default function Home() {
         text="We are here to help you in your church. We are here to help you in your church. We are here to help you in your church."
         image={headerImage}
         textColor={TextColor.white}
-        />
+      />
       <main className={styles.container}>
         <WhatDoWeDoSection />
-        
+
         <WelcomeSection />
-      </main> 
+
+        <BenefitsSection />
+      </main>
     </>
   );
 }

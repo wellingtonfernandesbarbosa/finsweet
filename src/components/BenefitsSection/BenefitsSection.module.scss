@@ -1,0 +1,23 @@
+.container {
+  background-color: var(--gray);
+
+  &__content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 128px 0;
+    text-align: center;
+
+    h2 {
+      width: 500px;
+      margin: 0 auto 64px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 0;
+  }
+}
