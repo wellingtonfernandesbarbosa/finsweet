@@ -4,7 +4,7 @@ import { TextColor } from "../../enum/TextColor";
 import Button from "../Button";
 import { Chapter03 } from "../Chapters";
 import { Heading2, Heading5 } from "../Heading";
-import Label2 from "../Label2";
+import {Label2} from "../Label";
 import Paragraph from "../Paragraph";
 import styles from "./UpcomingSermonsSection.module.scss";
 import Angels from "./assets/a-man-and-woman-wearing-angel-costumes.png";

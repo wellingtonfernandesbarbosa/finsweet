@@ -1,5 +1,6 @@
 import { TextColor } from "../../enum/TextColor";
 import { Heading4, Heading5 } from "../Heading";
+import { Label3 } from "../Label";
 import Paragraph from "../Paragraph";
 import styles from "./Cards.module.scss";
 
@@ -45,5 +46,28 @@ export const BenefitsCard = ({ image = '', title = '', text = '' }: BenefitsCard
       <Heading5 theme={TextColor.white}>{title}</Heading5>
       <Paragraph textColor={TextColor.white}>{text}</Paragraph>
     </div>
+  );
+};
+
+interface BlogPost {
+  title: string;
+  text: string;
+  author: string;
+  date: string;
+}
+
+export const BlogPost = ({ title, text, author, date }: BlogPost) => {
+  return (
+    <ul className={styles.BlogPost}>
+      <div className={styles.container__content}>
+        <Heading5 theme={TextColor.black}>{title}</Heading5>
+        <Paragraph textColor={TextColor.black}>{text}</Paragraph>
+      </div>
+      
+      <div className={styles.container__footer}>
+        <Label3>{author}</Label3>
+        <Paragraph textColor={TextColor.black}>{date}</Paragraph>
+      </div>
+    </ul>
   );
 };

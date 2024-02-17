@@ -1,5 +1,5 @@
 import { TextColor } from "../../enum/TextColor";
-import Label2 from "../Label2";
+import {Label2} from "../Label";
 import styles from "./BenefitsSection.module.scss";
 import Num from "./assets/num.png";
 import HoldingBible from "./assets/holdingBible.png";
@@ -7,7 +7,6 @@ import StainedGlass from "./assets/stainedGlass.png";
 import ManReadingBible from "./assets/manReadingBible.png";
 import { BenefitsCard } from "../Cards";
 import { Heading2 } from "../Heading";
-
 
 interface BenefitsCard {
   image: string;
@@ -32,7 +31,7 @@ const benefitsCards: BenefitsCard[] = [
   {
     image: StainedGlass,
     title: "WATCH AND LISTEN TO OUR SERMONS",
-  }
+  },
 ];
 
 export default function BenefitsSection() {

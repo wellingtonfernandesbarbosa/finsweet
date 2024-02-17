@@ -1,7 +1,7 @@
 import { ButtonSize } from "../../enum/ButtonSize";
 import { TextColor } from "../../enum/TextColor";
 import Button from "../Button";
-import Label2 from "../Label2";
+import {Label2} from "../Label";
 import Paragraph from "../Paragraph";
 import styles from "./WelcomeSection.module.scss";
 import manPraying from "./assets/manPraying.png";
@@ -9,6 +9,7 @@ import peopleSitting from "./assets/peopleSitting.png";
 import readingBook from "./assets/readingBook.png";
 import arrow from "./assets/arrow.svg";
 import { Heading2, Heading4 } from "../Heading";
+import { ButtonTheme } from "../../enum/ButtonTheme";
 
 export default function WelcomeSection() {
   return (
@@ -28,7 +29,7 @@ export default function WelcomeSection() {
         </Paragraph>
       </div>
 
-      <Button path="/" size={ButtonSize.medium}>
+      <Button theme={ButtonTheme.light} path="/" size={ButtonSize.medium}>
         Read more
       </Button>
 
@@ -48,7 +49,8 @@ export default function WelcomeSection() {
       </div>
 
       <div className={styles.container__readMore}>
-        <p>Read more</p><img src={arrow} alt="Arrow to read more" />
+        <p>Read more</p>
+        <img src={arrow} alt="Arrow to read more" />
       </div>
     </div>
   );

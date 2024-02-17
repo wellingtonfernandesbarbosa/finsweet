@@ -47,3 +47,17 @@
   height: 300px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
 }
+
+.BlogPost {
+  max-width: 292px;
+  background-color: var(--light-orange);
+  padding: 48px 32px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  h5 {
+    margin: 0 0 16px;
+  }
+}
