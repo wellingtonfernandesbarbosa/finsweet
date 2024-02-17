@@ -26,10 +26,6 @@
     padding: 24px 64px;
   }
 
-  &:hover {
-    border-color: var(--primary-color);
-  }
-
   &:focus,
   &:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;

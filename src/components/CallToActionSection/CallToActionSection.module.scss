@@ -1,0 +1,32 @@
+.container {
+  background-image: url("./assets/facade-of-aged-grand-cathedral-with-dome-on-river-shore.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 128px 366px;
+  
+  
+  margin-bottom: 10em;
+
+
+
+  &__content {
+    max-width: 768px;
+    background-color: var(--white);
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 72px 48px;
+    border-bottom: 16PX solid var(--primary-color);
+    
+    h2 {
+      margin: 0 0 16px;
+      width: 55%;
+    }
+
+    p {
+      margin: 0 0 48px;
+      width: 38%;
+    }
+  }
+}

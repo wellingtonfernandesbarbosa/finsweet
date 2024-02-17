@@ -6,6 +6,7 @@ import WhatDoWeDoSection from "../../components/WhatDoWeDoSection";
 import WelcomeSection from "../../components/WelcomeSection";
 import BenefitsSection from "../../components/BenefitsSection";
 import UpcomingSermonsSection from "../../components/UpcomingSermonsSection";
+import CallToActionSection from "../../components/CallToActionSection";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
         <BenefitsSection />
 
         <UpcomingSermonsSection />
+
+        <CallToActionSection />
       </main>
     </>
   );
