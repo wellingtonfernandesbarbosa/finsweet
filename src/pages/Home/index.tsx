@@ -5,6 +5,7 @@ import { TextColor } from "../../enum/TextColor";
 import WhatDoWeDoSection from "../../components/WhatDoWeDoSection";
 import WelcomeSection from "../../components/WelcomeSection";
 import BenefitsSection from "../../components/BenefitsSection";
+import UpcomingSermonsSection from "../../components/UpcomingSermonsSection";
 
 export default function Home() {
   return (
@@ -23,6 +24,8 @@ export default function Home() {
         <WelcomeSection />
 
         <BenefitsSection />
+
+        <UpcomingSermonsSection />
       </main>
     </>
   );
