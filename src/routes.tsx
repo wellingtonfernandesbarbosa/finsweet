@@ -6,7 +6,7 @@ import Footer from './components/Footer/index.tsx';
 
 export default function AppRoutes() {
   return (
-    <main style={{ width: "100%" } }>
+    <div style={{ width: "100%" } }>
       <Router>
         <NavBar />
         <Routes>
@@ -16,6 +16,6 @@ export default function AppRoutes() {
         </Routes>
         <Footer />
       </Router>
-    </main>
+    </div>
   );
 }

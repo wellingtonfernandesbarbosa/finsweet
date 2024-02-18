@@ -36,19 +36,25 @@ const NavBar = () => {
           {"{Finsweet"}
         </Link>
 
-        <div className={styles.navbar__Items}>
-          <ul className={styles.navbar__Nav}>
+        <nav className={styles.navbar__Nav}>
+          <ul className={styles.navbar__Items}>
             {routes.map((route, index) => (
               <li key={index}>
-              <Link className={styles.navbar__Link} to={route.to} key={index}>
-                {route.label}
-              </Link>
+                <Link className={styles.navbar__Link} to={route.to} key={index}>
+                  {route.label}
+                </Link>
               </li>
             ))}
           </ul>
-          
-          <Button theme={ButtonTheme.light} path='/contactus' size={ButtonSize.small}>CONTACT US</Button>
-        </div>
+
+          <Button
+            theme={ButtonTheme.light}
+            path="/contactus"
+            size={ButtonSize.small}
+          >
+            CONTACT US
+          </Button>
+        </nav>
       </div>
     </div>
   );

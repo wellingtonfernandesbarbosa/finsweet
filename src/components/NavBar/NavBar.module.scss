@@ -19,19 +19,20 @@
 
   &__Nav {
     display: flex;
-    gap: 3em;
-  }
-
-  &__Link {
-    color: #FFFFFF;
-  }
-  
-  &__Items {
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     flex-grow: 1;
     margin: 0 64px;
   }
+
+  &__Items {
+    display: flex;
+    gap: 3em;
+  }
+  
+  &__Link {
+    color: #FFFFFF;
+  }
+  
 }
