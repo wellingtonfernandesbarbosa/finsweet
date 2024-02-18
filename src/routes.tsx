@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DefaultPage from './pages/DefaultPage/index.tsx';
 import NavBar from "./components/NavBar/index.tsx";
 import Home from './pages/Home/index.tsx';
+import Footer from './components/Footer/index.tsx';
 
 export default function AppRoutes() {
   return (
@@ -13,6 +14,7 @@ export default function AppRoutes() {
             <Route index element={<Home />} />
           </Route>
         </Routes>
+        <Footer />
       </Router>
     </main>
   );
