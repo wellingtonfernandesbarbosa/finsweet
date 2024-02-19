@@ -1,9 +1,9 @@
+import styles from "./WelcomeSection.module.scss";
 import { ButtonSize } from "../../enum/ButtonSize";
 import { TextColor } from "../../enum/TextColor";
 import Button from "../Button";
-import {Label2} from "../Label";
+import { Label2 } from "../Label";
 import Paragraph from "../Paragraph";
-import styles from "./WelcomeSection.module.scss";
 import manPraying from "./assets/manPraying.png";
 import peopleSitting from "./assets/peopleSitting.png";
 import readingBook from "./assets/readingBook.png";
@@ -11,7 +11,11 @@ import arrow from "./assets/arrow.svg";
 import { Heading2, Heading4 } from "../Heading";
 import { ButtonTheme } from "../../enum/ButtonTheme";
 
-export default function WelcomeSection() {
+export default function WelcomeSection({
+  footer = false,
+}: {
+  footer?: boolean;
+}) {
   return (
     <div className={styles.container}>
       <Label2>Sub-Headline</Label2>
@@ -52,6 +56,41 @@ export default function WelcomeSection() {
         <p>Read more</p>
         <img src={arrow} alt="Arrow to read more" />
       </div>
+
+      {footer && (
+        <div className={styles.container__footer}>
+          <div>
+            <Label2>OUR MISSIOn & Vision</Label2>
+
+            <Heading4 theme={TextColor.black}>
+              STRIVING FOR A BETTER TOMORROW
+            </Heading4>
+
+            <Paragraph textColor={TextColor.black}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum.
+            </Paragraph>
+          </div>
+          <div>
+            <Label2>WHAT WE DO</Label2>
+
+            <Heading4 theme={TextColor.black}>
+              BRINgING PEACE AND JOY TO THE WORLD
+            </Heading4>
+
+            <Paragraph textColor={TextColor.black}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum.
+            </Paragraph>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

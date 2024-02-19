@@ -44,4 +44,26 @@
     justify-content: center;
     gap: 6px;
   }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 378px;
+      text-align: start;
+      
+      h4, p {
+        margin: 0;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
 }
