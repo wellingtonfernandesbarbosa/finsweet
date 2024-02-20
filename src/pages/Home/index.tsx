@@ -8,6 +8,7 @@ import BenefitsSection from "../../components/BenefitsSection";
 import UpcomingSermonsSection from "../../components/UpcomingSermonsSection";
 import CallToActionSection from "../../components/CallToActionSection";
 import BlogPostsSection from "../../components/BlogPostsSection";
+import { Page } from "../../enum/Page";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
 
         <WelcomeSection />
 
-        <BenefitsSection />
+        <BenefitsSection subtitle="Whatch and Listen" page={Page.home}/>
 
         <UpcomingSermonsSection />
 

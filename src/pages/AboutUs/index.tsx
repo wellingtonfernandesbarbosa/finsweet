@@ -3,6 +3,8 @@ import styles from "./AboutUs.module.scss";
 import BannerImage from "./Assets/banner.png";
 import { TextColor } from "../../enum/TextColor";
 import WelcomeSection from "../../components/WelcomeSection";
+import BenefitsSection from "../../components/BenefitsSection";
+import { Page } from "../../enum/Page";
 
 export default function AboutUs() {
   return (
@@ -15,6 +17,8 @@ export default function AboutUs() {
       />
 
       <WelcomeSection footer={true} />
+
+      <BenefitsSection subtitle="BENEFITS" page={Page.about} background="white" />
     </div>
   );
 }

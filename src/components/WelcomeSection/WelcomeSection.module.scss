@@ -2,8 +2,7 @@
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 128px;
-
+  padding-bottom: 0;
 
   &__paragraph {
     width: 80%;
@@ -58,7 +57,8 @@
       max-width: 378px;
       text-align: start;
 
-      h4, p {
+      h4,
+      p {
         margin: 0;
       }
 
