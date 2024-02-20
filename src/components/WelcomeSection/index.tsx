@@ -11,11 +11,19 @@ import arrow from "./assets/arrow.svg";
 import { Heading2, Heading4 } from "../Heading";
 import { ButtonTheme } from "../../enum/ButtonTheme";
 
-export default function WelcomeSection({
-  footer = false,
-}: {
-  footer?: boolean;
-}) {
+export default function WelcomeSection({ footer = false, }: { footer?: boolean; }) {
+  const secondImageStyle: React.CSSProperties | undefined = footer ? {
+    position: "static" as const,
+    width: "390px",
+    height: "512px",
+  } : undefined;
+
+  const containerImagesStyle = footer ? {
+    FlexWrap: "wrap",
+    alignItems: "center",
+    marginBottom: "64px",
+  } : undefined;
+
   return (
     <div className={styles.container}>
       <Label2>Sub-Headline</Label2>
@@ -33,32 +41,32 @@ export default function WelcomeSection({
         </Paragraph>
       </div>
 
-      <Button theme={ButtonTheme.light} path="/" size={ButtonSize.medium}>
+      { !footer && <Button theme={ButtonTheme.light} path="/" size={ButtonSize.medium}>
         Read more
-      </Button>
+      </Button>}
 
-      <div className={styles.container__images}>
+      <div className={styles.container__images} style={containerImagesStyle}>
         <img src={manPraying} alt="A bearded man praying" />
-        <img src={readingBook} alt="People reading a book on a church" />
+        <img src={readingBook} alt="People reading a book on a church" style={secondImageStyle}/>
         <img src={peopleSitting} alt="People sitting" />
       </div>
 
-      <div className={styles.container__footer}>
-        <Label2>our mission & vision</Label2>
-        <Heading4 theme={TextColor.black}>celebrate WITH US</Heading4>
-        <Paragraph textColor={TextColor.black}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </Paragraph>
-      </div>
-
-      <div className={styles.container__readMore}>
-        <p>Read more</p>
-        <img src={arrow} alt="Arrow to read more" />
-      </div>
-
-      {footer && (
+      {!footer ? (<>
         <div className={styles.container__footer}>
+          <Label2>our mission & vision</Label2>
+          <Heading4 theme={TextColor.black}>celebrate WITH US</Heading4>
+          <Paragraph textColor={TextColor.black}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </Paragraph>
+        </div>
+
+        <div className={styles.container__readMore}>
+          <p>Read more</p>
+          <img src={arrow} alt="Arrow to read more" />
+        </div>
+      </>) : (
+        <div className={styles.container__footerArticles}>
           <div>
             <Label2>OUR MISSIOn & Vision</Label2>
 
