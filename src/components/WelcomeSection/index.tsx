@@ -1,4 +1,5 @@
 import styles from "./WelcomeSection.module.scss";
+
 import { ButtonSize } from "../../enum/ButtonSize";
 import { ThemeColor } from "../../enum/ThemeColor";
 import Button from "../Button";

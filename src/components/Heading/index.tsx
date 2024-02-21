@@ -1,4 +1,4 @@
-import { TextColor } from "../../enum/ThemeColor";
+import { ThemeColor } from "../../enum/ThemeColor";
 import styles from "./Heading.module.scss";
 
 export function Heading1({
@@ -6,7 +6,7 @@ export function Heading1({
   theme,
 }: {
   children: React.ReactNode;
-  theme: TextColor;
+  theme: ThemeColor;
 }) {
   const styleText = {
     color: theme,
@@ -24,7 +24,7 @@ export function Heading2({
   theme,
 }: {
   children: React.ReactNode;
-  theme: TextColor;
+  theme: ThemeColor;
 }) {
   const styleText = {
     color: theme,
@@ -42,7 +42,7 @@ export function Heading3({
   theme,
 }: {
   children: React.ReactNode;
-  theme: TextColor;
+  theme: ThemeColor;
 }) {
   const styleText = {
     color: theme,
@@ -60,7 +60,7 @@ export function Heading4({
   theme,
 }: {
   children: React.ReactNode;
-  theme: TextColor;
+  theme: ThemeColor;
 }) {
   const styleText = {
     color: theme,
@@ -78,7 +78,7 @@ export function Heading5({
   theme,
 }: {
   children: React.ReactNode;
-  theme: TextColor;
+  theme: ThemeColor;
 }) {
   const styleText = {
     color: theme,
@@ -96,7 +96,7 @@ export function Heading6({
   theme,
 }: {
   children: React.ReactNode;
-  theme: TextColor;
+  theme: ThemeColor;
 }) {
   const styleText = {
     color: theme,
