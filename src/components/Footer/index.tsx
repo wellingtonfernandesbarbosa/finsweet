@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import { TextColor } from "../../enum/TextColor";
-import { Heading4 } from "../Heading";
+
 import styles from "./Footer.module.scss";
+
+import Button from "../Button";
 import Logo from "./assets/Logo.svg";
 import Paragraph from "../Paragraph";
 import { Chapter02 } from "../Chapters";
-import Facebook from "./assets/facebook.svg";
-import Twitter from "./assets/twitter.svg";
-import Linkedin from "./assets/linkedin.svg";
-import Button from "../Button";
+import { Heading4 } from "../Heading";
+import { ThemeColor } from "../../enum/ThemeColor";
 import { ButtonTheme } from "../../enum/ButtonTheme";
 import { ButtonSize } from "../../enum/ButtonSize";
+import SocialMediaLinks from "../SocialMediaLinks";
 
 export default function Footer() {
   return (
@@ -26,16 +26,16 @@ export default function Footer() {
 
         <div className={styles.footer__info__location}>
           <Chapter02>(480) 555-0103</Chapter02>
-        
+
           <Chapter02>4517 Washington Ave.</Chapter02>
-        
+
           <Chapter02>finsweet@example.com</Chapter02>
-        </div> 
+        </div>
       </div>
 
       <div className={styles.footer__links}>
         <div>
-          <Paragraph textColor={TextColor.white}>Quicklinks</Paragraph>
+          <Paragraph textColor={ThemeColor.white}>Quicklinks</Paragraph>
           <Chapter02>
             <Link to="/">Home</Link>
           </Chapter02>
@@ -54,29 +54,14 @@ export default function Footer() {
         </div>
 
         <div className={styles.footer__links__connect}>
-          <Paragraph textColor={TextColor.white}>Connect</Paragraph>
-          <ul>
-            <li>
-              <a href="https://facebook.com/">
-                <img src={Facebook} alt="Facebook logo" />
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/">
-                <img src={Twitter} alt="Twitter logo" />
-              </a>
-            </li>
-            <li>
-              <a href="https://linkedin.com/">
-                <img src={Linkedin} alt="Linkedin logo" />
-              </a>
-            </li>
-          </ul>
+          <Paragraph textColor={ThemeColor.white}>Connect</Paragraph>
+          
+          <SocialMediaLinks theme={ThemeColor.white} />
         </div>
       </div>
 
       <div className={styles.footer__subscribe}>
-        <Heading4 theme={TextColor.white}>
+        <Heading4 theme={ThemeColor.white}>
           Subscribe to get Latest Updates and News
         </Heading4>
         <div>

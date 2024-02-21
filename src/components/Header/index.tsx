@@ -1,6 +1,6 @@
 import { ButtonSize } from "../../enum/ButtonSize";
 import { ButtonTheme } from "../../enum/ButtonTheme";
-import { TextColor } from "../../enum/TextColor";
+import { ThemeColor } from "../../enum/ThemeColor";
 import Button from "../Button";
 import { Heading6, Heading1 } from "../Heading";
 import Paragraph from "../Paragraph";
@@ -12,7 +12,7 @@ interface HeaderProps {
   text?: string;
   buttonText?: string;
   image: string;
-  textColor: TextColor;
+  textColor: ThemeColor;
 }
 
 export default function Header({
@@ -21,7 +21,7 @@ export default function Header({
   subtitle,
   text = "",
   image,
-  textColor = TextColor.white,
+  textColor = ThemeColor.white,
 }: HeaderProps) {
   const backgroundImageStyle = {
     backgroundImage: `url(${image})`,
@@ -34,9 +34,7 @@ export default function Header({
     <header className={styles.header} style={backgroundImageStyle}>
       <div className={styles.header__container}>
         <div className={styles.header__content}>
-          {subtitle !== "" && (
-            <Heading6 theme={textColor}>{subtitle}</Heading6>
-          )}
+          {subtitle !== "" && <Heading6 theme={textColor}>{subtitle}</Heading6>}
 
           {title !== "" && <Heading1 theme={textColor}>{title}</Heading1>}
 
@@ -47,9 +45,7 @@ export default function Header({
           )}
 
           <div className={styles.header__text}>
-            {text !== "" && (
-              <Paragraph textColor={textColor}>{text}</Paragraph>
-            )}
+            {text !== "" && <Paragraph textColor={textColor}>{text}</Paragraph>}
           </div>
         </div>
       </div>

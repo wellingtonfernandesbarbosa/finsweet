@@ -1,9 +1,15 @@
-import { TextColor } from '../../enum/TextColor';
-import styles from './Heading.module.scss';
+import { TextColor } from "../../enum/ThemeColor";
+import styles from "./Heading.module.scss";
 
-export function Heading1({ children, theme }: { children: React.ReactNode, theme: TextColor }) {
+export function Heading1({
+  children,
+  theme,
+}: {
+  children: React.ReactNode;
+  theme: TextColor;
+}) {
   const styleText = {
-    color: theme
+    color: theme,
   };
 
   return (
@@ -13,9 +19,15 @@ export function Heading1({ children, theme }: { children: React.ReactNode, theme
   );
 }
 
-export function Heading2({ children, theme }: { children: React.ReactNode, theme: TextColor }) {
+export function Heading2({
+  children,
+  theme,
+}: {
+  children: React.ReactNode;
+  theme: TextColor;
+}) {
   const styleText = {
-    color: theme
+    color: theme,
   };
 
   return (
@@ -25,9 +37,15 @@ export function Heading2({ children, theme }: { children: React.ReactNode, theme
   );
 }
 
-export function Heading3({ children, theme }: { children: React.ReactNode, theme: TextColor }) {
+export function Heading3({
+  children,
+  theme,
+}: {
+  children: React.ReactNode;
+  theme: TextColor;
+}) {
   const styleText = {
-    color: theme
+    color: theme,
   };
 
   return (
@@ -37,9 +55,15 @@ export function Heading3({ children, theme }: { children: React.ReactNode, theme
   );
 }
 
-export function Heading4({ children, theme }: { children: React.ReactNode, theme: TextColor }) {
+export function Heading4({
+  children,
+  theme,
+}: {
+  children: React.ReactNode;
+  theme: TextColor;
+}) {
   const styleText = {
-    color: theme
+    color: theme,
   };
 
   return (
@@ -49,9 +73,15 @@ export function Heading4({ children, theme }: { children: React.ReactNode, theme
   );
 }
 
-export function Heading5({ children, theme }: { children: React.ReactNode, theme: TextColor }) {
+export function Heading5({
+  children,
+  theme,
+}: {
+  children: React.ReactNode;
+  theme: TextColor;
+}) {
   const styleText = {
-    color: theme
+    color: theme,
   };
 
   return (
@@ -61,9 +91,15 @@ export function Heading5({ children, theme }: { children: React.ReactNode, theme
   );
 }
 
-export function Heading6({ children, theme }: { children: React.ReactNode, theme: TextColor }) {
+export function Heading6({
+  children,
+  theme,
+}: {
+  children: React.ReactNode;
+  theme: TextColor;
+}) {
   const styleText = {
-    color: theme
+    color: theme,
   };
 
   return (

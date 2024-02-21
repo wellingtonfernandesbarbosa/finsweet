@@ -1,34 +1,51 @@
-import { TextColor } from '../../enum/TextColor';
-import styles from './Chapters.module.scss';
+import { ThemeColor } from "../../enum/ThemeColor";
+import styles from "./Chapters.module.scss";
 
 interface ChapterProps {
   children: React.ReactNode;
-  textColor?: TextColor;
+  textColor?: ThemeColor;
 }
 
-export const Chapter01 = ({ children, textColor = TextColor.white }: ChapterProps) => {
+export const Chapter01 = ({
+  children,
+  textColor = ThemeColor.white,
+}: ChapterProps) => {
   const styleText = {
     color: textColor,
   };
 
   return (
-    <p className={styles.chapter01} style={styleText}>{children}</p>
+    <p className={styles.chapter01} style={styleText}>
+      {children}
+    </p>
   );
 };
 
-export const Chapter02 = ({ children, textColor = TextColor.white }: ChapterProps) => {
+export const Chapter02 = ({
+  children,
+  textColor = ThemeColor.white,
+}: ChapterProps) => {
   const styleText = {
     color: textColor,
   };
-  return <p className={styles.chapter02} style={styleText}>{children}</p>;
+  return (
+    <p className={styles.chapter02} style={styleText}>
+      {children}
+    </p>
+  );
 };
 
-export const Chapter03 = ({ children, textColor = TextColor.white }: ChapterProps) => {
+export const Chapter03 = ({
+  children,
+  textColor = ThemeColor.white,
+}: ChapterProps) => {
   const styleText = {
     color: textColor,
   };
 
   return (
-    <p className={styles.chapter03} style={styleText}>{children}</p>
+    <p className={styles.chapter03} style={styleText}>
+      {children}
+    </p>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./BenefitsSection.module.scss";
 
-import { TextColor } from "../../enum/TextColor";
+import { ThemeColor } from "../../enum/ThemeColor";
 
 import Num from "./assets/num.png";
 import { Page } from "../../enum/Page";
@@ -96,15 +96,11 @@ export default function BenefitsSection({
     page === Page.about ? { paddingTop: 0 } : {};
 
   return (
-    // colocar backgroundImageStyle e containerPdding dentro do style
-    <section
-      className={styles.container}
-      style={backgroundImageStyle}
-    >
+    <section className={styles.container} style={backgroundImageStyle}>
       <div className={styles.container__content} style={containerPdding}>
         <Label2>{subtitle}</Label2>
 
-        <Heading2 theme={TextColor.black}>
+        <Heading2 theme={ThemeColor.black}>
           THE benefits of joining our church
         </Heading2>
 
@@ -136,11 +132,11 @@ export default function BenefitsSection({
                     </div>
 
                     <div>
-                      <Heading4 theme={TextColor.black}>
+                      <Heading4 theme={ThemeColor.black}>
                         {article.title}
                       </Heading4>
 
-                      <Paragraph textColor={TextColor.black}>
+                      <Paragraph textColor={ThemeColor.black}>
                         {article.text}
                       </Paragraph>
                     </div>

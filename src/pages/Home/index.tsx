@@ -1,7 +1,7 @@
 import Header from "../../components/Header";
 import styles from "./Home.module.scss";
 import headerImage from "../../assets/praying.jpeg";
-import { TextColor } from "../../enum/TextColor";
+import { ThemeColor } from "../../enum/ThemeColor";
 import WhatDoWeDoSection from "../../components/WhatDoWeDoSection";
 import WelcomeSection from "../../components/WelcomeSection";
 import BenefitsSection from "../../components/BenefitsSection";
@@ -19,14 +19,14 @@ export default function Home() {
         buttonText="LEARN MORE"
         text="We are here to help you in your church. We are here to help you in your church. We are here to help you in your church."
         image={headerImage}
-        textColor={TextColor.white}
+        textColor={ThemeColor.white}
       />
       <main className={styles.container}>
         <WhatDoWeDoSection />
 
         <WelcomeSection />
 
-        <BenefitsSection subtitle="Whatch and Listen" page={Page.home}/>
+        <BenefitsSection subtitle="Whatch and Listen" page={Page.home} />
 
         <UpcomingSermonsSection />
 

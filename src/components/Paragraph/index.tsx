@@ -1,9 +1,9 @@
-import { TextColor } from '../../enum/TextColor';
+import { TextColor } from "../../enum/ThemeColor";
 import styles from "./Paragraph.module.scss";
 
 interface TextProps {
-  children: React.ReactNode
-  textColor: TextColor
+  children: React.ReactNode;
+  textColor: TextColor;
 }
 
 export default function Paragraph({ children, textColor }: TextProps) {

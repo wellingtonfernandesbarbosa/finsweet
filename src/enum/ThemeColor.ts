@@ -1,4 +1,4 @@
-export enum TextColor {
+export enum ThemeColor {
   black = 'black',
   white = 'white'
 }

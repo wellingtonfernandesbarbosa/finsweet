@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 0;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &__teamMembers {
+    display: flex;
+    gap: 24px;
+  }
+}

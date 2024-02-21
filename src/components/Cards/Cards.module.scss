@@ -61,3 +61,31 @@
     margin: 0 0 16px;
   }
 }
+
+.TeamCard {
+  padding: 48px 55px;
+  background-color: var(--gray);
+  max-width: 302px;
+
+  &__image {
+    margin: 0 0 26px;
+    width: 152px;
+  }
+
+  &__content {
+    h5 {
+      margin: 0 0 8px;
+    }
+
+    p {
+      width: fit-content;
+      margin: 0 auto 16px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+  }
+}

@@ -1,4 +1,4 @@
-import { TextColor } from "../../enum/TextColor";
+import { ThemeColor } from "../../enum/ThemeColor";
 import { BlogPost } from "../Cards";
 import { Heading2 } from "../Heading";
 import { Label2 } from "../Label";
@@ -42,7 +42,7 @@ export default function BlogPostsSection() {
   return (
     <section className={styles.container}>
       <Label2>Read our Blog</Label2>
-      <Heading2 theme={TextColor.black}>SHARE, INSPIRE, INNOVATE</Heading2>
+      <Heading2 theme={ThemeColor                                                                                                                                                                                                                                                                                                                                                                                   .black}>SHARE, INSPIRE, INNOVATE</Heading2>
 
       <ul className={styles.container__cards}>
         {blogPosts.map((blogPost, index) => (
