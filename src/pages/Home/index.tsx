@@ -17,7 +17,7 @@ export default function Home() {
         title="Become a part of our community"
         subtitle="Welcome to our CHURCH"
         buttonText="LEARN MORE"
-        text="We are here to help you in your church. We are here to help you in your church. We are here to help you in your church."
+        text="---- We are here to help you in your church. We are here to help you in your church. We are here to help you in your church."
         image={headerImage}
         textColor={ThemeColor.white}
       />

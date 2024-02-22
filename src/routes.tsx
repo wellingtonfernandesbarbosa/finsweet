@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/index.tsx";
 import Home from "./pages/Home/index.tsx";
 import Footer from "./components/Footer/index.tsx";
 import AboutUs from "./pages/AboutUs/index.tsx";
+import Sermon from "./pages/Sermon/index.tsx";
 
 export default function AppRoutes() {
   return (
@@ -14,6 +15,7 @@ export default function AppRoutes() {
           <Route path="/" element={<DefaultPage />}>
             <Route index element={<Home />} />
             <Route path="aboutus" element={<AboutUs />} />
+            <Route path="sermon" element={<Sermon />} />
           </Route>
         </Routes>
         <Footer />

@@ -5,12 +5,9 @@
   flex-direction: column;
   text-align: center;
 
-  label {
-    margin-bottom: 1em;
-  }
-
   h2 {
-    margin: 0 0 64px;
+    margin: 16px auto 64px;
+    width: 45%;
   }
 
   &__info {
@@ -19,46 +16,21 @@
     background-color: var(--light-orange);
     text-align: start;
 
-    &__details {
-      padding: 0 60px;
-      width: 435px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-
-      p,
-      h5 {
-        margin: 0;
-      }
-
-      h5 {
-        width: 80%;
-      }
-
-      &__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-      }
-
-      &__time,
-      &__location {
-        display: flex;
-        align-items: start;
-        gap: 8px;
-
-        p {
-          margin: 0;
-        }
-      }
-
-      &__button {
-        margin-top: 30px;
-      }
-    }
-
     &__banner {
       height: 512px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: end;
+    margin-top: 48px;
+
+    a {
+      display: flex;
+      align-items: baseline;
+      gap: 11px;
+      margin: 0;
     }
   }
 }

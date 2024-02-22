@@ -10,10 +10,19 @@
 
   &__content {
     width: 52%;
+
+    h1{
+      margin: 0 0 56px 0
+    }
+
+    :first-child {
+      margin: 0 0 1em 0;
+    }
+    
   }
 
   &__text {
     width: 70%;
-    margin: 64px 0 0 0;
+    margin: 88px 0 0 0;
   }
 };

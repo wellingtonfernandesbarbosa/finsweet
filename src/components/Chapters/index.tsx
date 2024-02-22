@@ -3,7 +3,7 @@ import styles from "./Chapters.module.scss";
 
 interface ChapterProps {
   children: React.ReactNode;
-  textColor?: ThemeColor;
+  textColor?: ThemeColor | string;
 }
 
 export const Chapter01 = ({
@@ -37,7 +37,7 @@ export const Chapter02 = ({
 
 export const Chapter03 = ({
   children,
-  textColor = ThemeColor.white,
+  textColor = "",
 }: ChapterProps) => {
   const styleText = {
     color: textColor,

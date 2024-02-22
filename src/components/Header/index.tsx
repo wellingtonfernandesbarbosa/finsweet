@@ -2,7 +2,8 @@ import { ButtonSize } from "../../enum/ButtonSize";
 import { ButtonTheme } from "../../enum/ButtonTheme";
 import { ThemeColor } from "../../enum/ThemeColor";
 import Button from "../Button";
-import { Heading6, Heading1 } from "../Heading";
+import { Chapter01 } from "../Chapters";
+import { Heading1 } from "../Heading";
 import Paragraph from "../Paragraph";
 import styles from "./Header.module.scss";
 
@@ -34,7 +35,7 @@ export default function Header({
     <header className={styles.header} style={backgroundImageStyle}>
       <div className={styles.header__container}>
         <div className={styles.header__content}>
-          {subtitle !== "" && <Heading6 theme={textColor}>{subtitle}</Heading6>}
+          {subtitle !== "" && <Chapter01 textColor={textColor}>{subtitle}</Chapter01>}
 
           {title !== "" && <Heading1 theme={textColor}>{title}</Heading1>}
 
@@ -44,9 +45,10 @@ export default function Header({
             </Button>
           )}
 
-          <div className={styles.header__text}>
-            {text !== "" && <Paragraph textColor={textColor}>{text}</Paragraph>}
-          </div>
+          {text !== "" &&
+            <div className={styles.header__text}>
+              <Paragraph textColor={textColor}>{text}</Paragraph>
+            </div>}
         </div>
       </div>
     </header>

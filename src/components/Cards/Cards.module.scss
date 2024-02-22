@@ -89,3 +89,38 @@
     padding: 0;
   }
 }
+
+.sermonCard {
+      padding: 0 60px;
+      width: 435px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      p,
+      h5 {
+        margin: 0;
+      }
+
+      h5 {
+        width: 80%;
+      }
+
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+      }
+
+      &__time,
+      &__location {
+        display: flex;
+        align-items: start;
+        gap: 8px;
+
+      }
+
+      &__button {
+        margin-top: 30px;
+      }
+    }
