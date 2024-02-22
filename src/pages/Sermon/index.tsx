@@ -1,6 +1,10 @@
-import Header from "../../components/Header";
 import styles from "./Sermon.module.scss";
+
 import HeaderImage from "./assets/sermonHeader.png";
+
+import Header from "../../components/Header";
+import UpcomingSermonsSection from "../../components/UpcomingSermonsSection";
+
 import { ThemeColor } from "../../enum/ThemeColor";
 
 export default function Sermon() {
@@ -12,6 +16,8 @@ export default function Sermon() {
         title="take part in OUR SERMON"
         subtitle="SERMON"
       />
+
+      <UpcomingSermonsSection />
     </div>
   );
 }
