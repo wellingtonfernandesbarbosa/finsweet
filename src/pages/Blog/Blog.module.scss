@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 128px 0;
+  gap: 128px;
+  background-color: #e5e5e5;
+
+  &__recentPost {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+
+    &__content {
+      background-color: var(--white);
+      display: flex;
+      align-items: center;
+      padding: 56px;
+
+      &__info {
+        padding: 28px 29px 29px 48px;
+        text-align: start;
+        h4 {
+          margin: 12px 0 16px;
+        }
+
+        p {
+          margin-bottom: 32px;
+        }
+        &__header {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
