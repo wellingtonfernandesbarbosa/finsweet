@@ -4,6 +4,7 @@ import HeaderImage from "./assets/sermonHeader.png";
 
 import Header from "../../components/Header";
 import UpcomingSermonsSection from "../../components/UpcomingSermonsSection";
+import SermonEventsSection from "../../components/SermonEventsSection";
 
 import { ThemeColor } from "../../enum/ThemeColor";
 
@@ -18,6 +19,8 @@ export default function Sermon() {
       />
 
       <UpcomingSermonsSection />
+
+      <SermonEventsSection />
     </div>
   );
 }

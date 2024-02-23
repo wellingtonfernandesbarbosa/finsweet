@@ -8,7 +8,18 @@ import { Heading2 } from "../Heading";
 
 import Angels from "./assets/a-man-and-woman-wearing-angel-costumes.png";
 import Arrow from "./assets/arrow.svg";
-import { SermonCard } from "../Cards";
+import { EventCard } from "../Cards";
+import { EventInfo } from "../../interfaces";
+
+const eventInfo: EventInfo = {
+  day: 20,
+  month: "July",
+  title: "WATCH AND LISTEN TO OUR SERMONS",
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+  time1: "Friday 23:39 IST",
+  time2: "Saturday 11:20 ISD",
+  local: "No 233 Main St. New York, United States",
+};
 
 export default function UpcomingSermonsSection() {
   return (
@@ -20,7 +31,9 @@ export default function UpcomingSermonsSection() {
       </Heading2>
 
       <div className={styles.container__info}>
-        <SermonCard />
+        <div className={styles.container__info__card}>
+          <EventCard upcommingEvent="Upcoming Event" link="/" {...eventInfo} />
+        </div>
         <div className={styles.container__info__banner}>
           <img src={Angels} alt="A man and woman wearing angel costumes" />
         </div>

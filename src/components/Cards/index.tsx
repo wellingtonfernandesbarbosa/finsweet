@@ -1,7 +1,7 @@
 import styles from "./Cards.module.scss";
 
 import { ThemeColor } from "../../enum/ThemeColor";
-import { TeamMember } from "../../types/TeamMenber";
+import { EventInfo, TeamMember } from "../../interfaces";
 import { Heading4, Heading5 } from "../Heading";
 import { Label2, Label3 } from "../Label";
 import Paragraph from "../Paragraph";
@@ -100,47 +100,80 @@ import { ButtonTheme } from "../../enum/ButtonTheme";
 import Button from "../Button";
 import { Chapter03 } from "../Chapters";
 
-export const SermonCard = () => {
+interface EventCardProps {
+  backgroundColor?: boolean;
+  upcommingEvent?: string;
+  link?: string;
+  day: EventInfo["day"];
+  month: EventInfo["month"];
+  title: EventInfo["title"];
+  text: EventInfo["text"];
+  time1: EventInfo["time1"];
+  time2: EventInfo["time2"];
+  local: EventInfo["local"];
+}
+
+export const EventCard = (
+  {
+    backgroundColor = false, upcommingEvent = "", link = "", day, month, title, text, time1, time2, local }: EventCardProps
+) => {
+  
+  console.log(title);
+
+  const bgColor: React.CSSProperties =
+    backgroundColor === true
+      ? {
+          backgroundColor: "#FFF5EB",
+        }
+      : {};
+
+  const cardPadding: React.CSSProperties =
+    link == ""
+      ? {
+        padding: "24px 24px 80px 40px",
+      }
+      : {
+        padding: "32px 32px 35px 89px"
+      };
+
+  const cardStyle = {
+    ...bgColor,
+    ...cardPadding,
+  };
+
   return (
-    <div className={styles.sermonCard}>
-      <header className={styles.sermonCard__header}>
-        <Chapter03>Upcoming Event</Chapter03>
-        <div className={styles.sermonCard__header__date}>
-          <Heading5 theme={ThemeColor.black}>20</Heading5>
-          <Label2>July</Label2>
+    <section className={styles.EventCard} style={cardStyle}>
+      <div className={styles.EventCard__header}>
+        <Chapter03>{upcommingEvent}</Chapter03>
+        <div className={styles.EventCard__header__date}>
+          <Heading5 theme={ThemeColor.black}>{day}</Heading5>
+          <Label2>{month}</Label2>
         </div>
-      </header>
+      </div>
 
-      <Heading5 theme={ThemeColor.black}>
-        WATCH AND LISTEN TO OUR SERMONS
-      </Heading5>
+      <Heading5 theme={ThemeColor.black}>{title}</Heading5>
 
-      <Paragraph textColor={ThemeColor.black}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor.
-      </Paragraph>
+      <Paragraph textColor={ThemeColor.black}>{text}</Paragraph>
 
-      <div className={styles.sermonCard__time}>
+      <div className={styles.EventCard__time}>
         <img src={Clock} alt="Clock icon" />
         <Paragraph textColor={ThemeColor.black}>
-          Friday 23:39 IST
+          {time1}
           <br />
-          Saturday 11:20 ISD
+          {time2}
         </Paragraph>
       </div>
-      <div className={styles.sermonCard__location}>
+      <div className={styles.EventCard__location}>
         <img src={Location} alt="Location icon" />
-        <Paragraph textColor={ThemeColor.black}>
-          No 233 Main St. New York,
-          <br />
-          United States
-        </Paragraph>
+        <Paragraph textColor={ThemeColor.black}>{local}</Paragraph>
       </div>
-      <div className={styles.sermonCard__button}>
-        <Button path="/" size={ButtonSize.medium} theme={ButtonTheme.dark}>
-          Register
-        </Button>
-      </div>
-    </div>
+      {link && (
+        <div className={styles.EventCard__button}>
+          <Button path={link} size={ButtonSize.medium} theme={ButtonTheme.dark}>
+            Register
+          </Button>
+        </div>
+      )}
+    </section>
   );
 };

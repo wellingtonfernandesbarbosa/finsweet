@@ -6,7 +6,7 @@ import KimBowen from "./assets/KimBowen.png";
 import DanielleWatkins from "./assets/DanielleWatkins.png";
 import NaomiCraig from "./assets/NaomiCraig.png";
 import SantosPayne from "./assets/SantosPayne.png";
-import { TeamMember } from "../../types/TeamMenber";
+import { TeamMember } from "../../interfaces";
 import { TeamCard } from "../Cards";
 
 const teamMembers: TeamMember[] = [

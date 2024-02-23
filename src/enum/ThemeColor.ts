@@ -1,4 +1,4 @@
 export enum ThemeColor {
   black = 'black',
-  white = 'white'
+  white = 'white',
 }
