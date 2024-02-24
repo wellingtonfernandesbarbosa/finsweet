@@ -10,11 +10,11 @@
     margin: 0;
     padding: 0;
 
-    ul:first-child {
+    ul, li:first-child {
       border-bottom: 16px solid #ffd0a0;
     }
 
-    ul p {
+    ul li p {
       margin: 0;
     }
   }

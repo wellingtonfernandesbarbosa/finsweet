@@ -6,6 +6,7 @@ import Footer from "./components/Footer/index.tsx";
 import AboutUs from "./pages/AboutUs/index.tsx";
 import Sermon from "./pages/Sermon/index.tsx";
 import Blog from "./pages/Blog/index.tsx";
+import BlogPost from "./pages/Blog/BlogPost/index.tsx";
 
 export default function AppRoutes() {
   return (
@@ -18,6 +19,7 @@ export default function AppRoutes() {
             <Route path="aboutus" element={<AboutUs />} />
             <Route path="sermon" element={<Sermon />} />
             <Route path="blog" element={<Blog />} />
+            <Route path="blog/:id" element={<BlogPost />} />
           </Route>
         </Routes>
         <Footer />

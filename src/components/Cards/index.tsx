@@ -59,15 +59,14 @@ export const BenefitsCard = ({
 interface PostCardProps {
   bgColor?: boolean;
   title: string;
-  text: string;
+  description?: string;
   author: string;
   date: string;
 }
 
 export const PostCard = (
-  { title, text, author, date, bgColor }: PostCardProps
+  { title, description, author, date, bgColor }: PostCardProps
 ) => {
-  // TODO - Receber props indicando a cor do background
   const style: React.CSSProperties = bgColor
     ? { backgroundColor: "var(--light-orange)" }
     : {};
@@ -75,7 +74,7 @@ export const PostCard = (
     <li className={styles.PostCard} style={style}>
       <div className={styles.PostCard__header}>
         <Heading5 theme={ThemeColor.black}>{title}</Heading5>
-        <Paragraph textColor={ThemeColor.black}>{text}</Paragraph>
+        <Paragraph>{description}</Paragraph>
       </div>
 
       <div className={styles.PostCard__footer}>

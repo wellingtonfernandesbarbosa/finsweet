@@ -6,7 +6,7 @@ import styles from "./BlogPostsSection.module.scss";
 
 interface BlogPost {
   title: string;
-  text: string;
+  description: string;
   author: string;
   date: string;
 }
@@ -14,25 +14,29 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     title: "WATCH AND LISTEN TO OUR SERMONS",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
     author: "By Mathew Johnson",
     date: "Tuesday 13 May, 2021",
   },
   {
     title: "WATCH AND LISTEN TO OUR SERMONS",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
     author: "By Mathew Johnson",
     date: "Tuesday 13 May, 2021",
   },
   {
     title: "WATCH AND LISTEN TO OUR SERMONS",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
     author: "By Mathew Johnson",
     date: "Tuesday 13 May, 2021",
   },
   {
     title: "WATCH AND LISTEN TO OUR SERMONS",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
     author: "By Mathew Johnson",
     date: "Tuesday 13 May, 2021",
   },

@@ -44,16 +44,19 @@
     }
 
     &__cards {
-      li:first-child {
-        border-bottom: 16px solid #ffd0a0;
-      }
       &__list {
         display: flex;
         flex-wrap: wrap;
         gap: 24px;
-
+        
         margin: 0 auto;
         padding: 0;
+        a {
+          background-color: var(--white);
+          &:first-child {
+            border-bottom: 16px solid #ffd0a0;
+          }
+        }
       }
     }
   }
