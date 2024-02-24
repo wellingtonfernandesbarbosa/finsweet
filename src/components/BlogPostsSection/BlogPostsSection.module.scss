@@ -3,14 +3,15 @@
   margin: 0 auto;
   text-align: center;
 
-
-  &__cards{
+  &__cards {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 
     ul:first-child {
-      border-bottom: 16px solid #FFD0A0 ;
+      border-bottom: 16px solid #ffd0a0;
     }
 
     ul p {

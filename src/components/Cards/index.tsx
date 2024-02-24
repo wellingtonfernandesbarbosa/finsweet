@@ -56,26 +56,33 @@ export const BenefitsCard = ({
   );
 };
 
-interface BlogPost {
+interface PostCardProps {
+  bgColor?: boolean;
   title: string;
   text: string;
   author: string;
   date: string;
 }
 
-export const BlogPost = ({ title, text, author, date }: BlogPost) => {
+export const PostCard = (
+  { title, text, author, date, bgColor }: PostCardProps
+) => {
+  // TODO - Receber props indicando a cor do background
+  const style: React.CSSProperties = bgColor
+    ? { backgroundColor: "var(--light-orange)" }
+    : {};
   return (
-    <ul className={styles.BlogPost}>
-      <div className={styles.container__content}>
+    <li className={styles.PostCard} style={style}>
+      <div className={styles.PostCard__header}>
         <Heading5 theme={ThemeColor.black}>{title}</Heading5>
         <Paragraph textColor={ThemeColor.black}>{text}</Paragraph>
       </div>
 
-      <div className={styles.container__footer}>
+      <div className={styles.PostCard__footer}>
         <Label3>{author}</Label3>
         <Paragraph textColor={ThemeColor.black}>{date}</Paragraph>
       </div>
-    </ul>
+    </li>
   );
 };
 
@@ -113,13 +120,18 @@ interface EventCardProps {
   local: EventInfo["local"];
 }
 
-export const EventCard = (
-  {
-    backgroundColor = false, upcommingEvent = "", link = "", day, month, title, text, time1, time2, local }: EventCardProps
-) => {
-  
-  console.log(title);
-
+export const EventCard = ({
+  backgroundColor = false,
+  upcommingEvent = "",
+  link = "",
+  day,
+  month,
+  title,
+  text,
+  time1,
+  time2,
+  local,
+}: EventCardProps) => {
   const bgColor: React.CSSProperties =
     backgroundColor === true
       ? {
@@ -130,11 +142,11 @@ export const EventCard = (
   const cardPadding: React.CSSProperties =
     link == ""
       ? {
-        padding: "24px 24px 80px 40px",
-      }
+          padding: "24px 24px 80px 40px",
+        }
       : {
-        padding: "32px 32px 35px 89px"
-      };
+          padding: "32px 32px 35px 89px",
+        };
 
   const cardStyle = {
     ...bgColor,
@@ -153,7 +165,9 @@ export const EventCard = (
 
       <Heading5 theme={ThemeColor.black}>{title}</Heading5>
 
-      <Paragraph textColor={ThemeColor.black}>{text}</Paragraph>
+      <div className={styles.EventCard__paragraph}>
+        <Paragraph>{text}</Paragraph>
+      </div>
 
       <div className={styles.EventCard__time}>
         <img src={Clock} alt="Clock icon" />

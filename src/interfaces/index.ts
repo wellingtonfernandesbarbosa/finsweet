@@ -13,3 +13,11 @@ export interface EventInfo {
   time2: string;
   local: string;
 }
+
+export interface BlogPostCard {
+  id: number;
+  title: string;
+  text: string;
+  author: string;
+  date: string;
+}

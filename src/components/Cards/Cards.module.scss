@@ -48,17 +48,33 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
 }
 
-.BlogPost {
-  max-width: 292px;
-  background-color: var(--light-orange);
+.PostCard {
+  max-width: 302px;
+  background-color: var(--white);
   padding: 48px 32px;
   text-align: start;
   display: flex;
   flex-direction: column;
   gap: 48px;
 
-  h5 {
-    margin: 0 0 16px;
+  &__header {
+    h5 {
+      margin: 16px 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    p {
+      margin: 0;
+    }
   }
 }
 
@@ -121,12 +137,22 @@
     }
   }
 
+  &__paragraph {
+    p {
+      color: #333333;
+    }
+  }
+
   &__time,
   &__location {
     display: flex;
     align-items: start;
     width: 70%;
     gap: 8px;
+
+    p {
+      color: black;
+    }
   }
 
   &__button {

@@ -3,7 +3,7 @@ import styles from "./Paragraph.module.scss";
 
 interface TextProps {
   children: React.ReactNode;
-  textColor: ThemeColor;
+  textColor?: ThemeColor;
 }
 
 export default function Paragraph({ children, textColor }: TextProps) {
