@@ -10,6 +10,7 @@ import Paragraph from "../../../components/Paragraph";
 import Button from "../../../components/Button";
 import { ButtonTheme } from "../../../enum/ButtonTheme";
 import { ButtonSize } from "../../../enum/ButtonSize";
+import SermonEventsSection from "../../../components/SermonEventsSection";
 
 export default function SermonEvent() {
   const param = Number(useParams().id);
@@ -70,10 +71,21 @@ export default function SermonEvent() {
                 />
               </div>
 
-              <Button path="/sermon" size={ButtonSize.medium} theme={ButtonTheme.light}>Register now</Button>
+              <Button
+                path="/sermon"
+                size={ButtonSize.medium}
+                theme={ButtonTheme.light}
+              >
+                Register now
+              </Button>
             </form>
           </div>
         </section>
+
+        <SermonEventsSection
+          sectionTitle="Upcoming Sermons"
+          backgroundColor={false}
+        />
       </div>
     </body>
   );
