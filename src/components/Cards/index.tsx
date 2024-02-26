@@ -64,9 +64,13 @@ interface PostCardProps {
   date: string;
 }
 
-export const PostCard = (
-  { title, description, author, date, bgColor }: PostCardProps
-) => {
+export const PostCard = ({
+  title,
+  description,
+  author,
+  date,
+  bgColor,
+}: PostCardProps) => {
   const style: React.CSSProperties = bgColor
     ? { backgroundColor: "var(--light-orange)" }
     : {};
@@ -99,23 +103,25 @@ export const TeamCard = ({ name, role, image }: TeamMember) => {
   );
 };
 
-import Clock from "./assets/clock.svg";
-import Location from "./assets/location.svg";
+import Clock from "../../assets/clock.svg";
+import Location from "../../assets/location.svg";
 import { ButtonSize } from "../../enum/ButtonSize";
 import { ButtonTheme } from "../../enum/ButtonTheme";
 import Button from "../Button";
 import { Chapter03 } from "../Chapters";
+import { Link } from "react-router-dom";
 
 interface EventCardProps {
   backgroundColor?: boolean;
   upcommingEvent?: string;
   link?: string;
+  id?: EventInfo["id"];
+  description?: EventInfo["description"];
   day: EventInfo["day"];
   month: EventInfo["month"];
   title: EventInfo["title"];
-  text: EventInfo["text"];
-  time1: EventInfo["time1"];
-  time2: EventInfo["time2"];
+  date1: EventInfo["date1"];
+  date2: EventInfo["date2"];
   local: EventInfo["local"];
 }
 
@@ -123,12 +129,13 @@ export const EventCard = ({
   backgroundColor = false,
   upcommingEvent = "",
   link = "",
+  id,
   day,
   month,
   title,
-  text,
-  time1,
-  time2,
+  description,
+  date1,
+  date2,
   local,
 }: EventCardProps) => {
   const bgColor: React.CSSProperties =
@@ -136,7 +143,9 @@ export const EventCard = ({
       ? {
           backgroundColor: "#FFF5EB",
         }
-      : {};
+      : {
+          backgroundColor: "var(--white)",
+        };
 
   const cardPadding: React.CSSProperties =
     link == ""
@@ -153,7 +162,7 @@ export const EventCard = ({
   };
 
   return (
-    <section className={styles.EventCard} style={cardStyle}>
+    <div className={styles.EventCard} style={cardStyle}>
       <div className={styles.EventCard__header}>
         <Chapter03>{upcommingEvent}</Chapter03>
         <div className={styles.EventCard__header__date}>
@@ -162,18 +171,24 @@ export const EventCard = ({
         </div>
       </div>
 
-      <Heading5 theme={ThemeColor.black}>{title}</Heading5>
+      {link == "" ? (
+        <Link to={`/sermon/${id}`}>
+          <Heading5 theme={ThemeColor.black}>{title}</Heading5>
+        </Link>
+      ) : (
+        <Heading5 theme={ThemeColor.black}>{title}</Heading5>
+      )}
 
       <div className={styles.EventCard__paragraph}>
-        <Paragraph>{text}</Paragraph>
+        <Paragraph>{description}</Paragraph>
       </div>
 
       <div className={styles.EventCard__time}>
         <img src={Clock} alt="Clock icon" />
         <Paragraph textColor={ThemeColor.black}>
-          {time1}
+          {date1}
           <br />
-          {time2}
+          {date2}
         </Paragraph>
       </div>
       <div className={styles.EventCard__location}>
@@ -187,6 +202,6 @@ export const EventCard = ({
           </Button>
         </div>
       )}
-    </section>
+    </div>
   );
 };

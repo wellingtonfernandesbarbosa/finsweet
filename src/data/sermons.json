@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "title": "100 RANDOM ACTS OF KINDNESS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "https://i.imgur.com/hTcyMlZ.png",
+    "imageAlt": "Open Bible",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Pharetra sit amet aliquam id diam maecenas ultricies.\n\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Pharetra sit amet aliquam id diam maecenas ultricies.",
+    "day": 20,
+    "month": "July",
+    "date1": "Friday 23:39 IST",
+    "date2": "Saturday 11:20 ISD",
+    "local": "No 233 Main St. New York, United States"
+  },
+  {
+    "id": 2,
+    "title": "FAITH IS A PROCESS, NOT A DESTINATION",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "https://i.imgur.com/hTcyMlZ.png",
+    "imageAlt": "Open Bible",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Pharetra sit amet aliquam id diam maecenas ultricies.\n\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Pharetra sit amet aliquam id diam maecenas ultricies.",
+    "day": 20,
+    "month": "July",
+    "date1": "Friday 23:39 IST",
+    "date2": "Saturday 11:20 ISD",
+    "local": "No 233 Main St. New York, United States"
+  },
+  {
+    "id": 3,
+    "title": "THERE IS NOTHING IMPOSSIBLE",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "https://i.imgur.com/hTcyMlZ.png",
+    "imageAlt": "Open Bible",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Pharetra sit amet aliquam id diam maecenas ultricies.\n\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Pharetra sit amet aliquam id diam maecenas ultricies.",
+    "day": 20,
+    "month": "July",
+    "date1": "Friday 23:39 IST",
+    "date2": "Saturday 11:20 ISD",
+    "local": "No 233 Main St. New York, United States"
+  },
+  {
+    "id": 4,
+    "title": "Celebrating freedom and life",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "https://i.imgur.com/hTcyMlZ.png",
+    "imageAlt": "Open Bible",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Pharetra sit amet aliquam id diam maecenas ultricies.\n\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Pharetra sit amet aliquam id diam maecenas ultricies.",
+    "day": 20,
+    "month": "July",
+    "date1": "Friday 23:39 IST",
+    "date2": "Saturday 11:20 ISD",
+    "local": "No 233 Main St. New York, United States"
+  }
+]

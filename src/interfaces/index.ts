@@ -5,12 +5,14 @@ export interface TeamMember {
 }
 
 export interface EventInfo {
+  id?: number;
   day: number;
   month: string;
   title: string;
+  description?: string;
   text: string;
-  time1: string;
-  time2: string;
+  date1: string;
+  date2: string;
   local: string;
 }
 

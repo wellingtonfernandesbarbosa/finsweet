@@ -20,7 +20,10 @@ export default function Sermon() {
 
       <UpcomingSermonsSection />
 
-      <SermonEventsSection />
+      <SermonEventsSection
+        sectionTitle="View All Events"
+        backgroundColor={true}
+      />
     </div>
   );
 }

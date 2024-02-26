@@ -16,8 +16,8 @@ const eventInfo: EventInfo = {
   month: "July",
   title: "WATCH AND LISTEN TO OUR SERMONS",
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-  time1: "Friday 23:39 IST",
-  time2: "Saturday 11:20 ISD",
+  date1: "Friday 23:39 IST",
+  date2: "Saturday 11:20 ISD",
   local: "No 233 Main St. New York, United States",
 };
 
@@ -32,7 +32,12 @@ export default function UpcomingSermonsSection() {
 
       <div className={styles.container__info}>
         <div className={styles.container__info__card}>
-          <EventCard upcommingEvent="Upcoming Event" link="/" {...eventInfo} />
+          <EventCard
+            backgroundColor={true}
+            upcommingEvent="Upcoming Event"
+            {...eventInfo}
+            link="/sermons/1"
+          />
         </div>
         <div className={styles.container__info__banner}>
           <img src={Angels} alt="A man and woman wearing angel costumes" />
