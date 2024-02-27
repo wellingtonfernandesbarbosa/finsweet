@@ -8,6 +8,7 @@ import Sermon from "./pages/Sermon/index.tsx";
 import Blog from "./pages/Blog/index.tsx";
 import BlogPost from "./pages/Blog/BlogPost/index.tsx";
 import SermonEvent from "./pages/Sermon/SermonEvent/index.tsx";
+import Contact from "./pages/Contact/index.tsx";
 
 export default function AppRoutes() {
   return (
@@ -22,6 +23,7 @@ export default function AppRoutes() {
             <Route path="sermon/:id" element={<SermonEvent />} />
             <Route path="blog" element={<Blog />} />
             <Route path="blog/:id" element={<BlogPost />} />
+            <Route path="contactus" element={<Contact />} />
           </Route>
         </Routes>
         <Footer />

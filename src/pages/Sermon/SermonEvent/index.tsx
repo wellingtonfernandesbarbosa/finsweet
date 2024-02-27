@@ -70,11 +70,10 @@ export default function SermonEvent() {
                   placeholder="user@abc.com"
                 />
               </div>
-
               <Button
-                path="/sermon"
                 size={ButtonSize.medium}
                 theme={ButtonTheme.light}
+                onclick={() => alert("Submitted")}
               >
                 Register now
               </Button>

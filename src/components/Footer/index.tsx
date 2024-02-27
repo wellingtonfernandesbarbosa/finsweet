@@ -46,7 +46,7 @@ export default function Footer() {
             <Link to="/sermon">Sermons</Link>
           </Chapter02>
           <Chapter02>
-            <Link to="/blog">Events</Link>
+            <Link to="/sermon">Events</Link>
           </Chapter02>
           <Chapter02>
             <Link to="/blog">Blog</Link>

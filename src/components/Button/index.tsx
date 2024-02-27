@@ -5,12 +5,13 @@ import { ButtonTheme } from '../../enum/ButtonTheme';
 
 type ButtonProps = {
   children: React.ReactNode;
-  path: string,
-  size: ButtonSize
-  theme: ButtonTheme
+  path?: string,
+  size: ButtonSize,
+  theme: ButtonTheme,
+  onclick?: () => void,
 };
 
-const Button = ({ children, path, size=ButtonSize.medium, theme=ButtonTheme.light }: ButtonProps) => {
+const Button = ({ children, path, size=ButtonSize.medium, theme=ButtonTheme.light, onclick }: ButtonProps) => {
   
   const buttonSize = {
     [ButtonSize.small]: styles.button__small,
@@ -21,11 +22,13 @@ const Button = ({ children, path, size=ButtonSize.medium, theme=ButtonTheme.ligh
     [ButtonTheme.light]: styles.button__light,
     [ButtonTheme.dark]: styles.button__dark
   };
+
+  const element = path ?
+    <Link to={path} className={styles.button + ' ' + buttonSize[size] + ' ' + buttonTheme[theme]}>{children}</Link>
+    : <a className={styles.button + ' ' + buttonSize[size] + ' ' + buttonTheme[theme]} onClick={onclick}>{children}</a>;
   
   return (
-    <Link to={path} className={styles.button + ' ' + buttonSize[size] + ' ' + buttonTheme[theme]}>
-      {children}
-    </Link>
+    element
   );
 };
 
