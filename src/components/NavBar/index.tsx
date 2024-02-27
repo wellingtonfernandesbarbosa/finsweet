@@ -3,6 +3,7 @@ import Button from '../Button';
 import styles from "./NavBar.module.scss";
 import { ButtonSize } from '../../enum/ButtonSize';
 import { ButtonTheme } from '../../enum/ButtonTheme';
+import { ButtonType } from '../../enum/ButtonType';
 
 interface Routes {
   label: string,
@@ -48,6 +49,7 @@ const NavBar = () => {
           </ul>
 
           <Button
+            buttonType={ButtonType.ReactLink}
             theme={ButtonTheme.light}
             path="/contactus"
             size={ButtonSize.small}

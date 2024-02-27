@@ -13,6 +13,7 @@ import { PostCard } from "../../components/Cards";
 
 import posts from "./posts.json";
 import { Link } from "react-router-dom";
+import { ButtonType } from "../../enum/ButtonType";
 
 export default function Blog() {
   return (
@@ -43,7 +44,7 @@ export default function Blog() {
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
             </Paragraph>
 
-            <Button path="/blog" theme={ButtonTheme.light} size={ButtonSize.small}>
+            <Button buttonType={ButtonType.ReactLink} path="/blog" theme={ButtonTheme.light} size={ButtonSize.small}>
               Read more
             </Button>
           </div>
@@ -56,7 +57,7 @@ export default function Blog() {
         <div className={styles.container__blogCardsSection__cards}>
           <ul className={styles.container__blogCardsSection__cards__list}>
             {posts.map((post, index) => ( 
-              <Link to={`/blog/${index + 1}`} key={index}>
+              <Link to={`/blog/${post.id}`} key={index}>
                 <PostCard key={index} {...post} />
               </Link>
             ))}

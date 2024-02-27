@@ -11,6 +11,7 @@ import { ThemeColor } from "../../enum/ThemeColor";
 import { ButtonTheme } from "../../enum/ButtonTheme";
 import { ButtonSize } from "../../enum/ButtonSize";
 import SocialMediaLinks from "../SocialMediaLinks";
+import { ButtonType } from "../../enum/ButtonType";
 
 export default function Footer() {
   return (
@@ -66,7 +67,7 @@ export default function Footer() {
         </Heading4>
         <div>
           <input type="email" placeholder="Yourmail@gmail.com" />
-          <Button theme={ButtonTheme.light} path="/" size={ButtonSize.small}>
+          <Button buttonType={ButtonType.Submit} theme={ButtonTheme.light} path="/" size={ButtonSize.small}>
             Subscribe
           </Button>
         </div>

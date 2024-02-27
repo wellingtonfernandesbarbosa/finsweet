@@ -1,5 +1,6 @@
 import { ButtonSize } from "../../enum/ButtonSize";
 import { ButtonTheme } from "../../enum/ButtonTheme";
+import { ButtonType } from "../../enum/ButtonType";
 import { ThemeColor } from "../../enum/ThemeColor";
 import Button from "../Button";
 import { Chapter01 } from "../Chapters";
@@ -40,7 +41,7 @@ export default function Header({
           {title !== "" && <Heading1 theme={textColor}>{title}</Heading1>}
 
           {buttonText !== "" && (
-            <Button theme={ButtonTheme.light} path="/" size={ButtonSize.medium}>
+            <Button buttonType={ButtonType.ReactLink} theme={ButtonTheme.light} path="/" size={ButtonSize.medium}>
               {buttonText}
             </Button>
           )}

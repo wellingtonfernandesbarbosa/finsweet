@@ -74,6 +74,7 @@ export const PostCard = ({
   const style: React.CSSProperties = bgColor
     ? { backgroundColor: "var(--light-orange)" }
     : {};
+  
   return (
     <li className={styles.PostCard} style={style}>
       <div className={styles.PostCard__header}>
@@ -110,6 +111,7 @@ import { ButtonTheme } from "../../enum/ButtonTheme";
 import Button from "../Button";
 import { Chapter03 } from "../Chapters";
 import { Link } from "react-router-dom";
+import { ButtonType } from "../../enum/ButtonType";
 
 interface EventCardProps {
   backgroundColor?: boolean;
@@ -197,7 +199,7 @@ export const EventCard = ({
       </div>
       {link && (
         <div className={styles.EventCard__button}>
-          <Button path={link} size={ButtonSize.medium} theme={ButtonTheme.dark}>
+          <Button buttonType={ButtonType.ReactLink} path={link} size={ButtonSize.medium} theme={ButtonTheme.dark}>
             Register
           </Button>
         </div>

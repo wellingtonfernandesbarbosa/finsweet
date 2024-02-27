@@ -3,3 +3,74 @@
   flex-direction: column;
   background-color: var(--gray);
 }
+
+.container {
+  display: flex;
+  gap: 32px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 128px 0;
+
+  &__form {
+    flex: 1;
+    h5 {
+      margin: 0 0 32px;
+    }
+
+    &__input {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      
+      input {
+        justify-content: center;
+        background-color: var(--white);
+        padding: 20px;
+        border: none;
+
+        &::placeholder {
+          font-size: 16px;
+          color: var(--black);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      button {
+        padding: 24px 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      &__message {
+        height: 120px;
+
+        &::placeholder {
+          position: relative;
+          top: -28px;
+        }
+      }
+    } 
+  }
+
+  &__info {
+    flex: 1;
+    padding: 60px 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
+
+    h5 {
+      margin: 0;
+      width: 60%;
+    }
+
+    p, label {
+      margin: 0 0 8px;
+    }
+  }
+}

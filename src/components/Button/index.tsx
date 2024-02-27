@@ -2,16 +2,18 @@ import { Link } from 'react-router-dom';
 import styles from './Button.module.scss';
 import { ButtonSize } from '../../enum/ButtonSize';
 import { ButtonTheme } from '../../enum/ButtonTheme';
+import { ButtonType } from '../../enum/ButtonType';
 
 type ButtonProps = {
   children: React.ReactNode;
+  buttonType: ButtonType,
   path?: string,
   size: ButtonSize,
   theme: ButtonTheme,
   onclick?: () => void,
 };
 
-const Button = ({ children, path, size=ButtonSize.medium, theme=ButtonTheme.light, onclick }: ButtonProps) => {
+const Button = ({ children, buttonType, path, size=ButtonSize.medium, theme=ButtonTheme.light, onclick }: ButtonProps) => {
   
   const buttonSize = {
     [ButtonSize.small]: styles.button__small,
@@ -23,9 +25,26 @@ const Button = ({ children, path, size=ButtonSize.medium, theme=ButtonTheme.ligh
     [ButtonTheme.dark]: styles.button__dark
   };
 
-  const element = path ?
-    <Link to={path} className={styles.button + ' ' + buttonSize[size] + ' ' + buttonTheme[theme]}>{children}</Link>
-    : <a className={styles.button + ' ' + buttonSize[size] + ' ' + buttonTheme[theme]} onClick={onclick}>{children}</a>;
+  let element;
+  
+  switch (buttonType) {
+    case ButtonType.ReactLink:
+      if (!path) return;
+      element = <Link to={path} className={styles.button + ' ' + buttonSize[size] + ' ' + buttonTheme[theme]}>{children}</Link>;
+      break;
+    case ButtonType.Anchor:
+      element = <a className={styles.button + ' ' + buttonSize[size] + ' ' + buttonTheme[theme]} onClick={onclick}>{children}</a>;
+      break;
+    case ButtonType.Button:
+      element = <button className={styles.button + ' ' + buttonSize[size] + ' ' + buttonTheme[theme]} onClick={onclick}>{children}</button>;
+break;
+    case ButtonType.Submit:
+      element = <button type="submit" className={styles.button + ' ' + buttonSize[size] + ' ' + buttonTheme[theme]}>{children}</button>;
+      break;
+    default:
+      break;
+  }
+  
   
   return (
     element

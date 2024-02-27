@@ -11,6 +11,7 @@ import readingBook from "./assets/readingBook.png";
 import arrow from "./assets/arrow.svg";
 import { Heading2, Heading4 } from "../Heading";
 import { ButtonTheme } from "../../enum/ButtonTheme";
+import { ButtonType } from "../../enum/ButtonType";
 
 export default function WelcomeSection({
   footer = false,
@@ -51,7 +52,7 @@ export default function WelcomeSection({
       </div>
 
       {!footer && (
-        <Button theme={ButtonTheme.light} path="/" size={ButtonSize.medium}>
+        <Button buttonType={ButtonType.ReactLink} theme={ButtonTheme.light} size={ButtonSize.medium}>
           Read more
         </Button>
       )}

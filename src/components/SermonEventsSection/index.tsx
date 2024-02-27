@@ -3,7 +3,6 @@ import { EventCard } from "../Cards";
 import { Heading2 } from "../Heading";
 import styles from "./SermonEventsSection.module.scss";
 import events from "../../data/sermons.json";
-console.log(events);
 
 export default function SermonEventsSection({
   backgroundColor = true,
@@ -11,7 +10,8 @@ export default function SermonEventsSection({
 }: {
     backgroundColor: boolean;
     sectionTitle: string;
-}) {
+  }) {
+  
   return (
     <section className={styles.container}>
       <Heading2 theme={ThemeColor.black}>{ sectionTitle }</Heading2>
