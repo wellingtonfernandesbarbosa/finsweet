@@ -12,9 +12,14 @@ import { ButtonTheme } from "../../../enum/ButtonTheme";
 import { ButtonSize } from "../../../enum/ButtonSize";
 import SermonEventsSection from "../../../components/SermonEventsSection";
 import { ButtonType } from "../../../enum/ButtonType";
+import { useEffect } from "react";
 
 export default function SermonEvent() {
   const param = Number(useParams().id);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [param]);
 
   const sermonEvent = events.find((e) => e.id == param);
 

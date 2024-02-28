@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Button from "../../components/Button";
 import Header from "../../components/Header";
 import { Heading5 } from "../../components/Heading";
@@ -9,9 +10,13 @@ import { ButtonTheme } from "../../enum/ButtonTheme";
 import { ButtonType } from "../../enum/ButtonType";
 import { ThemeColor } from "../../enum/ThemeColor";
 import styles from "./Contact.module.scss";
-import Banner from "./assets/banner.png";
+import Banner from "./assets/banner.webp";
 
 export default function Contact() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+  
   return (
     <div className={styles.body}>
       <Header title="Get in touch with our CHURCH" subtitle="Contact" textColor={ThemeColor.white} image={Banner} />

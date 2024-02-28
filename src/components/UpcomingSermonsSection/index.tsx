@@ -6,7 +6,7 @@ import { ThemeColor } from "../../enum/ThemeColor";
 import { Label1, Label2 } from "../Label";
 import { Heading2 } from "../Heading";
 
-import Angels from "./assets/a-man-and-woman-wearing-angel-costumes.png";
+import Angels from "./assets/a-man-and-woman-wearing-angel-costumes.webp";
 import Arrow from "./assets/arrow.svg";
 import { EventCard } from "../Cards";
 import { EventInfo } from "../../interfaces";

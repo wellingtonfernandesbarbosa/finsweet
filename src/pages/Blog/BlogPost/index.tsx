@@ -5,9 +5,15 @@ import { useParams } from "react-router-dom";
 import { ThemeColor } from "../../../enum/ThemeColor";
 import { Heading2 } from "../../../components/Heading";
 import MarkdownToText from "../../../components/MarkdownToText";
+import { useEffect } from "react";
 
 export default function BlogPost() {
   const id = Number(useParams().id) - 1;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [id]);
+
   if (!posts[id]) return <div>Post not found</div>;
   
   return (

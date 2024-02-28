@@ -14,8 +14,13 @@ import { PostCard } from "../../components/Cards";
 import posts from "./posts.json";
 import { Link } from "react-router-dom";
 import { ButtonType } from "../../enum/ButtonType";
+import { useEffect } from "react";
 
 export default function Blog() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+  
   return (
     <main className={styles.container}>
       <section className={styles.container__recentPost}>

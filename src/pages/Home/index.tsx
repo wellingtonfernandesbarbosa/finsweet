@@ -1,6 +1,6 @@
 import Header from "../../components/Header";
 import styles from "./Home.module.scss";
-import headerImage from "../../assets/praying.jpeg";
+import headerImage from "../../assets/praying.webp";
 import { ThemeColor } from "../../enum/ThemeColor";
 import WhatDoWeDoSection from "../../components/WhatDoWeDoSection";
 import WelcomeSection from "../../components/WelcomeSection";
@@ -9,8 +9,12 @@ import UpcomingSermonsSection from "../../components/UpcomingSermonsSection";
 import CallToActionSection from "../../components/CallToActionSection";
 import BlogPostsSection from "../../components/BlogPostsSection";
 import { Page } from "../../enum/Page";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       <Header
