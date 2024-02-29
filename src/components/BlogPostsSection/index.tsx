@@ -1,8 +1,9 @@
+import styles from "./BlogPostsSection.module.scss";
+
 import { ThemeColor } from "../../enum/ThemeColor";
 import { PostCard } from "../Cards";
 import { Heading2 } from "../Heading";
 import { Label2 } from "../Label";
-import styles from "./BlogPostsSection.module.scss";
 
 interface BlogPost {
   title: string;

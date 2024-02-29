@@ -57,3 +57,26 @@
     }
   }
 }
+
+@media (max-width: 865px) {
+  .container {
+    padding: 128px 16px 123px;
+
+    &__content {
+      h2 {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .container {
+    padding: 64px 16px;
+    &__content {
+      h2 {
+        font-size: var(--heading2-small);
+      }
+    }
+  }
+}

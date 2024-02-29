@@ -30,7 +30,7 @@ const Button = ({ children, buttonType, path, size=ButtonSize.medium, theme=Butt
   switch (buttonType) {
     case ButtonType.ReactLink:
       if (!path) return;
-      element = <Link to={path} className={styles.button + ' ' + buttonSize[size] + ' ' + buttonTheme[theme]}>{children}</Link>;
+      element = <Link to={path} className={styles.button + ' ' + buttonSize[size] + ' ' + buttonTheme[theme]} onClick={onclick}>{children}</Link>;
       break;
     case ButtonType.Anchor:
       element = <a className={styles.button + ' ' + buttonSize[size] + ' ' + buttonTheme[theme]} onClick={onclick}>{children}</a>;

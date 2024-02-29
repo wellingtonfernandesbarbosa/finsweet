@@ -1,4 +1,5 @@
 import styles from "./SocialMediaLinks.module.scss";
+
 import Facebook from "./assets/facebook.svg";
 import FacebookBlack from "./assets/facebookBlack.svg";
 import Twitter from "./assets/twitter.svg";

@@ -33,3 +33,39 @@
     }
   }
 }
+
+@media (max-width: 1210px) {
+  .container {
+    &__info {
+      flex-direction: column;
+      &__card {
+        width: 100%;
+      }
+      &__banner {
+        height: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    padding: 0 16px;
+    h2 {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .container {
+    padding: 0;
+    h2 {
+      font-size: var(--heading2-small);
+    }
+  }
+}

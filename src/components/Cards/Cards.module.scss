@@ -16,6 +16,21 @@
   }
 }
 
+@media (max-width: 450px) {
+  .WelcomeCard {
+    width: 90%;
+    padding: 70px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .WelcomeCard {
+    padding: 40px;
+    gap: 16px;
+  }
+}
+
 .BenefitsCard {
   width: 302px;
   height: 384px;
@@ -67,7 +82,7 @@
       color: #333333;
     }
   }
-  
+
   &__footer {
     display: flex;
     flex-direction: column;

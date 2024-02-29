@@ -1,5 +1,6 @@
-import Header from "../../components/Header";
 import styles from "./Home.module.scss";
+
+import Header from "../../components/Header";
 import headerImage from "../../assets/praying.webp";
 import { ThemeColor } from "../../enum/ThemeColor";
 import WhatDoWeDoSection from "../../components/WhatDoWeDoSection";

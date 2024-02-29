@@ -1,3 +1,5 @@
+import styles from "./Header.module.scss";
+
 import { ButtonSize } from "../../enum/ButtonSize";
 import { ButtonTheme } from "../../enum/ButtonTheme";
 import { ButtonType } from "../../enum/ButtonType";
@@ -6,7 +8,6 @@ import Button from "../Button";
 import { Chapter01 } from "../Chapters";
 import { Heading1 } from "../Heading";
 import Paragraph from "../Paragraph";
-import styles from "./Header.module.scss";
 
 interface HeaderProps {
   title: string;

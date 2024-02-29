@@ -9,10 +9,15 @@
   font-family: var(--font-family);
   
   --heading1: 64px;
+  --heading1-small: 48px;
   --heading2: 48px;
+  --heading2-small: 32px;
   --heading3: 40px;
+  --heading3-small: 24px;
   --heading4: 32px;
+  --heading4-small: 20px;
   --heading5: 24px;
+  --heading5-small: 18px;
   --heading6: 16px;
 
   --primary-color: #FFD2A4;

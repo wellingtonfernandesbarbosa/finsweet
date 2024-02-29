@@ -19,3 +19,10 @@
     width: 16px;
   }
 }
+
+@media (max-width: 375px) {
+  .socialMediaLinks {
+    display: flex;
+    flex-direction: column;
+  }
+}

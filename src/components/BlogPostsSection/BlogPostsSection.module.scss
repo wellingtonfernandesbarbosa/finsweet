@@ -10,7 +10,8 @@
     margin: 0;
     padding: 0;
 
-    ul, li:first-child {
+    ul,
+    li:first-child {
       border-bottom: 16px solid #ffd0a0;
     }
 
@@ -18,5 +19,20 @@
       margin: 0;
     }
   }
-  margin-bottom: 10em;
+}
+
+@media (max-width: 1210px) {
+  .container {
+    &__cards {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .container {
+    h2 {
+      font-size: var(--heading2-small);
+    }
+  }
 }

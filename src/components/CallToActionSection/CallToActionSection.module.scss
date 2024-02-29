@@ -3,17 +3,17 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 128px 366px;
+  padding: 128px 0;
 
   &__content {
-    max-width: 768px;
+    max-width: 54%;
     background-color: var(--white);
     margin: 0 auto;
     box-sizing: border-box;
     overflow: hidden;
     padding: 72px 48px;
-    border-bottom: 16PX solid var(--primary-color);
-    
+    border-bottom: 16px solid var(--primary-color);
+
     h2 {
       margin: 0 0 16px;
       width: 55%;
@@ -22,6 +22,50 @@
     p {
       margin: 0 0 48px;
       width: 38%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    &__content {
+      max-width: 70%;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .container {
+    &__content {
+      max-width: 90%;
+    }
+  }
+}
+
+@media (max-width: 773px) {
+  .container {
+    padding: 64px 0;
+    &__content {
+      h2,
+      p {
+        width: 100%;
+        text-align: center;
+      }
+
+      a {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .container {
+    &__content {
+      padding: 48px 24px;
+      h2 {
+        font-size: var(--heading2-small);
+      }
     }
   }
 }

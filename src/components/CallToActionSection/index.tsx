@@ -1,3 +1,5 @@
+import styles from "./CallToActionSection.module.scss";
+
 import { ButtonSize } from "../../enum/ButtonSize";
 import { ButtonTheme } from "../../enum/ButtonTheme";
 import { ButtonType } from "../../enum/ButtonType";
@@ -5,7 +7,6 @@ import { ThemeColor } from "../../enum/ThemeColor";
 import Button from "../Button";
 import { Heading2 } from "../Heading";
 import Paragraph from "../Paragraph";
-import styles from "./CallToActionSection.module.scss";
 
 export default function CallToActionSection() {
   return (

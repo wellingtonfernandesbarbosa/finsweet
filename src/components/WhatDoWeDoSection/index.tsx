@@ -1,4 +1,5 @@
 import styles from "./WhatDoWeDoSection.module.scss";
+
 import { WelcomeCard } from "../../components/Cards";
 import Pray from "./assets/pray.svg";
 import Donate from "./assets/donate.svg";
