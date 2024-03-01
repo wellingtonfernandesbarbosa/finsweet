@@ -1,13 +1,30 @@
 .container {
   header {
-    padding: 160px 110px;
-    
+    div {
+      div {
+        width: 100%;
+      }
+    }
     h1 {
       margin: 0;
-    };
+    }
   }
+
   display: flex;
   flex-direction: column;
   gap: 128px;
   padding-bottom: 128px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    gap: 64px;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    gap: 32px;
+    padding-bottom: 64px;
+  }
 }

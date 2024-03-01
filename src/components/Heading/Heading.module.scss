@@ -26,3 +26,21 @@ h1, h2, h3, h4, h5, h6 {
 .heading6 {
   font-size: 16px;
 }
+
+@media (max-width: 435px) {
+  .heading1 {
+    font-size: var(--heading1-small);
+  }
+  .heading2 {
+    font-size: var(--heading2-small);
+  }
+  .heading3 {
+    font-size: var(--heading3-small);
+  }
+  .heading4 {
+    font-size: var(--heading4-small);
+  }
+  .heading5 {
+    font-size: var(--heading5-small);
+  }
+}

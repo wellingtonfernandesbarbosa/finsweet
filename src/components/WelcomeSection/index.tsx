@@ -17,8 +17,8 @@ export default function WelcomeSection({
   footer = false,
 }: {
   footer?: boolean;
-}) {
-  const secondImageStyle: React.CSSProperties | undefined = footer
+  }) {
+  const secondImageStyle: React.CSSProperties | undefined = footer && window.innerWidth > 920
     ? {
         position: "static" as const,
         width: "390px",
@@ -52,7 +52,11 @@ export default function WelcomeSection({
       </div>
 
       {!footer && (
-        <Button buttonType={ButtonType.ReactLink} theme={ButtonTheme.light} size={ButtonSize.medium}>
+        <Button
+          buttonType={ButtonType.ReactLink}
+          theme={ButtonTheme.light}
+          size={ButtonSize.medium}
+        >
           Read more
         </Button>
       )}

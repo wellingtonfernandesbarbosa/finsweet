@@ -64,7 +64,7 @@
     &__Nav {
       display: none;
       position: absolute;
-      top: 88px;
+      top: 64px;
       right: 0;
       background-color: var(--black);
       padding: 12px 0;
@@ -93,12 +93,13 @@
       justify-content: space-around;
       gap: 12px;
 
+      width: 40px;
+      height: 40px;
+
       cursor: pointer;
-      width: 50px;
-      height: 50px;
 
       div {
-        width: 50px;
+        width: 40px;
         height: 3px;
         background-color: #ffffff;
         transition: all 0.3s ease;
@@ -110,18 +111,23 @@
 @media (max-width: 425px) {
   .navbar {
     padding: 8px 0;
+    &__Logo {
+      padding-left: 0;
+    }
   }
 }
 
 @media (max-width: 375px) {
   .navbar {
+    padding: 0;
+
     &__MobileMenu {
       gap: 10px;
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
 
       div {
-        width: 40px;
+        width: 30px;
       }
     }
   }

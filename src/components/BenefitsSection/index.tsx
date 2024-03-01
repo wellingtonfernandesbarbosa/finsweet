@@ -126,11 +126,7 @@ export default function BenefitsSection({
                   key={index}
                   className={styles.container__articles__list__item}
                 >
-                  <article style={index % 2 === 1 ? {} : invertStyle}>
-                    <div>
-                      <img src={article.image} alt={article.title} />
-                    </div>
-
+                  <article style={index % 2 !== 1 ? {} : invertStyle}>
                     <div>
                       <Heading4 theme={ThemeColor.black}>
                         {article.title}
@@ -139,6 +135,10 @@ export default function BenefitsSection({
                       <Paragraph textColor={ThemeColor.black}>
                         {article.text}
                       </Paragraph>
+                    </div>
+
+                    <div>
+                      <img src={article.image} alt={article.title} />
                     </div>
                   </article>
                 </li>

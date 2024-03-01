@@ -97,7 +97,7 @@
 .TeamCard {
   padding: 48px 55px;
   background-color: var(--gray);
-  max-width: 302px;
+  width: 302px;
 
   &__image {
     margin: 0 0 26px;
@@ -119,6 +119,12 @@
     display: flex;
     gap: 20px;
     padding: 0;
+  }
+}
+
+@media (max-width: 435px) {
+  .TeamCard {
+    padding: 32px 39px;
   }
 }
 

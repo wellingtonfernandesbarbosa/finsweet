@@ -18,6 +18,14 @@
 
   &__teamMembers {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
+  }
+}
+
+@media (max-width: 435px) {
+  .container {
+    gap: 32px;
   }
 }

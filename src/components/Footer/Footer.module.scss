@@ -160,11 +160,6 @@
         }
       }
     }
-    &__subscribe {
-      h4 {
-        font-size: var(--heading4-small);
-      }
-    }
   }
 }
 
@@ -176,6 +171,7 @@
       &__links {
         &__connect {
           ul {
+            display: flex;
             flex-direction: column;
           }
         }
