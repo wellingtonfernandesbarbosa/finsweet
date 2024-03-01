@@ -74,7 +74,7 @@ export const PostCard = ({
   const style: React.CSSProperties = bgColor
     ? { backgroundColor: "var(--light-orange)" }
     : {};
-  
+
   return (
     <li className={styles.PostCard} style={style}>
       <div className={styles.PostCard__header}>
@@ -147,7 +147,9 @@ export const EventCard = ({
         }
       : {
           backgroundColor: "var(--white)",
-        };
+      }
+  ;
+ 
 
   const cardPadding: React.CSSProperties =
     link == ""
@@ -155,9 +157,8 @@ export const EventCard = ({
           padding: "24px 24px 80px 40px",
         }
       : {
-          padding: "32px 32px 35px 89px",
+          padding: window.innerWidth > 1210 ? "32px 32px 35px 89px" : "32px",
         };
-
   const cardStyle = {
     ...bgColor,
     ...cardPadding,
@@ -199,7 +200,12 @@ export const EventCard = ({
       </div>
       {link && (
         <div className={styles.EventCard__button}>
-          <Button buttonType={ButtonType.ReactLink} path={link} size={ButtonSize.medium} theme={ButtonTheme.dark}>
+          <Button
+            buttonType={ButtonType.ReactLink}
+            path={link}
+            size={ButtonSize.medium}
+            theme={ButtonTheme.dark}
+          >
             Register
           </Button>
         </div>

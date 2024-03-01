@@ -36,10 +36,19 @@
 
 @media (max-width: 1210px) {
   .container {
+    padding: 0 32px;
+
+    h2 {
+      width: 80%;
+    }
     &__info {
       flex-direction: column;
+      width: fit-content;
+      margin: auto;
+
       &__card {
         width: 100%;
+        padding: 32px 20%;
       }
       &__banner {
         height: 100%;
@@ -52,17 +61,35 @@
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 700px) {
   .container {
-    padding: 0 16px;
-    h2 {
-      width: 80%;
+    &__info {
+      &__card {
+        padding: 32px 10%;
+      }
     }
   }
 }
 
-@media (max-width: 435px) {
+@media (max-width: 540px) {
   .container {
-    padding: 0;
+    padding: 0 16px;
+
+    h2 {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .container {
+    h2 {
+      margin: 16px auto;
+    }
+    &__info {
+      &__card {
+        padding: 32px 0;
+      }
+    }
   }
 }
