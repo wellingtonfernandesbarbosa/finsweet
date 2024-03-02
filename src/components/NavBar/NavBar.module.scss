@@ -68,14 +68,14 @@
       right: 0;
       background-color: var(--black);
       padding: 12px 0;
-      transition: transition 0.3s ease;
-      transform: translateY(-100%);
+      transform: translateX(-100%);
     }
-
+    
     &__Nav.open {
       display: block;
-      transform: translateY(0);
+      transform: translateX(0);
       padding: 16px 32px 32px;
+      transition: 3s;
     }
 
     &__Items {
@@ -87,6 +87,7 @@
         font-size: 24px;
       }
     }
+    
     &__MobileMenu {
       display: flex;
       flex-direction: column;

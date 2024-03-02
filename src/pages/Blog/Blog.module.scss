@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 128px 0;
+  padding: 128px 16px;
   gap: 128px;
   background-color: #e5e5e5;
 
@@ -48,7 +48,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 24px;
-        
+
         margin: 0 auto;
         padding: 0;
         a {
@@ -56,6 +56,99 @@
           &:first-child {
             border-bottom: 16px solid #ffd0a0;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1330px) {
+  .container {
+    &__blogCardsSection {
+      &__cards {
+        &__list {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1166px) {
+  .container {
+    padding: 64px 16px;
+    
+    &__recentPost {
+      &__content {
+        &__info {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1121px) {
+  .container {
+    &__recentPost {
+      &__content {
+        padding: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1110px) {
+  .container {
+    &__recentPost {
+      &__content {
+        flex-direction: column-reverse;
+        gap: 32px;
+
+        &__info {
+          padding: 0;
+          width: 70%;
+
+          a {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    gap: 64px;
+
+    &__recentPost {
+      &__content {
+        img {
+          width: 90%;
+        }
+        &__info {
+          width: 90%;
+        }
+      }
+    }
+
+    &__blogCardsSection {
+      h2 {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .container {
+    &__recentPost {
+      &__content {
+        padding: 16px;
+        img {
+          width: 100%;
         }
       }
     }

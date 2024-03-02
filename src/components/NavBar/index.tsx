@@ -24,19 +24,24 @@ const NavBar = () => {
   };
 
   useEffect(() => {
-     function handleClickOutside(event: MouseEvent) {
-       const menu = document.getElementById("navbarMenu");
-       if (menu && !menu.contains(event.target as Node)) {
-         setIsMenuOpen(false);
-       }
-     }
+    function handleClickOutside(event: MouseEvent) {
+      const menu = document.getElementById("navbarMenu");
+      if (menu && !menu.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    }
 
-     document.addEventListener("mousedown", handleClickOutside);
-     return () => {
-       document.removeEventListener("mousedown", handleClickOutside);
-     };
-   }, []);
-  
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
   const routes: Routes[] = [
     {
       label: "HOME",
@@ -69,11 +74,19 @@ const NavBar = () => {
           <div></div>
         </div>
 
-        <nav id="navbarMenu" className={`${styles.navbar__Nav} ${isMenuOpen ? styles.open : ""}`}>
+        <nav
+          id="navbarMenu"
+          className={`${styles.navbar__Nav} ${isMenuOpen ? styles.open : ""}`}
+        >
           <ul className={styles.navbar__Items}>
             {routes.map((route, index) => (
               <li key={index}>
-                <Link className={styles.navbar__Link} to={route.to} key={index} onClick={closeMenu}>
+                <Link
+                  className={styles.navbar__Link}
+                  to={route.to}
+                  key={index}
+                  onClick={closeMenu}
+                >
                   {route.label}
                 </Link>
               </li>
