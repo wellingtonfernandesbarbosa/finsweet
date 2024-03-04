@@ -1,4 +1,7 @@
+import styles from "./Contact.module.scss";
+
 import { useEffect } from "react";
+
 import Button from "../../components/Button";
 import Header from "../../components/Header";
 import { Heading5 } from "../../components/Heading";
@@ -9,7 +12,7 @@ import { ButtonSize } from "../../enum/ButtonSize";
 import { ButtonTheme } from "../../enum/ButtonTheme";
 import { ButtonType } from "../../enum/ButtonType";
 import { ThemeColor } from "../../enum/ThemeColor";
-import styles from "./Contact.module.scss";
+
 import Banner from "./assets/banner.webp";
 
 export default function Contact() {
@@ -19,16 +22,29 @@ export default function Contact() {
   
   return (
     <div className={styles.body}>
-      <Header title="Get in touch with our CHURCH" subtitle="Contact" textColor={ThemeColor.white} image={Banner} />
+      <Header
+        title="Get in touch with our CHURCH"
+        subtitle="Contact"
+        textColor={ThemeColor.white}
+        image={Banner}
+      />
+
       <main className={styles.container}>
         <form className={styles.container__form}>
           <Heading5 theme={ThemeColor.black}>Contact Form:</Heading5>
+
           <div className={styles.container__form__input}>
             <input type="text" placeholder="Your full Name" />
             <input type="text" placeholder="Your Email" />
             <input type="text" placeholder="Query Related" />
-            <input type="text" placeholder="Message" className={styles.container__form__input__message}/>
-            <Button buttonType={ButtonType.Submit} theme={ButtonTheme.light} size={ButtonSize.medium} onclick={() => {alert("Message sent");}}>
+            <input type="text" placeholder="Message" className={styles.container__form__input__message} />
+            
+            <Button
+              buttonType={ButtonType.Submit}
+              theme={ButtonTheme.light}
+              size={ButtonSize.medium}
+              onclick={() => { alert("Message sent"); }}
+            >
               Send Message
             </Button>
           </div>
