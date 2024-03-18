@@ -15,9 +15,9 @@ export default function BlogPost() {
   }, [id]);
 
   if (!posts[id]) return <div>Post not found</div>;
-  
+
   return (
-    <body className={styles.body}>
+    <div className={styles.body}>
       <main className={styles.container}>
         <header className={styles.container__header}>
           <Heading2 theme={ThemeColor.black}>{posts[id].title}</Heading2>
@@ -29,6 +29,6 @@ export default function BlogPost() {
         <img src={posts[id].image} alt="" />
         <MarkdownToText>{posts[id].text}</MarkdownToText>
       </main>
-    </body>
+    </div>
   );
 }

@@ -1,7 +1,9 @@
+import styles from "./SermonEventsSection.module.scss";
+
 import { ThemeColor } from "../../enum/ThemeColor";
 import { EventCard } from "../Cards";
 import { Heading2 } from "../Heading";
-import styles from "./SermonEventsSection.module.scss";
+
 import events from "../../data/sermons.json";
 
 export default function SermonEventsSection({

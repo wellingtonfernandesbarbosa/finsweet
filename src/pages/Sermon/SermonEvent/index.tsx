@@ -1,18 +1,21 @@
-import { useParams } from "react-router-dom";
 import styles from "./SermonEvent.module.scss";
+
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import events from "../../../data/sermons.json";
+
 import MarkdownToText from "../../../components/MarkdownToText";
 import { ThemeColor } from "../../../enum/ThemeColor";
 import { Heading2, Heading4 } from "../../../components/Heading";
-import locationIcon from "../../../assets/location.svg";
-import clockIcon from "../../../assets/clock.svg";
 import Paragraph from "../../../components/Paragraph";
 import Button from "../../../components/Button";
 import { ButtonTheme } from "../../../enum/ButtonTheme";
 import { ButtonSize } from "../../../enum/ButtonSize";
 import SermonEventsSection from "../../../components/SermonEventsSection";
 import { ButtonType } from "../../../enum/ButtonType";
-import { useEffect } from "react";
+
+import locationIcon from "../../../assets/location.svg";
+import clockIcon from "../../../assets/clock.svg";
 
 export default function SermonEvent() {
   const param = Number(useParams().id);
