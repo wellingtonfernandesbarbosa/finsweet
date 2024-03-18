@@ -1,5 +1,6 @@
-import ReactMarkdown from "react-markdown";
 import styles from "./MarkdownToText.module.scss";
+
+import ReactMarkdown from "react-markdown";
 
 export default function MarkdownToText({ children }: { children: string }) {
   return (
