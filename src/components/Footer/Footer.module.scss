@@ -68,7 +68,12 @@
         background-color: transparent;
         border: none;
         padding: 20px;
+        color: var(--white);
         flex: 1;
+      }
+
+      input:focus {
+        outline: none;
       }
 
       button {
