@@ -1,11 +1,12 @@
 import styles from "./NavBar.module.scss";
 
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 import Button from "../Button";
 import { ButtonSize } from "../../enum/ButtonSize";
-import { ButtonTheme } from "../../enum/ButtonTheme";
 import { ButtonType } from "../../enum/ButtonType";
-import { useEffect, useState } from "react";
+import { ButtonTheme } from "../../enum/ButtonTheme";
 
 interface Routes {
   label: string;
