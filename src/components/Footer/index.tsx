@@ -2,8 +2,9 @@ import styles from "./Footer.module.scss";
 
 import { Link } from "react-router-dom";
 
-import Button from "../Button";
 import Logo from "./assets/Logo.svg";
+
+import Button from "../Button";
 import Paragraph from "../Paragraph";
 import { Chapter02 } from "../Chapters";
 import { Heading4 } from "../Heading";
@@ -27,11 +28,20 @@ export default function Footer() {
           </div>
 
           <div className={styles.footer__info__location}>
-            <Chapter02>(480) 555-0103</Chapter02>
+            <a href="tel:(480) 555-0100" target="_blank">
+              <Chapter02>(480) 555-0103</Chapter02>
+            </a>
 
-            <Chapter02>4517 Washington Ave.</Chapter02>
+            <a
+              href="https://www.google.com/maps/@37.9699894,-87.5406932,3a,75y,0.01h,99.11t/data=!3m7!1e1!3m5!1ssLqqkzQnDgkKie7XKNqwLw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DsLqqkzQnDgkKie7XKNqwLw%26cb_client%3Dsearch.revgeo_and_fetch.gps%26w%3D96%26h%3D64%26yaw%3D55.36667%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192"
+              target="_blank"
+            >
+              <Chapter02>4517 Washington Ave.</Chapter02>
+            </a>
 
-            <Chapter02>finsweet@example.com</Chapter02>
+            <a href="mailto:finsweet@example.com" target="_blank">
+              <Chapter02>finsweet@example.com</Chapter02>
+            </a>
           </div>
         </div>
 
@@ -68,7 +78,12 @@ export default function Footer() {
         </Heading4>
         <div>
           <input type="email" placeholder="Yourmail@gmail.com" />
-          <Button buttonType={ButtonType.Submit} theme={ButtonTheme.light} path="/" size={ButtonSize.small}>
+          <Button
+            buttonType={ButtonType.Submit}
+            theme={ButtonTheme.light}
+            path="/"
+            size={ButtonSize.small}
+          >
             Subscribe
           </Button>
         </div>
