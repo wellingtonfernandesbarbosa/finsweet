@@ -10,126 +10,154 @@
     margin: 0 auto;
 
     img {
-      width: 50px;
-      height: 50px;
+      display: none;
     }
-  }
 
-  &__Logo {
-    color: #ffffff;
-    padding: 13px 33px;
-    border-right: 1px solid rgba($color: #ffffff, $alpha: 0.3);
-    font-size: 26px;
-  }
+    &__Logo {
+      color: #ffffff;
+      padding: 13px 33px;
+      border-right: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+      font-size: 26px;
+    }
 
-  &__Nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-grow: 1;
-    margin: 0 64px;
-  }
+    &__Nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-grow: 1;
+      margin: 0 64px;
+      a {
+        color: var(--white);
+        text-transform: uppercase;
+      }
 
-  &__Items {
-    display: flex;
-    gap: 3em;
-  }
+      &__Items {
+        display: flex;
+        gap: 3em;
+        padding: 0;
 
-  &__Link {
-    color: #ffffff;
+        &__Link {
+          color: #ffffff;
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 890px) {
   .navbar {
-    &__Nav {
-      justify-content: space-around;
-      margin: 0;
+    &__Container {
+      &__Nav {
+        justify-content: space-around;
+        margin: 0;
+      }
     }
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .navbar {
     &__Container {
-      justify-content: space-between;
-      padding: 0 16px;
-    }
-
-    &__Logo {
-      border: none;
-    }
-
-    &__Nav {
-      display: none;
-      position: absolute;
-      top: 64px;
-      right: 0;
-      background-color: var(--black);
-      padding: 12px 0;
-      transform: translateX(-100%);
-    }
-    
-    &__Nav.open {
-      display: block;
-      transform: translateX(0);
-      padding: 16px 32px 32px;
-      transition: transform 0.3s ease;
-    }
-
-    &__Items {
-      flex-direction: column;
-      gap: 16px;
-      margin: 16px 0 32px;
-      padding: 0;
-
-      a {
-        font-size: 24px;
-      }
-    }
-    
-    &__MobileMenu {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      gap: 12px;
-
-      width: 32px;
-      height: 32px;
-
-      cursor: pointer;
-
-      div {
-        width: 32px;
-        height: 3px;
-        background-color: #ffffff;
-        transition: all 0.3s ease;
+      &__Nav {
+        &__Items {
+          gap: 2em;
+        }
       }
     }
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 650px) {
   .navbar {
-    padding: 8px 0;
-    &__Logo {
-      padding-left: 0;
+    &__Container {
+      &__Nav {
+        &__Items {
+          gap: 1em;
+        }
+      }
     }
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 620px) {
   .navbar {
     padding: 0;
+    &__Container {
+      &__Logo {
+        border: none;
+        padding: 1em;
+      }
 
-    &__MobileMenu {
-      gap: 10px;
-      width: 30px;
-      height: 30px;
+      &__Nav {
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        background-color: var(--black);
+        padding: 0 2em;
+        gap: 2em;
+        bottom: 0;
 
-      div {
-        width: 30px;
+        a {
+          background-color: transparent;
+          padding: 0;
+          text-transform: capitalize;
+        }
+
+        &__Items {
+          justify-content: space-around;
+          flex-grow: 1;
+          margin: 0.8em 0 0.7em;
+          padding: 0;
+
+          li {
+            a {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 4px;
+
+              img {
+                display: block;
+                width: 32px;
+                height: 32px;
+              }
+            }
+          }
+        }
+
+        &__ContactContainer {
+          a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+          }
+
+          img {
+            display: block;
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 467px) {
+  .navbar {
+    &__Container {
+      &__Logo {
+        padding: 0.5em 1em;
+      }
+      &__Nav {
+        &__Items {
+          gap: 0.5em;
+        }
+        gap: 0.5em;
+        padding: 0 0.5em;
       }
     }
   }

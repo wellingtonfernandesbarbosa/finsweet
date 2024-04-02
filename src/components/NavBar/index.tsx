@@ -1,108 +1,72 @@
 import styles from "./NavBar.module.scss";
 
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 import Button from "../Button";
 import { ButtonSize } from "../../enum/ButtonSize";
 import { ButtonType } from "../../enum/ButtonType";
 import { ButtonTheme } from "../../enum/ButtonTheme";
+import { MyLink } from "../MyLink";
 
 interface Routes {
   label: string;
   to: string;
+  icon: string;
+  iconAlt?: string;
 }
 
 const NavBar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      const menu = document.getElementById("navbarMenu");
-      if (menu && !menu.contains(event.target as Node)) {
-        setIsMenuOpen(false);
-      }
-    }
-
-    if (isMenuOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isMenuOpen]);
 
   const routes: Routes[] = [
     {
-      label: "HOME",
+      label: "Home",
       to: "/",
+      icon: "/src/assets/home.png",
+      iconAlt: "Home",
     },
     {
-      label: "ABOUT US",
+      label: "About Us",
       to: "/aboutus",
+      icon: "/src/assets/information.png",
+      iconAlt: "Information",
     },
     {
-      label: "SERMON",
+      label: "sermon",
       to: "/sermon",
+      icon: "/src/assets/sermon.png",
+      iconAlt: "Sermon",
     },
     {
-      label: "BLOG",
+      label: "Blog",
       to: "/blog",
+      icon: "/src/assets/blog.png",
+      iconAlt: "Blog",
     },
   ];
 
   return (
     <div className={styles.navbar}>
       <div className={styles.navbar__Container}>
-        <Link to="/" className={styles.navbar__Logo}>
+        <Link to="/" className={styles.navbar__Container__Logo}>
           {"{Finsweet"}
         </Link>
 
-        <div className={styles.navbar__MobileMenu} onClick={toggleMenu}>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-
-        <nav
-          id="navbarMenu"
-          className={`${styles.navbar__Nav} ${isMenuOpen ? styles.open : ""}`}
-        >
-          <ul className={styles.navbar__Items}>
+        <nav id="navbarMenu" className={styles.navbar__Container__Nav} >
+          <ul className={styles.navbar__Container__Nav__Items}>
             {routes.map((route, index) => (
               <li key={index}>
-                <Link
-                  className={styles.navbar__Link}
-                  to={route.to}
-                  key={index}
-                  onClick={closeMenu}
-                >
-                  {route.label}
-                </Link>
+                <MyLink route={route} />
               </li>
             ))}
           </ul>
 
-          <Button
-            buttonType={ButtonType.ReactLink}
-            theme={ButtonTheme.light}
-            path="/contactus"
-            size={ButtonSize.small}
-            onclick={closeMenu}
-          >
-            CONTACT US
-          </Button>
+          <div className={styles.navbar__Container__Nav__ContactContainer}>
+            <Button buttonType={ButtonType.ReactLink} theme={ButtonTheme.light} path="/contactus" size={ButtonSize.small} icon="/src/assets/contact.png" iconAlt="Contact"
+            >
+              Contact Us
+            </Button>
+          </div>
         </nav>
       </div>
     </div>
