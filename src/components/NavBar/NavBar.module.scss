@@ -27,6 +27,7 @@
       justify-content: space-between;
       flex-grow: 1;
       margin: 0 64px;
+      
       a {
         color: var(--white);
         text-transform: uppercase;
@@ -39,6 +40,12 @@
 
         &__Link {
           color: #ffffff;
+        }
+      }
+
+      &__ContactContainer {
+        a {
+          color: var(--black);
         }
       }
     }
@@ -129,6 +136,7 @@
         &__ContactContainer {
           a {
             display: flex;
+            color: var(--white);
             flex-direction: column;
             justify-content: center;
             align-items: center;

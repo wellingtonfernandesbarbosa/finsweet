@@ -1,7 +1,6 @@
 import styles from "./NavBar.module.scss";
 
 import { Link } from "react-router-dom";
-// import { useEffect, useState } from "react";
 
 import Button from "../Button";
 import { ButtonSize } from "../../enum/ButtonSize";
@@ -9,39 +8,53 @@ import { ButtonType } from "../../enum/ButtonType";
 import { ButtonTheme } from "../../enum/ButtonTheme";
 import { MyLink } from "../MyLink";
 
+import home from "./assets/home.png";
+import homeActive from "./assets/home-active.png";
+
+import aboutUs from "./assets/aboutUs.png";
+import aboutUsActive from "./assets/aboutUs-active.png";
+
+import blog from "./assets/blog.png";
+import blogActive from "./assets/blog-active.png";
+
+import sermon from "./assets/sermon.png";
+import sermonActive from "./assets/sermon-active.png";
+
+import contact from "./assets/contact.png";
+import contactActive from "./assets/contact-active.png";
+
 interface Routes {
   label: string;
   to: string;
   icon: string;
-  iconAlt?: string;
+  iconActive: string;
 }
 
 const NavBar = () => {
-
   const routes: Routes[] = [
     {
       label: "Home",
       to: "/",
-      icon: "/src/assets/home.png",
-      iconAlt: "Home",
+      icon: home,
+      iconActive: homeActive,
     },
     {
       label: "About Us",
       to: "/aboutus",
-      icon: "/src/assets/information.png",
-      iconAlt: "Information",
+      icon: aboutUs,
+      iconActive: aboutUsActive,
     },
     {
-      label: "sermon",
+      label: "Sermon",
       to: "/sermon",
-      icon: "/src/assets/sermon.png",
-      iconAlt: "Sermon",
+      icon: sermon,
+      iconActive: sermonActive,
     },
     {
       label: "Blog",
       to: "/blog",
-      icon: "/src/assets/blog.png",
-      iconAlt: "Blog",
+      icon: blog,
+      iconActive: blogActive,
     },
   ];
 
@@ -52,7 +65,7 @@ const NavBar = () => {
           {"{Finsweet"}
         </Link>
 
-        <nav id="navbarMenu" className={styles.navbar__Container__Nav} >
+        <nav id="navbarMenu" className={styles.navbar__Container__Nav}>
           <ul className={styles.navbar__Container__Nav__Items}>
             {routes.map((route, index) => (
               <li key={index}>
@@ -62,8 +75,7 @@ const NavBar = () => {
           </ul>
 
           <div className={styles.navbar__Container__Nav__ContactContainer}>
-            <Button buttonType={ButtonType.ReactLink} theme={ButtonTheme.light} path="/contactus" size={ButtonSize.small} icon="/src/assets/contact.png" iconAlt="Contact"
-            >
+            <Button buttonType={ButtonType.ReactLink} theme={ButtonTheme.light} path="/contactus" size={ButtonSize.small} icon={contact} iconActive={contactActive} label="Contact Us">
               Contact Us
             </Button>
           </div>
