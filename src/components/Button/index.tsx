@@ -16,10 +16,9 @@ type ButtonProps = {
   icon?: string;
   iconActive?: string;
   label?: string;
-  onclick?: () => void;
 };
 
-const Button = ({ children, buttonType, path, size = ButtonSize.medium, theme = ButtonTheme.light, icon, iconActive, label, onclick }: ButtonProps) => {
+const Button = ({ children, buttonType, path, size = ButtonSize.medium, theme = ButtonTheme.light, icon, iconActive, label }: ButtonProps) => {
   let page = useLocation().pathname;
   page = page.replace("/", "");
 
@@ -27,7 +26,6 @@ const Button = ({ children, buttonType, path, size = ButtonSize.medium, theme = 
   let textStyle = undefined;
 
   if (window.matchMedia && window.matchMedia("(max-width: 620px)").matches) {
-    // Verifica se a largura da tela é menor que 620px
     if (page === label?.toLowerCase().replace(" ", "")) {
       Icon = iconActive;
       textStyle = {
@@ -52,7 +50,7 @@ const Button = ({ children, buttonType, path, size = ButtonSize.medium, theme = 
     case ButtonType.ReactLink:
       if (!path) return null;
       element = (
-        <Link to={path} className={`${styles.button} ${buttonSize[size]} ${buttonTheme[theme]}`} style={textStyle} onClick={onclick}>
+        <Link to={path} className={`${styles.button} ${buttonSize[size]} ${buttonTheme[theme]}`} style={textStyle} >
           {Icon &&<img src={Icon} alt={label} />}
           {children}
         </Link>
@@ -60,7 +58,7 @@ const Button = ({ children, buttonType, path, size = ButtonSize.medium, theme = 
       break;
     case ButtonType.Anchor:
       element = (
-        <a className={`${styles.button} ${buttonSize[size]} ${buttonTheme[theme]}`} onClick={onclick}>
+        <a className={`${styles.button} ${buttonSize[size]} ${buttonTheme[theme]}`} >
           {children}
         </a>
       );
@@ -68,7 +66,7 @@ const Button = ({ children, buttonType, path, size = ButtonSize.medium, theme = 
 
     case ButtonType.Button:
       element = (
-        <button className={`${styles.button} ${buttonSize[size]} ${buttonTheme[theme]}`} onClick={onclick}>
+        <button className={`${styles.button} ${buttonSize[size]} ${buttonTheme[theme]}`} >
           {children}
         </button>
       );

@@ -1,6 +1,6 @@
 import styles from "./Contact.module.scss";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import Button from "../../components/Button";
 import Header from "../../components/Header";
@@ -16,9 +16,24 @@ import { ThemeColor } from "../../enum/ThemeColor";
 import Banner from "./assets/banner.webp";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [query, setQuery] = useState("");
+  const [message, setMessage] = useState("");
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  const onSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    alert("Message sent");
+
+    setName("");
+    setEmail("");
+    setQuery("");
+    setMessage("");
+  };
   
   return (
     <div className={styles.body}>
@@ -30,20 +45,19 @@ export default function Contact() {
       />
 
       <main className={styles.container}>
-        <form className={styles.container__form}>
+        <form className={styles.container__form} onSubmit={onSubmitForm}>
           <Heading5 theme={ThemeColor.black}>Contact Form:</Heading5>
 
           <div className={styles.container__form__input}>
-            <input type="text" placeholder="Your full Name" />
-            <input type="text" placeholder="Your Email" />
-            <input type="text" placeholder="Query Related" />
-            <input type="text" placeholder="Message" className={styles.container__form__input__message} />
+            <input type="text" placeholder="Your full Name" value={name} onChange={(e) => setName(e.target.value)} required />
+            <input type="text" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <input type="text" placeholder="Query Related" value={query} onChange={(e) => setQuery(e.target.value)} />
+            <input type="text" placeholder="Message" className={styles.container__form__input__message} value={message} onChange={(e) => setMessage(e.target.value)} />
             
             <Button
               buttonType={ButtonType.Submit}
               theme={ButtonTheme.light}
               size={ButtonSize.medium}
-              onclick={() => { alert("Message sent"); }}
             >
               Send Message
             </Button>

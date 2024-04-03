@@ -88,7 +88,6 @@ export default function SermonEvent() {
                   buttonType={ButtonType.Submit}
                   size={ButtonSize.medium}
                   theme={ButtonTheme.light}
-                  onclick={() => alert("Submitted")}
                 >
                   Register now
                 </Button>
