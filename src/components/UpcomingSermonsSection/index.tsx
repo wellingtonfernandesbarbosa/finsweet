@@ -36,7 +36,7 @@ export default function UpcomingSermonsSection() {
             backgroundColor={true}
             upcommingEvent="Upcoming Event"
             {...eventInfo}
-            link="/sermons/1"
+            link="/sermon/1"
           />
         </div>
         <div className={styles.container__info__banner}>

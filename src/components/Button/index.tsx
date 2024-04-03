@@ -53,7 +53,7 @@ const Button = ({ children, buttonType, path, size = ButtonSize.medium, theme = 
       if (!path) return null;
       element = (
         <Link to={path} className={`${styles.button} ${buttonSize[size]} ${buttonTheme[theme]}`} style={textStyle} onClick={onclick}>
-          {<img src={Icon} alt={label} />}
+          {Icon &&<img src={Icon} alt={label} />}
           {children}
         </Link>
       );

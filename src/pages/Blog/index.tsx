@@ -1,5 +1,8 @@
 import styles from "./Blog.module.scss";
 
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import Button from "../../components/Button";
 import { Heading2, Heading4 } from "../../components/Heading";
 import { Label2 } from "../../components/Label";
@@ -7,14 +10,12 @@ import Paragraph from "../../components/Paragraph";
 import { ButtonTheme } from "../../enum/ButtonTheme";
 import { ThemeColor } from "../../enum/ThemeColor";
 import { ButtonSize } from "../../enum/ButtonSize";
-
-import ChildrenReadingTheBible from "./assets/childrenReadingTheBible.png";
 import { PostCard } from "../../components/Cards";
+import { ButtonType } from "../../enum/ButtonType";
+
 
 import posts from "./posts.json";
-import { Link } from "react-router-dom";
-import { ButtonType } from "../../enum/ButtonType";
-import { useEffect } from "react";
+import ChildrenReadingTheBible from "./assets/childrenReadingTheBible.png";
 
 export default function Blog() {
   useEffect(() => {
