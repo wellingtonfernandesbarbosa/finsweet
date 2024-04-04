@@ -1,12 +1,28 @@
 {
   "routes": [
     {
-      "src": "/blog/:id",
-      "dest": "/blog/:[id]"
+      "src": "/aboutus",
+      "dest": "/about"
+    },
+    {
+      "src": "/sermon",
+      "dest": "/sermon"
     },
     {
       "src": "/sermon/:id",
       "dest": "/sermon/:[id]"
+    },
+    {
+      "src": "/blog",
+      "dest": "/blog"
+    },
+    {
+      "src": "/blog/:id",
+      "dest": "/blog/:[id]"
+    },
+    {
+      "src": "/contactus",
+      "dest": "/contactus"
     }
   ]
 }
