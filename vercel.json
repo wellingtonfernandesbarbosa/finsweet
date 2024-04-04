@@ -1,61 +1,8 @@
 {
-  "routes": [
-    {
-      "src": "/aboutus",
-      "dest": "/about",
-      "headers": {
-        "X-Rewrite-Url": "/aboutus"
-      }
-    },
-    {
-      "src": "/sermon",
-      "dest": "/sermon",
-      "headers": {
-        "X-Rewrite-Url": "/sermon"
-      }
-    },
-    {
-      "src": "/sermon/:id",
-      "dest": "/sermon/:[id]",
-      "headers": {
-        "X-Rewrite-Url": "/sermon/:id"
-      }
-    },
-    {
-      "src": "/blog",
-      "dest": "/blog",
-      "headers": {
-        "X-Rewrite-Url": "/blog"
-      }
-    },
-    {
-      "src": "/blog/:id",
-      "dest": "/blog/:[id]",
-      "headers": {
-        "X-Rewrite-Url": "/blog/:id"
-      }
-    },
-    {
-      "src": "/contactus",
-      "dest": "/contactus",
-      "headers": {
-        "X-Rewrite-Url": "/contactus"
-      }
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/",
-      "condition": {
-        "not": {
-          "reqHeaders": {
-            "X-Rewrite-Url": {
-              "exists": true
-            }
-          }
-        }
-      }
+      "destination": "/"
     }
   ]
 }
