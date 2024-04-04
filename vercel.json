@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "src": "/blog/:id",
+      "dest": "/blog/:[id]"
+    },
+    {
+      "src": "/sermon/:id",
+      "dest": "/sermon/:[id]"
+    }
+  ]
+}

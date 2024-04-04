@@ -1,11 +1,12 @@
 import styles from "./BlogPost.module.scss";
 
-import posts from "../posts.json";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+
+import posts from "../posts.json";
 import { ThemeColor } from "../../../enum/ThemeColor";
 import { Heading2 } from "../../../components/Heading";
 import MarkdownToText from "../../../components/MarkdownToText";
-import { useEffect } from "react";
 
 export default function BlogPost() {
   const id = Number(useParams().id) - 1;
