@@ -7,15 +7,19 @@ import posts from "../posts.json";
 import { ThemeColor } from "../../../enum/ThemeColor";
 import { Heading2 } from "../../../components/Heading";
 import MarkdownToText from "../../../components/MarkdownToText";
+import { useUpdateUrl } from "../../../hooks/useUpdateUrl";
 
 export default function BlogPost() {
   const id = Number(useParams().id) - 1;
+  const updateUrl = useUpdateUrl;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [id]);
 
   if (!posts[id]) return <div>Post not found</div>;
+
+  updateUrl(posts[id].title);
 
   return (
     <div className={styles.body}>
