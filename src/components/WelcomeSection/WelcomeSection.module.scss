@@ -49,9 +49,11 @@
   }
 
   &__readMore {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
+    a {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+    }
   }
 
   &__footerArticles {

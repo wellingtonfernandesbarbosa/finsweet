@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import styles from "./UpcomingSermonsSection.module.scss";
 
@@ -22,33 +22,28 @@ const eventInfo: EventInfo = {
 };
 
 export default function UpcomingSermonsSection() {
+  const location = useLocation().pathname;
+  
   return (
     <section className={styles.container}>
       <Label2>Upcoming Sermons</Label2>
 
-      <Heading2 theme={ThemeColor.black}>
-        join us and become part of something great
-      </Heading2>
+      <Heading2 theme={ThemeColor.black}>join us and become part of something great</Heading2>
 
       <div className={styles.container__info}>
         <div className={styles.container__info__card}>
-          <EventCard
-            backgroundColor={true}
-            upcommingEvent="Upcoming Event"
-            {...eventInfo}
-            link="/sermon/1"
-          />
+          <EventCard backgroundColor={true} upcommingEvent="Upcoming Event" {...eventInfo} link="/sermon/1" />
         </div>
         <div className={styles.container__info__banner}>
           <img src={Angels} alt="A man and woman wearing angel costumes" />
         </div>
       </div>
-      <footer className={styles.container__footer}>
-        <Link to="">
+      {location === "/sermon" ? "" : <footer className={styles.container__footer}>
+        <Link to="sermon">
           <Label1>View all Sermons</Label1>
           <img src={Arrow} alt="Arrow icon" />
         </Link>
-      </footer>
+      </footer>}
     </section>
   );
 }
