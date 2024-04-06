@@ -1,113 +1,123 @@
 .footer {
-  display: flex;
-  justify-content: space-around;
   background-color: #161722;
-  padding: 64px 110px;
-
-  &__info {
+  padding-bottom: 16px;
+  
+  &__container {
     display: flex;
     justify-content: space-around;
-    flex: 1;
-    gap: 28px;
+    padding: 64px 64px 16px;
 
-    div p {
-      margin-top: 0;
+    &__info {
+      display: flex;
+      justify-content: space-around;
+      flex: 1;
+      gap: 28px;
+
+      div p {
+        margin-top: 0;
+      }
+
+      &__content {
+        &__location {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+
+          p {
+            margin: 0;
+          }
+        }
+      }
+
+      &__links {
+        display: flex;
+        gap: 72px;
+
+        div a {
+          color: var(--white);
+        }
+
+        &__connect {
+          max-width: 226px;
+
+          ul {
+            display: flex;
+            gap: 20px;
+            padding: 0;
+          }
+        }
+      }
     }
 
-    &__content {
-      &__location {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
+    &__subscribe {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      gap: 32px;
 
-        p {
+      h4 {
+        max-width: 377px;
+        margin: 0;
+      }
+
+      div {
+        width: 512px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 14px;
+        border: 0.5px solid var(--white);
+
+        input {
+          background-color: transparent;
+          border: none;
+          padding: 20px;
+          color: var(--white);
+          flex: 1;
+        }
+
+        input:focus {
+          outline: none;
+        }
+
+        button {
           margin: 0;
         }
       }
     }
-
-    &__links {
-      display: flex;
-      gap: 72px;
-
-      div a {
-        color: var(--white);
-      }
-
-      &__connect {
-        max-width: 226px;
-
-        ul {
-          display: flex;
-          gap: 20px;
-          padding: 0;
-        }
-      }
-    }
   }
 
-  &__subscribe {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    gap: 32px;
-
-    h4 {
-      max-width: 377px;
-      margin: 0;
+  &__credits {
+    text-align: center;
+    color: var(--white);
+    a {
+      color: var(--primary-color);
     }
-
-    div {
-      width: 512px;
-      display: flex;
-      justify-content: space-between;
-      border-radius: 14px;
-      border: 0.5px solid var(--white);
-
-      input {
-        background-color: transparent;
-        border: none;
-        padding: 20px;
-        color: var(--white);
-        flex: 1;
-      }
-
-      input:focus {
-        outline: none;
-      }
-
-      button {
-        margin: 0;
-      }
-    }
-  }
-}
-
-@media (max-width: 1350px) {
-  .footer {
-    padding: 64px;
   }
 }
 
 @media (max-width: 1200px) {
   .footer {
-    padding: 64px 32px;
+    &__container {
+      padding: 64px 32px 16px;
+    }
   }
 }
 
 @media (max-width: 1150px) {
   .footer {
-    flex-direction: column;
+    &__container {
+      flex-direction: column;
 
-    &__subscribe {
-      align-self: center;
+      &__subscribe {
+        align-self: center;
 
-      h4 {
-        max-width: 100%;
-      }
+        h4 {
+          max-width: 100%;
+        }
 
-      div {
-        margin: auto;
+        div {
+          margin: auto;
+        }
       }
     }
   }
@@ -115,12 +125,14 @@
 
 @media (max-width: 973px) {
   .footer {
-    &__subscribe {
-      justify-content: center;
-      margin-top: 32px;
+    &__container {
+      &__subscribe {
+        justify-content: center;
+        margin-top: 32px;
 
-      div {
-        max-width: 90%;
+        div {
+          max-width: 90%;
+        }
       }
     }
   }
@@ -128,12 +140,14 @@
 
 @media (max-width: 720px) {
   .footer {
-    &__subscribe {
-      text-align: center;
-      h4,
-      div,
-      div input {
-        width: 100%;
+    &__container {
+      &__subscribe {
+        text-align: center;
+        h4,
+        div,
+        div input {
+          width: 100%;
+        }
       }
     }
   }
@@ -141,19 +155,24 @@
 
 @media (max-width: 620px) {
   .footer {
-    padding: 32px 16px 120px;
+    padding-bottom: 96px;
+    &__container {
+      padding: 32px 16px;
+    }
   }
 }
 
 @media (max-width: 550px) {
   .footer {
-    flex-direction: column;
-    gap: 32px;
+    &__container {
+      flex-direction: column;
+      gap: 32px;
 
-    &__subscribe {
-      margin: 0;
-      div {
-        max-width: 100%;
+      &__subscribe {
+        margin: 0;
+        div {
+          max-width: 100%;
+        }
       }
     }
   }
@@ -161,11 +180,13 @@
 
 @media (max-width: 435px) {
   .footer {
-    &__info {
-      &__links {
-        &__connect {
-          p {
-            text-align: center;
+    &__container {
+      &__info {
+        &__links {
+          &__connect {
+            p {
+              text-align: center;
+            }
           }
         }
       }
@@ -175,14 +196,16 @@
 
 @media (max-width: 375px) {
   .footer {
-    &__info {
-      gap: 16px;
+    &__container {
+      &__info {
+        gap: 16px;
 
-      &__links {
-        &__connect {
-          ul {
-            display: flex;
-            flex-direction: column;
+        &__links {
+          &__connect {
+            ul {
+              display: flex;
+              flex-direction: column;
+            }
           }
         }
       }
