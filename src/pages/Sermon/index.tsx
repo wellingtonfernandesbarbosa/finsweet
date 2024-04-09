@@ -8,11 +8,16 @@ import SermonEventsSection from "../../components/SermonEventsSection";
 
 import { ThemeColor } from "../../enum/ThemeColor";
 import { useEffect } from "react";
+import { useResetMetaTags } from "../../hooks/useResetMetaTags";
 
 export default function Sermon() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  const resetMetaTags = useResetMetaTags;
+  resetMetaTags();
+  
   return (
     <div className={styles.container}>
       <Header

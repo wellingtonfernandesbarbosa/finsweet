@@ -16,11 +16,15 @@ import { ButtonType } from "../../enum/ButtonType";
 
 import posts from "./posts.json";
 import ChildrenReadingTheBible from "./assets/childrenReadingTheBible.png";
+import { useResetMetaTags } from "../../hooks/useResetMetaTags";
 
 export default function Blog() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  const resetMetaTags = useResetMetaTags;
+  resetMetaTags();
   
   return (
     <main className={styles.container}>

@@ -8,10 +8,11 @@ import { ThemeColor } from "../../../enum/ThemeColor";
 import { Heading2 } from "../../../components/Heading";
 import MarkdownToText from "../../../components/MarkdownToText";
 import { useUpdateUrl } from "../../../hooks/useUpdateUrl";
+import { useUpdateMetaOGDescription } from "../../../hooks/useUpdateMetaOGDescription";
+import { useUpdateMetaDescription } from "../../../hooks/useUpdateMetaDescription";
 
 export default function BlogPost() {
   const id = Number(useParams().id) - 1;
-  const updateUrl = useUpdateUrl;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -19,7 +20,14 @@ export default function BlogPost() {
 
   if (!posts[id]) return <div>Post not found</div>;
 
+  const updateUrl = useUpdateUrl;
   updateUrl(posts[id].title);
+
+  const updateMetaOGDescription = useUpdateMetaOGDescription;
+  updateMetaOGDescription(posts[id].title);
+
+  const updateMetaDescription = useUpdateMetaDescription;
+  updateMetaDescription(posts[id].text.split("\n")[1]);
 
   return (
     <div className={styles.body}>

@@ -14,6 +14,7 @@ import { ButtonType } from "../../enum/ButtonType";
 import { ThemeColor } from "../../enum/ThemeColor";
 
 import Banner from "./assets/banner.webp";
+import { useResetMetaTags } from "../../hooks/useResetMetaTags";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -24,6 +25,9 @@ export default function Contact() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  const resetMetaTags = useResetMetaTags;
+  resetMetaTags();
 
   const onSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
