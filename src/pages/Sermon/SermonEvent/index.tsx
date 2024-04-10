@@ -17,8 +17,6 @@ import { ButtonType } from "../../../enum/ButtonType";
 import locationIcon from "../../../assets/location.svg";
 import clockIcon from "../../../assets/clock.svg";
 import { useUpdateUrl } from "../../../hooks/useUpdateUrl";
-import { useUpdateMetaDescription } from "../../../hooks/useUpdateMetaDescription";
-import { useUpdateMetaOGDescription } from "../../../hooks/useUpdateMetaOGDescription";
 
 export default function SermonEvent() {
   const param = Number(useParams().id);
@@ -35,11 +33,8 @@ export default function SermonEvent() {
 
   updateUrl(sermonEvent.title);
 
-  const updateMetaOGDescription = useUpdateMetaOGDescription;
-  updateMetaOGDescription(sermonEvent.title);
-
-  const updateMetaDescription = useUpdateMetaDescription;
-  updateMetaDescription(sermonEvent.text.split("\n\n")[1]);
+  const metaOGDescriptionTag = document.querySelector("meta[property='og:description']");
+  if (metaOGDescriptionTag) metaOGDescriptionTag.setAttribute("content", sermonEvent.title);
 
   return (
     <div className={styles.body}>

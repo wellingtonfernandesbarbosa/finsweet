@@ -8,8 +8,6 @@ import { ThemeColor } from "../../../enum/ThemeColor";
 import { Heading2 } from "../../../components/Heading";
 import MarkdownToText from "../../../components/MarkdownToText";
 import { useUpdateUrl } from "../../../hooks/useUpdateUrl";
-import { useUpdateMetaOGDescription } from "../../../hooks/useUpdateMetaOGDescription";
-import { useUpdateMetaDescription } from "../../../hooks/useUpdateMetaDescription";
 
 export default function BlogPost() {
   const id = Number(useParams().id) - 1;
@@ -22,12 +20,6 @@ export default function BlogPost() {
 
   const updateUrl = useUpdateUrl;
   updateUrl(posts[id].title);
-
-  const updateMetaOGDescription = useUpdateMetaOGDescription;
-  updateMetaOGDescription(posts[id].title);
-
-  const updateMetaDescription = useUpdateMetaDescription;
-  updateMetaDescription(posts[id].text.split("\n")[1]);
 
   return (
     <div className={styles.body}>
