@@ -11,15 +11,11 @@ import CallToActionSection from "../../components/CallToActionSection";
 import BlogPostsSection from "../../components/BlogPostsSection";
 import { Page } from "../../enum/Page";
 import { useEffect } from "react";
-import { useResetMetaTags } from "../../hooks/useResetMetaTags";
 
 export default function Home() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
-
-  const resetMetaTags = useResetMetaTags;
-  resetMetaTags();
   
   return (
     <>
