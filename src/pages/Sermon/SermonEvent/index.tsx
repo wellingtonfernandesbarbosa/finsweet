@@ -33,9 +33,6 @@ export default function SermonEvent() {
 
   updateUrl(sermonEvent.title);
 
-  const metaOGDescriptionTag = document.querySelector("meta[property='og:description']");
-  if (metaOGDescriptionTag) metaOGDescriptionTag.setAttribute("content", sermonEvent.title);
-
   return (
     <div className={styles.body}>
       <div className={styles.container}>
