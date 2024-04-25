@@ -86,7 +86,7 @@
   }
 
   &__credits {
-    padding: 16px 0 0;
+    padding: 16px 0;
     text-align: center;
     color: var(--white);
     a {
@@ -155,7 +155,7 @@
 
 @media (max-width: 620px) {
   .footer {
-    padding-bottom: 96px;
+    padding-bottom: 70px;
     &__container {
       padding: 32px 16px 0;
     }

@@ -17,10 +17,11 @@ import { ButtonType } from "../../enum/ButtonType";
 export default function Footer() {
   const pathname = useLocation().pathname;
   const displayWidth = window.innerWidth;
+  console.log(displayWidth > 620 && pathname !== "/contactus");
   
   return (
     <footer className={styles.footer}>
-      {displayWidth < 620 && pathname === "/contactus" && <div className={styles.footer__container}>
+      {((displayWidth > 620 && pathname !== "/contactus") || (pathname === "/contactus")) && <div className={styles.footer__container}>
         {pathname !== "/contactus" && (
           <div className={styles.footer__container__info}>
             <div className={styles.footer__container__info__content}>
