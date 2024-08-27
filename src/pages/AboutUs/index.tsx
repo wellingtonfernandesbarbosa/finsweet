@@ -15,20 +15,11 @@ export default function AboutUs() {
   
   return (
     <div className={styles.container}>
-      <Header
-        title="Serving the world around us"
-        subtitle="About Us"
-        image={BannerImage}
-        textColor={ThemeColor.black}
-      />
+      <Header title="Servindo o mundo ao nosso redor" subtitle="Sobre nós" image={BannerImage} textColor={ThemeColor.black} />
 
       <WelcomeSection footer={true} />
 
-      <BenefitsSection
-        subtitle="BENEFITS"
-        page={Page.about}
-        background="white"
-      />
+      <BenefitsSection subtitle="Benefícios" page={Page.about} background="white" />
 
       <OurTeamSection />
     </div>
