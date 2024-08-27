@@ -23,8 +23,6 @@ import sermonActive from "./assets/sermon-active.png";
 import contact from "./assets/contact.png";
 import contactActive from "./assets/contact-active.png";
 
-// Tradução da aplicação para portugues
-
 interface Routes {
   label: string;
   to: string;

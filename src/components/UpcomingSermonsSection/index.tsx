@@ -13,12 +13,12 @@ import { EventInfo } from "../../interfaces";
 
 const eventInfo: EventInfo = {
   day: 20,
-  month: "July",
-  title: "WATCH AND LISTEN TO OUR SERMONS",
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-  date1: "Friday 23:39 IST",
-  date2: "Saturday 11:20 ISD",
-  local: "No 233 Main St. New York, United States",
+  month: "Julho",
+  title: "ASSISTA E OUÇA NOSSOS SERMÕES",
+  text: "",
+  date1: "Sexta-feira 23:39 IST",
+  date2: "Sábado 11:20 ISD",
+  local: "Nº 233, Rua Principal, Nova York, Estados Unidos",
 };
 
 export default function UpcomingSermonsSection() {
@@ -26,24 +26,28 @@ export default function UpcomingSermonsSection() {
   
   return (
     <section className={styles.container}>
-      <Label2>Upcoming Sermons</Label2>
+      <Label2>Próximos Sermões</Label2>
 
-      <Heading2 theme={ThemeColor.black}>join us and become part of something great</Heading2>
+      <Heading2 theme={ThemeColor.black}>junte-se a nós e faça parte de algo grandioso</Heading2>
 
       <div className={styles.container__info}>
         <div className={styles.container__info__card}>
-          <EventCard backgroundColor={true} upcommingEvent="Upcoming Event" {...eventInfo} link="/sermoes/1" />
+          <EventCard backgroundColor={true} upcommingEvent="Próximo evento" {...eventInfo} link="/sermoes/1" />
         </div>
         <div className={styles.container__info__banner}>
-          <img src={Angels} alt="A man and woman wearing angel costumes" />
+          <img src={Angels} alt="Um homem e uma mulher vestindo fantasias de anjo" />
         </div>
       </div>
-      {location === "/sermoes" ? "" : <footer className={styles.container__footer}>
-        <Link to="sermoes">
-          <Label1>View all Sermons</Label1>
-          <img src={Arrow} alt="Arrow icon" />
-        </Link>
-      </footer>}
+      {location === "/sermoes" ? (
+        ""
+      ) : (
+        <footer className={styles.container__footer}>
+          <Link to="sermoes">
+            <Label1>Veja todos os sermões</Label1>
+            <img src={Arrow} alt="Ícone de seta" />
+          </Link>
+        </footer>
+      )}
     </section>
   );
 }

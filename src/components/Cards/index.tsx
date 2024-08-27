@@ -206,7 +206,7 @@ export const EventCard = ({
             size={ButtonSize.medium}
             theme={ButtonTheme.dark}
           >
-            Register
+            Registre-se
           </Button>
         </div>
       )}

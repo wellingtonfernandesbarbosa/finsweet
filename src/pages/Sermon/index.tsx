@@ -16,19 +16,11 @@ export default function Sermon() {
   
   return (
     <div className={styles.container}>
-      <Header
-        image={HeaderImage}
-        textColor={ThemeColor.black}
-        title="take part in OUR SERMON"
-        subtitle="SERMON"
-      />
+      <Header image={HeaderImage} textColor={ThemeColor.black} title="participe do NOSSO SERMÃO" subtitle="Sermão" />
 
       <UpcomingSermonsSection />
 
-      <SermonEventsSection
-        sectionTitle="View All Events"
-        backgroundColor={true}
-      />
+      <SermonEventsSection sectionTitle="Ver todos os eventos" backgroundColor={true} />
     </div>
   );
 }
