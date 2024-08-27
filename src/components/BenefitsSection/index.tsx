@@ -36,42 +36,45 @@ interface BenefitsArticle {
 const benefitsCards: BenefitsCard[] = [
   {
     image: Num,
-    title: "WATCH AND LISTEN TO OUR SERMONS",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, tempora?",
+    title: "Ouça Mensagens Inspiradoras",
+    text: "Seja edificado por mensagens poderosas que transformam vidas. Nossos pastores trazem a Palavra de Deus de forma clara e relevante para o seu dia a dia.",
   },
   {
     image: ManReadingBible,
-    title: "WATCH AND LISTEN TO OUR SERMONS",
+    title: "Estude a Bíblia Conosco",
+    text: "Aprofunde seu conhecimento bíblico através de nossos sermões. Descubra verdades eternas e aplique-as em sua vida.",
   },
   {
     image: HoldingBible,
-    title: "WATCH AND LISTEN TO OUR SERMONS",
+    title: "Encontre Comunidade",
+    text: "Conecte-se com outros cristãos e faça parte de uma comunidade acolhedora. Nossos sermões são um ponto de encontro para todos que buscam um relacionamento mais profundo com Deus.",
   },
   {
     image: StainedGlass,
-    title: "WATCH AND LISTEN TO OUR SERMONS",
+    title: "Experimente a Presença de Deus",
+    text: "Sinta a presença de Deus em cada mensagem. Seus desafios e ansiedades encontram respostas através da Palavra de Deus.",
   },
 ];
 
 const benefitsArticles: BenefitsArticle[] = [
   {
-    title: "find fulfillment and joy",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    title: "Encontre Propósito e Alegria",
+    text: "Junte-se a nós e faça parte de uma comunidade onde você se sentirá acolhido e valorizado. Através de nossos programas e eventos, você terá a oportunidade de conectar-se com pessoas que compartilham seus valores e objetivos. Experimente a sensação de pertencer a algo maior do que você.",
     image: Inspire,
   },
   {
-    title: "shared values",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    title: "Valores Compartilhados",
+    text: "Acreditamos na importância da família, da amizade e do serviço ao próximo. Ao fazer parte da nossa comunidade, você estará contribuindo para um mundo melhor e construindo um futuro mais promissor para todos.",
     image: Bible,
   },
   {
-    title: "charity events",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    title: "Eventos Beneficentes",
+    text: "Organize campanhas de arrecadação de alimentos, participe de mutirões de limpeza ou simplesmente doe seu tempo para ajudar aqueles que mais precisam. Juntos, podemos construir um mundo mais justo e solidário.",
     image: HandsUp,
   },
   {
-    title: "All are welcome",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    title: "Todos São Bem-Vindos",
+    text: "Celebramos a diversidade e valorizamos cada indivíduo. Acreditamos que a união faz a força e que juntos podemos construir um futuro mais brilhante.",
     image: FullStainedGlass,
   },
 ];
@@ -100,19 +103,13 @@ export default function BenefitsSection({
       <div className={styles.container__content} style={containerPdding}>
         <Label2>{subtitle}</Label2>
 
-        <Heading2 theme={ThemeColor.black}>
-          THE benefits of joining our church
-        </Heading2>
+        <Heading2 theme={ThemeColor.black}>Os benefícios de se juntar à nossa igreja </Heading2>
 
         {page === Page.home && (
           <ul className={styles.container__cards}>
             {benefitsCards.map((benefit, index) => (
               <li key={index}>
-                <BenefitsCard
-                  image={benefit.image}
-                  title={benefit.title}
-                  text={benefit.text}
-                />
+                <BenefitsCard image={benefit.image} title={benefit.title} text={benefit.text} />
               </li>
             ))}
           </ul>
@@ -122,19 +119,12 @@ export default function BenefitsSection({
           <div className={styles.container__articles}>
             <ul className={styles.container__articles__list}>
               {benefitsArticles.map((article, index) => (
-                <li
-                  key={index}
-                  className={styles.container__articles__list__item}
-                >
+                <li key={index} className={styles.container__articles__list__item}>
                   <article style={index % 2 !== 1 ? {} : invertStyle}>
                     <div>
-                      <Heading4 theme={ThemeColor.black}>
-                        {article.title}
-                      </Heading4>
+                      <Heading4 theme={ThemeColor.black}>{article.title}</Heading4>
 
-                      <Paragraph textColor={ThemeColor.black}>
-                        {article.text}
-                      </Paragraph>
+                      <Paragraph textColor={ThemeColor.black}>{article.text}</Paragraph>
                     </div>
 
                     <div>
