@@ -18,12 +18,12 @@ export default function AppRoutes() {
         <Routes>
           <Route path="/" element={<DefaultPage />}>
             <Route index element={<Home />} />
-            <Route path="aboutus" element={<AboutUs />} />
-            <Route path="sermon" element={<Sermon />} />
-            <Route path="sermon/:id" element={<SermonEvent />} />
+            <Route path="sobrenos" element={<AboutUs />} />
+            <Route path="sermoes" element={<Sermon />} />
+            <Route path="sermoes/:id" element={<SermonEvent />} />
             <Route path="blog" element={<Blog />} />
             <Route path="blog/:id" element={<BlogPost />} />
-            <Route path="contactus" element={<Contact />} />
+            <Route path="contato" element={<Contact />} />
           </Route>
         </Routes>
         <Footer />

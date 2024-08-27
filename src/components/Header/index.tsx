@@ -42,7 +42,7 @@ export default function Header({
           {title !== "" && <Heading1 theme={textColor}>{title}</Heading1>}
 
           {buttonText !== "" && (
-            <Button buttonType={ButtonType.ReactLink} theme={ButtonTheme.light} path="/aboutus" size={ButtonSize.medium}>
+            <Button buttonType={ButtonType.ReactLink} theme={ButtonTheme.light} path="/contato" size={ButtonSize.medium}>
               {buttonText}
             </Button>
           )}

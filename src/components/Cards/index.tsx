@@ -175,7 +175,7 @@ export const EventCard = ({
       </div>
 
       {link == "" ? (
-        <Link to={`/sermon/${id}`}>
+        <Link to={`/sermoes/${id}`}>
           <Heading5 theme={ThemeColor.black}>{title}</Heading5>
         </Link>
       ) : (

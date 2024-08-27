@@ -23,6 +23,8 @@ import sermonActive from "./assets/sermon-active.png";
 import contact from "./assets/contact.png";
 import contactActive from "./assets/contact-active.png";
 
+// Tradução da aplicação para portugues
+
 interface Routes {
   label: string;
   to: string;
@@ -33,20 +35,20 @@ interface Routes {
 const NavBar = () => {
   const routes: Routes[] = [
     {
-      label: "Home",
+      label: "Inicio",
       to: "/",
       icon: home,
       iconActive: homeActive,
     },
     {
-      label: "About Us",
-      to: "/aboutus",
+      label: "Sobre Nós",
+      to: "/sobrenos",
       icon: aboutUs,
       iconActive: aboutUsActive,
     },
     {
-      label: "Sermon",
-      to: "/sermon",
+      label: "Sermões",
+      to: "/sermoes",
       icon: sermon,
       iconActive: sermonActive,
     },
@@ -75,8 +77,8 @@ const NavBar = () => {
           </ul>
 
           <div className={styles.navbar__Container__Nav__ContactContainer}>
-            <Button buttonType={ButtonType.ReactLink} theme={ButtonTheme.light} path="/contactus" size={ButtonSize.small} icon={contact} iconActive={contactActive} label="Contact Us">
-              Contact Us
+            <Button buttonType={ButtonType.ReactLink} theme={ButtonTheme.light} path="/contato" size={ButtonSize.small} icon={contact} iconActive={contactActive} label="Contact Us">
+              Contato
             </Button>
           </div>
         </nav>

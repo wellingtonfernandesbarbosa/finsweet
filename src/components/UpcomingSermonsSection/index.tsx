@@ -32,14 +32,14 @@ export default function UpcomingSermonsSection() {
 
       <div className={styles.container__info}>
         <div className={styles.container__info__card}>
-          <EventCard backgroundColor={true} upcommingEvent="Upcoming Event" {...eventInfo} link="/sermon/1" />
+          <EventCard backgroundColor={true} upcommingEvent="Upcoming Event" {...eventInfo} link="/sermoes/1" />
         </div>
         <div className={styles.container__info__banner}>
           <img src={Angels} alt="A man and woman wearing angel costumes" />
         </div>
       </div>
-      {location === "/sermon" ? "" : <footer className={styles.container__footer}>
-        <Link to="sermon">
+      {location === "/sermoes" ? "" : <footer className={styles.container__footer}>
+        <Link to="sermoes">
           <Label1>View all Sermons</Label1>
           <img src={Arrow} alt="Arrow icon" />
         </Link>
