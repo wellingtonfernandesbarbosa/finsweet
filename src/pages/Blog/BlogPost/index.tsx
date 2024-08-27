@@ -3,7 +3,7 @@ import styles from "./BlogPost.module.scss";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import posts from "../posts.json";
+import posts from "../../../data/blogPosts.json";
 import { ThemeColor } from "../../../enum/ThemeColor";
 import { Heading2 } from "../../../components/Heading";
 import MarkdownToText from "../../../components/MarkdownToText";

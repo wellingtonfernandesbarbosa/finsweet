@@ -14,7 +14,7 @@ import { PostCard } from "../../components/Cards";
 import { ButtonType } from "../../enum/ButtonType";
 
 
-import posts from "./posts.json";
+import posts from "../../data/blogPosts.json";
 import ChildrenReadingTheBible from "./assets/childrenReadingTheBible.png";
 
 export default function Blog() {
