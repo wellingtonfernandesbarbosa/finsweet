@@ -1,5 +1,6 @@
 import styles from "./WelcomeSection.module.scss";
 
+import { Link } from "react-router-dom";
 import { ButtonSize } from "../../enum/ButtonSize";
 import { ThemeColor } from "../../enum/ThemeColor";
 import Button from "../Button";
@@ -12,7 +13,6 @@ import arrow from "./assets/arrow.svg";
 import { Heading2, Heading4 } from "../Heading";
 import { ButtonTheme } from "../../enum/ButtonTheme";
 import { ButtonType } from "../../enum/ButtonType";
-import { Link } from "react-router-dom";
 
 export default function WelcomeSection({ footer = false }: { footer?: boolean }) {
   const secondImageStyle: React.CSSProperties | undefined =
@@ -34,64 +34,62 @@ export default function WelcomeSection({ footer = false }: { footer?: boolean })
 
   return (
     <div className={styles.container}>
-      <Label2>Sub-Headline</Label2>
-
-      <Heading2 theme={ThemeColor.black}>love and compassion</Heading2>
+      <Heading2 theme={ThemeColor.black}>Amor e Compaixão</Heading2>
 
       <div className={styles.container__paragraph}>
         <Paragraph textColor={ThemeColor.black}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          O amor e a compaixão são os pilares da nossa fé. Ao amarmos ao próximo como a nós mesmos, demonstramos o amor de Deus de forma tangível. A compaixão nos move a agir com gentileza e bondade, aliviando o sofrimento daqueles que nos cercam. Ao
+          praticarmos essas virtudes, não apenas transformamos o mundo ao nosso redor, mas também encontramos uma profunda paz interior.
         </Paragraph>
       </div>
 
       {!footer && (
         <Button buttonType={ButtonType.ReactLink} theme={ButtonTheme.light} size={ButtonSize.medium}>
-          Read more
+          Leia mais
         </Button>
       )}
 
       <div className={styles.container__images} style={containerImagesStyle}>
-        <img src={manPraying} alt="A bearded man praying" />
-        <img src={readingBook} alt="People reading a book on a church" style={secondImageStyle} />
-        <img src={peopleSitting} alt="People sitting" />
+        <img src={manPraying} alt="Um homem barbudo rezando" />
+        <img src={readingBook} alt="Pessoas lendo um livro em uma igreja" style={secondImageStyle} />
+        <img src={peopleSitting} alt="Passoas sentadas em uma igreja" />
       </div>
 
       {!footer ? (
         <>
           <div className={styles.container__footer}>
-            <Label2>our mission & vision</Label2>
-            <Heading4 theme={ThemeColor.black}>celebrate WITH US</Heading4>
-            <Paragraph textColor={ThemeColor.black}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Paragraph>
+            <Label2>nossa missão & visão</Label2>
+            <Heading4 theme={ThemeColor.black}>comemore CONOSCO</Heading4>
+            <Paragraph textColor={ThemeColor.black}> Nossos valores são a base de tudo o que fazemos. Venha compartilhar conosco momentos de alegria e celebrar a vida.</Paragraph>
           </div>
 
           <div className={styles.container__readMore}>
             <Link to="/aboutus">
-              <p>Read more</p>
-              <img src={arrow} alt="Arrow to read more" />
+              <p>LEIA MAIS</p>
+              <img src={arrow} alt="Ícone de seta" />
             </Link>
           </div>
         </>
       ) : (
         <div className={styles.container__footerArticles}>
           <div>
-            <Label2>OUR MISSIOn & Vision</Label2>
+            <Label2>NOSSA MISSÃO E VISÃO</Label2>
 
-            <Heading4 theme={ThemeColor.black}>STRIVING FOR A BETTER TOMORROW</Heading4>
+            <Heading4 theme={ThemeColor.black}>ESFORÇANDO-SE POR UM AMANHÃ MELHOR</Heading4>
 
             <Paragraph textColor={ThemeColor.black}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-              irure dolor in reprehenderit in voluptate velit esse cillum.
+              Acreditamos em um mundo onde todos tenham oportunidades iguais e possam alcançar seu pleno potencial. Nosso compromisso é promover ações que contribuam para um futuro mais justo, sustentável e humano. Trabalhamos incansavelmente para superar
+              desafios sociais e ambientais, buscando soluções inovadoras e colaborando com a comunidade para construir um amanhã melhor para todos.
             </Paragraph>
           </div>
           <div>
-            <Label2>WHAT WE DO</Label2>
+            <Label2>O QUE FAZEMOS</Label2>
 
-            <Heading4 theme={ThemeColor.black}>BRINgING PEACE AND JOY TO THE WORLD</Heading4>
+            <Heading4 theme={ThemeColor.black}>TRAZENDO PAZ E ALEGRIA AO MUNDO</Heading4>
 
             <Paragraph textColor={ThemeColor.black}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-              irure dolor in reprehenderit in voluptate velit esse cillum.
+              Acreditamos que um mundo mais pacífico e alegre é possível. Através de nossas ações, buscamos inspirar e conectar pessoas, promovendo valores como compaixão, solidariedade e respeito mútuo. Nosso trabalho se concentra em [mencionar áreas de
+              atuação, ex: projetos sociais, eventos beneficentes, apoio a comunidades]. Junte-se a nós nessa jornada e faça a diferença na vida de muitas pessoas.
             </Paragraph>
           </div>
         </div>
