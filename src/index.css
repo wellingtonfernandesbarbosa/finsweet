@@ -7,7 +7,7 @@
   line-height: 1.5;
   font-weight: 400;
   font-family: var(--font-family);
-  
+
   --heading1: 64px;
   --heading1-small: 48px;
   --heading2: 48px;
@@ -29,6 +29,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
 }
 
 * {
@@ -43,7 +45,8 @@ a {
 }
 
 html {
-
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
   width: 100%;
 }
 
