@@ -20,10 +20,10 @@ export default function Home() {
   return (
     <>
       <Header
-        title="Become a part of our community"
-        subtitle="Welcome to our CHURCH"
-        buttonText="LEARN MORE"
-        text="---- We are here to help you in your church. We are here to help you in your church. We are here to help you in your church."
+        title="Faça parte da nossa comunidade"
+        subtitle="Bem-vindo à nossa IGREJA"
+        buttonText="SAIBA MAIS"
+        text="---- Estamos aqui para apoiar você em sua igreja. Conte com a nossa ajuda sempre que precisar."
         image={headerImage}
         textColor={ThemeColor.white}
       />
@@ -32,7 +32,7 @@ export default function Home() {
 
         <WelcomeSection />
 
-        <BenefitsSection subtitle="Whatch and Listen" page={Page.home} />
+        <BenefitsSection subtitle="Assista e ouça" page={Page.home} />
 
         <UpcomingSermonsSection />
 
