@@ -15,22 +15,22 @@ import SantosPayne from "./assets/SantosPayne.png";
 const teamMembers: TeamMember[] = [
   {
     name: "Kim Bowen",
-    role: "Pastor, Church",
+    role: "Pastora",
     image: KimBowen,
   },
   {
     name: "Danielle Watkins",
-    role: "Pastor, Church",
+    role: "Pastora",
     image: DanielleWatkins,
   },
   {
     name: "Naomi Craig",
-    role: "Pastor, Church",
+    role: "Pastora",
     image: NaomiCraig,
   },
   {
     name: "Santos Payne",
-    role: "Pastor, Church",
+    role: "Pastor",
     image: SantosPayne,
   },
 ];
@@ -39,9 +39,9 @@ export default function OurTeamSection() {
   return (
     <section className={styles.container}>
       <div className={styles.container__header}>
-        <Label2>church members</Label2>
+        <Label2>Membros da Igreja</Label2>
         <Heading2 theme={ThemeColor.black}>
-          meet our Inspirational team
+          Conheça nosso time inspirador
         </Heading2>
       </div>
 
