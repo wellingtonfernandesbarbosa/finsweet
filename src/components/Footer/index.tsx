@@ -17,13 +17,12 @@ import { ButtonType } from "../../enum/ButtonType";
 export default function Footer() {
   const pathname = useLocation().pathname;
   const displayWidth = window.innerWidth;
-  console.log(displayWidth > 620 && pathname !== "/contactus");
   
   return (
     <footer className={styles.footer}>
-      {((displayWidth > 620 && pathname !== "/contactus") || pathname === "/contactus") && (
+      {((displayWidth > 620 && pathname !== "/contato") || pathname === "/contato") && (
         <div className={styles.footer__container}>
-          {pathname !== "/contactus" && (
+          {pathname !== "/contato" && (
             <div className={styles.footer__container__info}>
               <div className={styles.footer__container__info__content}>
                 <div className={styles.footer__container__info__header}>
@@ -54,18 +53,18 @@ export default function Footer() {
 
               <div className={styles.footer__container__info__links}>
                 <div>
-                  <Paragraph textColor={ThemeColor.white}>Quicklinks</Paragraph>
+                  <Paragraph textColor={ThemeColor.white}>Links</Paragraph>
                   <Chapter02>
-                    <Link to="/">Home</Link>
+                    <Link to="/">Início</Link>
                   </Chapter02>
                   <Chapter02>
-                    <Link to="/aboutus">About Us</Link>
+                    <Link to="/sobrenos">Sobre Nós</Link>
                   </Chapter02>
                   <Chapter02>
-                    <Link to="/sermon">Sermons</Link>
+                    <Link to="/sermoes">Sermões</Link>
                   </Chapter02>
                   <Chapter02>
-                    <Link to="/sermon">Events</Link>
+                    <Link to="/sermoes">Eventos</Link>
                   </Chapter02>
                   <Chapter02>
                     <Link to="/blog">Blog</Link>
@@ -74,25 +73,25 @@ export default function Footer() {
               </div>
 
               <div className={styles.footer__container__info__links__connect}>
-                <Paragraph textColor={ThemeColor.white}>Connect</Paragraph>
+                <Paragraph textColor={ThemeColor.white}>Conectar-se</Paragraph>
                 <SocialMediaLinks theme={ThemeColor.white} />
               </div>
             </div>
           )}
 
           <div className={styles.footer__container__subscribe}>
-            <Heading4 theme={ThemeColor.white}>Subscribe to get Latest Updates and News</Heading4>
+            <Heading4 theme={ThemeColor.white}>Inscreva-se para receber as últimas atualizações e notícias</Heading4>
             <div>
-              <input type="email" placeholder="Yourmail@gmail.com" />
+              <input type="email" placeholder="seuemail@gmail.com" />
               <Button buttonType={ButtonType.Submit} theme={ButtonTheme.light} path="/" size={ButtonSize.small}>
-                Subscribe
+                Inscreva-se
               </Button>
             </div>
           </div>
         </div>
       )}
       <div className={styles.footer__credits}>
-        Developed by:{" "}
+        Desenvolvido por:{" "}
         <a href="https://wellingtonfernandes.vercel.app/" target="_blank">
           Wellington Fernandes
         </a>
