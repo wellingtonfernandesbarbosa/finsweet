@@ -13,10 +13,19 @@ import { ButtonTheme } from "../../enum/ButtonTheme";
 import { ButtonSize } from "../../enum/ButtonSize";
 import SocialMediaLinks from "../SocialMediaLinks";
 import { ButtonType } from "../../enum/ButtonType";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
   const pathname = useLocation().pathname;
-  const displayWidth = window.innerWidth;
+  const [displayWidth, setDisplayWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDisplayWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   
   return (
     <footer className={styles.footer}>
