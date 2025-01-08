@@ -13,6 +13,11 @@
     ul,
     li:first-child {
       border-bottom: 16px solid #ffd0a0;
+      padding-bottom: 32px;
+    }
+
+    li {
+      justify-content: space-between;
     }
 
     ul li p {
