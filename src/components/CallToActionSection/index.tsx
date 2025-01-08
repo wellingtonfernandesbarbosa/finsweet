@@ -13,13 +13,13 @@ export default function CallToActionSection() {
     <section className={styles.container}>
       <div className={styles.container__content}>
         <Heading2 theme={ThemeColor.black}>
-          We want to serve the world around us
+          Queremos servir ao mundo ao nosso redor
         </Heading2>
         <Paragraph textColor={ThemeColor.black}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+          Estamos comprometidos em fazer a diferença em nossa comunidade e além. Junte-se a nós em nossa missão de impacto positivo.
         </Paragraph>
         <Button buttonType={ButtonType.ReactLink} path="/" theme={ButtonTheme.light} size={ButtonSize.medium}>
-          Visit
+          Visitar
         </Button>
       </div>
     </section>
