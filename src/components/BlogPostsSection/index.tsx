@@ -14,7 +14,7 @@ export default function BlogPostsSection() {
       <Heading2 theme={ThemeColor.black}>COMPARTILHE, INSPIRE, INOVE</Heading2>
 
       <ul className={styles.container__cards}>
-        {posts.map((blogPost, index) => index < 4 && <PostCard key={index} {...blogPost} bgColor={true} />)}
+        {posts.map((blogPost, index) => index < 4 && <PostCard key={index} link={index} {...blogPost}/>)}
       </ul>
     </section>
   );

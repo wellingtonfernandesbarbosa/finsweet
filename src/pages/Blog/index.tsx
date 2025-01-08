@@ -1,7 +1,6 @@
 import styles from "./Blog.module.scss";
 
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 
 import Button from "../../components/Button";
 import { Heading2, Heading4 } from "../../components/Heading";
@@ -58,11 +57,7 @@ export default function Blog() {
 
         <div className={styles.container__blogCardsSection__cards}>
           <ul className={styles.container__blogCardsSection__cards__list}>
-            {posts.map((post, index) => (
-              <Link to={`/blog/${post.id}`} key={index}>
-                <PostCard key={index} {...post} />
-              </Link>
-            ))}
+            {posts.map((blogPost, index) => <PostCard key={index} link={index} {...blogPost} bgColor={true} />)}
           </ul>
         </div>
       </section>

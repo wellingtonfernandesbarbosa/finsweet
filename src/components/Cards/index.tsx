@@ -59,6 +59,7 @@ export const BenefitsCard = ({
 interface PostCardProps {
   bgColor?: boolean;
   title: string;
+  link?: number;
   description?: string;
   author: string;
   date: string;
@@ -67,18 +68,21 @@ interface PostCardProps {
 export const PostCard = ({
   title,
   description,
+  link,
   author,
   date,
-  bgColor,
 }: PostCardProps) => {
-  const style: React.CSSProperties = bgColor
-    ? { backgroundColor: "var(--light-orange)" }
-    : {};
 
   return (
-    <li className={styles.PostCard} style={style}>
+    <li className={styles.PostCard} >
       <div className={styles.PostCard__header}>
-        <Heading5 theme={ThemeColor.black}>{title}</Heading5>
+        {link == null ? (
+          <Heading5 theme={ThemeColor.black}>{title}</Heading5>
+        ) : (
+          <Link to={`/blog/${link + 1}`} >
+            <Heading5 theme={ThemeColor.black}>{title}</Heading5>
+          </Link>
+        )}
         <Paragraph>{description}</Paragraph>
       </div>
 
