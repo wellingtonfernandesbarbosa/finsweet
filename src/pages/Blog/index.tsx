@@ -14,12 +14,14 @@ import { ButtonType } from "../../enum/ButtonType";
 
 
 import posts from "../../data/blogPosts.json";
-import ChildrenReadingTheBible from "./assets/childrenReadingTheBible.png";
+import { Link } from "react-router-dom";
 
 export default function Blog() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  const recentPost = posts[posts.length - 1];
   
   return (
     <main className={styles.container}>
@@ -29,24 +31,27 @@ export default function Blog() {
         <Heading2 theme={ThemeColor.black}>postagem mais recente</Heading2>
 
         <div className={styles.container__recentPost__content}>
-          <img src={ChildrenReadingTheBible} alt="Children Reading the Bible" />
+          <img src={recentPost.image} alt="O bezerro de ouro" title="O bezerro de ouro" />
 
           <div className={styles.container__recentPost__content__info}>
             <div className={styles.container__recentPost__content__info__header}>
-              <Label2>Terça-feira, 13 de Maio de 2022</Label2>
+              <Label2>{recentPost.date}</Label2>
 
-              <Label2>Por João Hunau Deo</Label2>
+              <Label2>{recentPost.author}</Label2>
             </div>
 
-            <Heading4 theme={ThemeColor.black}>A Igreja estava fazendo o que muitas vezes fazia quando recebia um oráculo </Heading4>
+            <Heading4 theme={ThemeColor.black}>{recentPost.title}</Heading4>
 
             <Paragraph textColor={ThemeColor.black}>
-              A Igreja reunida buscava orientação em oração e estudo das Escrituras, esperando ouvir a voz de Deus. Durante um culto especial, um membro compartilhou uma palavra profética que trouxe esperança e direcionamento para todos. Foi um momento de
-              profunda conexão espiritual e renovação da fé.
+              {/* apenas o primeiro parágrafo até o "." */}
+              {recentPost.text.split("\n")[0]}
             </Paragraph>
 
             <Button buttonType={ButtonType.ReactLink} path="/blog" theme={ButtonTheme.light} size={ButtonSize.small}>
-              Leia mais
+              {/* linkar para o post */}
+              <Link to={`/blog/${recentPost.id}?${recentPost.title}`} >
+              Post completo
+              </Link>
             </Button>
           </div>
         </div>
