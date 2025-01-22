@@ -23,6 +23,8 @@
       justify-content: center;
       align-items: center;
       gap: 13px;
+      flex-wrap: wrap;
+      margin: 13px 0 13px;
     }
   }
 }
@@ -36,5 +38,11 @@
 @media (max-width: 435px) {
   .container {
     padding: 32px 16px;
+
+    &__header {
+      h2 {
+        font-size: 24px;
+      }
+    }
   }
 }

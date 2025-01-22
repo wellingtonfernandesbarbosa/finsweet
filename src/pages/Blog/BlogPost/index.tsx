@@ -27,8 +27,8 @@ export default function BlogPost() {
         <header className={styles.container__header}>
           <Heading2 theme={ThemeColor.black}>{posts[id].title}</Heading2>
           <div className={styles.container__header__info}>
-            <p>{posts[id].date}</p>
-            <p>{posts[id].author}</p>
+            <span>{posts[id].date}</span>
+            <span>{posts[id].author}</span>
           </div>
         </header>
         <img src={posts[id].image} alt="" />
