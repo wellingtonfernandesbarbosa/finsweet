@@ -19,20 +19,11 @@ type ButtonProps = {
 };
 
 const Button = ({ children, buttonType, path, size = ButtonSize.medium, theme = ButtonTheme.light, icon, iconActive, label }: ButtonProps) => {
-  let page = useLocation().pathname;
-  page = page.replace("/", "");
+  const location = useLocation();
+  const isActive = path && location.pathname === path; 
 
-  let Icon = icon;
-  let textStyle = undefined;
-
-  if (window.matchMedia && window.matchMedia("(max-width: 620px)").matches) {
-    if (page === label?.toLowerCase().replace(" ", "")) {
-      Icon = iconActive;
-      textStyle = {
-        color: "var(--primary-color)",
-      };
-    }
-  }
+  const Icon = isActive ? iconActive : icon; 
+  const textStyle = isActive ? { color: "var(--primary-color)" } : undefined; 
 
   const buttonSize = {
     [ButtonSize.small]: styles.button__small,
@@ -50,26 +41,23 @@ const Button = ({ children, buttonType, path, size = ButtonSize.medium, theme = 
     case ButtonType.ReactLink:
       if (!path) return null;
       element = (
-        <Link to={path} className={`${styles.button} ${buttonSize[size]} ${buttonTheme[theme]}`} style={textStyle} >
-          {Icon &&<img src={Icon} alt={label} />}
+        <Link to={path} className={`${styles.button} ${buttonSize[size]} ${buttonTheme[theme]}`} style={textStyle}>
+          {Icon && <img src={Icon} alt={label} />}
           {children}
         </Link>
       );
       break;
+
     case ButtonType.Anchor:
       element = (
-        <a className={`${styles.button} ${buttonSize[size]} ${buttonTheme[theme]}`} >
+        <a href={path} className={`${styles.button} ${buttonSize[size]} ${buttonTheme[theme]}`}>
           {children}
         </a>
       );
       break;
 
     case ButtonType.Button:
-      element = (
-        <button className={`${styles.button} ${buttonSize[size]} ${buttonTheme[theme]}`} >
-          {children}
-        </button>
-      );
+      element = <button className={`${styles.button} ${buttonSize[size]} ${buttonTheme[theme]}`}>{children}</button>;
       break;
 
     case ButtonType.Submit:

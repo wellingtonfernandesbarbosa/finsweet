@@ -8,25 +8,16 @@ interface MyLinkProps {
 }
 
 export const MyLink = ({ route }: { route: MyLinkProps }) => {
+  const location = useLocation();
+  const isActive = location.pathname === route.to;
 
-  let page = useLocation().pathname;
-  page = page.replace("/", "");
-  const Label = route.label === "Home" ? "" : route.label.replace(" ", "").toLowerCase();
+  const Icon = isActive ? route.iconActive : route.icon;
+  const textStyle = isActive ? { color: "var(--primary-color)" } : undefined;
 
-  let Icon = route.icon;
-  let textStyle = undefined;
-
-
-  if (page === Label) {
-    Icon = route.iconActive;
-    textStyle = {
-      color: "var(--primary-color)",
-    };
-  }
-    return (
-      <Link to={route.to} style={textStyle}>
-        {Icon && <img src={Icon} alt={route.label} />}
-        {route.label}
-      </Link>
-    );
+  return (
+    <Link to={route.to} style={textStyle}>
+      {Icon && <img src={Icon} alt={route.label} />}
+      {route.label}
+    </Link>
+  );
 };
