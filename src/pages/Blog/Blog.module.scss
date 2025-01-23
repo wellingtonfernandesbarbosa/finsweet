@@ -29,6 +29,8 @@
         &__header {
           display: flex;
           justify-content: space-between;
+          flex-wrap: wrap;
+          align-items: center;
         }
       }
     }
@@ -53,11 +55,10 @@
         padding: 0;
 
         li:last-child {
-            border-bottom: 16px solid #ffd0a0;
-            padding-bottom: 32px;
-          }
+          border-bottom: 16px solid #ffd0a0;
+          padding-bottom: 32px;
         }
-      
+      }
     }
   }
 }
@@ -74,11 +75,10 @@
   }
 }
 
-
 @media (max-width: 1166px) {
   .container {
     padding: 64px 16px;
-    
+
     &__recentPost {
       &__content {
         &__info {
@@ -149,6 +149,12 @@
         padding: 16px;
         img {
           width: 100%;
+        }
+
+        &__info {
+          &__header {
+            justify-content: center;
+          }
         }
       }
     }
