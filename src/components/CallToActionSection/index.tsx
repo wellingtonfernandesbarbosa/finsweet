@@ -12,13 +12,9 @@ export default function CallToActionSection() {
   return (
     <section className={styles.container}>
       <div className={styles.container__content}>
-        <Heading2 theme={ThemeColor.black}>
-          Queremos servir ao mundo ao nosso redor
-        </Heading2>
-        <Paragraph textColor={ThemeColor.black}>
-          Estamos comprometidos em fazer a diferença em nossa comunidade e além. Junte-se a nós em nossa missão de impacto positivo.
-        </Paragraph>
-        <Button buttonType={ButtonType.ReactLink} path="/" theme={ButtonTheme.light} size={ButtonSize.medium}>
+        <Heading2 theme={ThemeColor.black}>Queremos servir ao mundo ao nosso redor</Heading2>
+        <Paragraph textColor={ThemeColor.black}>Estamos comprometidos em fazer a diferença em nossa comunidade e além. Junte-se a nós em nossa missão de impacto positivo.</Paragraph>
+        <Button buttonType={ButtonType.ReactLink} path="/sobrenos" theme={ButtonTheme.dark} size={ButtonSize.medium}>
           Visitar
         </Button>
       </div>
