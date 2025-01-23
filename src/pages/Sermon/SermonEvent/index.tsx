@@ -38,7 +38,7 @@ export default function SermonEvent() {
       <div className={styles.container}>
         <section className={styles.container__article}>
           <div className={styles.container__article__content}>
-            <img src={sermonEvent.image} alt={sermonEvent.imageAlt} />
+            <img src={sermonEvent.image} alt={sermonEvent.imageAlt} title={sermonEvent.imageTitle} />
             <Heading2 theme={ThemeColor.black}>{sermonEvent.title}</Heading2>
             <MarkdownToText>{sermonEvent.text}</MarkdownToText>
           </div>
