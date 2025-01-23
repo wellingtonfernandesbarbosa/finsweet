@@ -27,6 +27,12 @@
       margin: 13px 0 13px;
     }
   }
+
+  &__image {
+    max-width: 768px;
+    align-self: center;
+    width: 100%;
+  }
 }
 
 @media (max-width: 1300px) {

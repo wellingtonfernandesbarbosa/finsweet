@@ -31,7 +31,7 @@ export default function BlogPost() {
             <span>{posts[id].author}</span>
           </div>
         </header>
-        <img src={posts[id].image} alt="" />
+        <img className={styles.container__image} src={posts[id].image} alt={posts[id].imageAlt} title={posts[id].imageTitle} />
         <MarkdownToText>{posts[id].text}</MarkdownToText>
       </main>
     </div>
