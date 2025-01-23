@@ -7,17 +7,7 @@ import { Label2, Label3 } from "../Label";
 import Paragraph from "../Paragraph";
 import SocialMediaLinks from "../SocialMediaLinks";
 
-export const WelcomeCard = ({
-  figure,
-  altFigure,
-  title,
-  text,
-}: {
-  figure: string;
-  altFigure: string;
-  title: string;
-  text: string;
-}) => {
+export const WelcomeCard = ({ figure, altFigure, title, text }: { figure: string; altFigure: string; title: string; text: string }) => {
   return (
     <div className={styles.WelcomeCard}>
       <img src={figure} alt={altFigure} />
@@ -36,11 +26,7 @@ interface BenefitsCardProps {
   text?: string;
 }
 
-export const BenefitsCard = ({
-  image = "",
-  title = "",
-  text = "",
-}: BenefitsCardProps) => {
+export const BenefitsCard = ({ image = "", title = "", text = "" }: BenefitsCardProps) => {
   const backgroundImageStyle = {
     backgroundImage: `url(${image})`,
     backgroundSize: "cover",
@@ -65,21 +51,14 @@ interface PostCardProps {
   date: string;
 }
 
-export const PostCard = ({
-  title,
-  description,
-  link,
-  author,
-  date,
-}: PostCardProps) => {
-
+export const PostCard = ({ title, description, link, author, date }: PostCardProps) => {
   return (
-    <li className={styles.PostCard} >
+    <li className={styles.PostCard}>
       <div className={styles.PostCard__header}>
         {link == null ? (
           <Heading5 theme={ThemeColor.black}>{title}</Heading5>
         ) : (
-          <Link to={`/blog/${link + 1}`} >
+          <Link to={`/blog/${link + 1}`}>
             <Heading5 theme={ThemeColor.black}>{title}</Heading5>
           </Link>
         )}
@@ -131,19 +110,7 @@ interface EventCardProps {
   local: EventInfo["local"];
 }
 
-export const EventCard = ({
-  backgroundColor = false,
-  upcommingEvent = "",
-  link = "",
-  id,
-  day,
-  month,
-  title,
-  description,
-  date1,
-  date2,
-  local,
-}: EventCardProps) => {
+export const EventCard = ({ backgroundColor = false, upcommingEvent = "", link = "", id, day, month, title, description, date1, date2, local }: EventCardProps) => {
   const bgColor: React.CSSProperties =
     backgroundColor === true
       ? {
@@ -151,14 +118,11 @@ export const EventCard = ({
         }
       : {
           backgroundColor: "var(--white)",
-      }
-  ;
- 
-
+        };
   const cardPadding: React.CSSProperties =
     link == ""
       ? {
-          padding: "24px 24px 80px 40px",
+          padding: "0px",
         }
       : {
           padding: window.innerWidth > 1210 ? "32px 32px 35px 89px" : "32px",
@@ -190,26 +154,23 @@ export const EventCard = ({
         <Paragraph>{description}</Paragraph>
       </div>
 
-      <div className={styles.EventCard__time}>
-        <img src={Clock} alt="Clock icon" />
-        <Paragraph textColor={ThemeColor.black}>
-          {date1}
-          <br />
-          {date2}
-        </Paragraph>
-      </div>
-      <div className={styles.EventCard__location}>
-        <img src={Location} alt="Location icon" />
-        <Paragraph textColor={ThemeColor.black}>{local}</Paragraph>
+      <div className={styles.EventCard__info}>
+        <div className={styles.EventCard__info__time}>
+          <img src={Clock} alt="Clock icon" />
+          <Paragraph textColor={ThemeColor.black}>
+            {date1}
+            <br />
+            {date2}
+          </Paragraph>
+        </div>
+        <div className={styles.EventCard__info__location}>
+          <img src={Location} alt="Location icon" />
+          <Paragraph textColor={ThemeColor.black}>{local}</Paragraph>
+        </div>
       </div>
       {link && (
         <div className={styles.EventCard__button}>
-          <Button
-            buttonType={ButtonType.ReactLink}
-            path={link}
-            size={ButtonSize.medium}
-            theme={ButtonTheme.dark}
-          >
+          <Button buttonType={ButtonType.ReactLink} path={link} size={ButtonSize.medium} theme={ButtonTheme.dark}>
             Registre-se
           </Button>
         </div>

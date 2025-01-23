@@ -20,10 +20,13 @@
 
     li {
       max-width: 302px;
+      background-color: rgb(255, 245, 235);
+      padding: 24px 24px 48px;
     }
-
+    
     li:first-child {
       border-bottom: 16px solid #ffd0a0;
+      padding-bottom: 32px;
     }
   }
 }
