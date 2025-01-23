@@ -29,7 +29,7 @@ export default function SermonEvent() {
 
   const sermonEvent = events.find((e) => e.id == param);
 
-  if (!sermonEvent) return <div>Event not found</div>;
+  if (!sermonEvent) return <div>Evento não encontrado</div>;
 
   updateUrl(sermonEvent.title);
 
@@ -45,7 +45,7 @@ export default function SermonEvent() {
 
           <div className={styles.container__article__register}>
             <form className={styles.container__article__register__form}>
-              <Heading4 theme={ThemeColor.black}>Register Now</Heading4>
+              <Heading4 theme={ThemeColor.black}>Registre-se Agora</Heading4>
 
               <div className={styles.container__article__register__form__info}>
                 <div className={styles.container__article__register__form__info__location}>
@@ -59,21 +59,21 @@ export default function SermonEvent() {
                 </div>
               </div>
               <div className={styles.container__article__register__form__input}>
-                <label htmlFor="name">Full Name</label>
-                <input type="text" name="name" id="name" placeholder="Leonard John" />
+                <label htmlFor="name">Nome Completo</label>
+                <input type="text" name="name" id="name" placeholder="João Silva" />
               </div>
               <div className={styles.container__article__register__form__input}>
                 <label htmlFor="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="user@abc.com" />
+                <input type="email" name="email" id="email" placeholder="usuario@exemplo.com.br" />
               </div>
               <Button buttonType={ButtonType.Submit} size={ButtonSize.medium} theme={ButtonTheme.light}>
-                Register now
+                Registre-se agora
               </Button>
             </form>
           </div>
         </section>
 
-        <SermonEventsSection sectionTitle="Upcoming Sermons" backgroundColor={false} />
+        <SermonEventsSection sectionTitle="Próximos Sermões" backgroundColor={false} />
       </div>
     </div>
   );
