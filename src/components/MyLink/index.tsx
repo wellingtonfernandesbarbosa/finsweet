@@ -9,7 +9,11 @@ interface MyLinkProps {
 
 export const MyLink = ({ route }: { route: MyLinkProps }) => {
   const location = useLocation();
-  const isActive = location.pathname === route.to;
+
+  const isActive =
+    route.to === "/" // Se for a rota inicial
+      ? location.pathname === "/" // Verifica se a rota atual é exatamente "/"
+      : location.pathname.startsWith(route.to); // Caso contrário, verifica se começa com a rota
 
   const Icon = isActive ? route.iconActive : route.icon;
   const textStyle = isActive ? { color: "var(--primary-color)" } : undefined;
