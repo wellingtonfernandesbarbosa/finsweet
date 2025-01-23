@@ -31,7 +31,7 @@ export default function Blog() {
         <Heading2 theme={ThemeColor.black}>postagem mais recente</Heading2>
 
         <div className={styles.container__recentPost__content}>
-          <img src={recentPost.image} alt="O bezerro de ouro" title="O bezerro de ouro" />
+          <img src={recentPost.image} alt={recentPost.imageAlt} title={recentPost.imageAlt} />
 
           <div className={styles.container__recentPost__content__info}>
             <div className={styles.container__recentPost__content__info__header}>
