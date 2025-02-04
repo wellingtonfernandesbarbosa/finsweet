@@ -33,6 +33,10 @@
           align-items: center;
         }
       }
+
+      img {
+        max-width: 50%;
+      }
     }
   }
 
@@ -95,6 +99,10 @@
       &__content {
         padding: 32px;
       }
+
+      img {
+        max-width: 70%;
+      }
     }
   }
 }
@@ -114,6 +122,10 @@
             margin: 0 auto;
           }
         }
+
+        img {
+          // max-width: 60%;
+        }
       }
     }
   }
@@ -126,7 +138,7 @@
     &__recentPost {
       &__content {
         img {
-          width: 90%;
+          max-width: 90%;
         }
         &__info {
           width: 90%;
