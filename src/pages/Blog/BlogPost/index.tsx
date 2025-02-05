@@ -8,6 +8,7 @@ import { ThemeColor } from "../../../enum/ThemeColor";
 import { Heading2 } from "../../../components/Heading";
 import MarkdownToText from "../../../components/MarkdownToText";
 import { useUpdateUrl } from "../../../hooks/useUpdateUrl";
+import sanitizeString from "../../../utils/sanitizeString";
 
 export default function BlogPost() {
   const id = Number(useParams().id) - 1;
@@ -19,7 +20,7 @@ export default function BlogPost() {
   if (!posts[id]) return <div>Post not found</div>;
 
   const updateUrl = useUpdateUrl;
-  updateUrl(posts[id].title);
+  updateUrl(sanitizeString(posts[id].title));
 
   return (
     <div className={styles.body}>

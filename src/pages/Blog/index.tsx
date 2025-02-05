@@ -12,9 +12,9 @@ import { ButtonSize } from "../../enum/ButtonSize";
 import { PostCard } from "../../components/Cards";
 import { ButtonType } from "../../enum/ButtonType";
 
-
 import posts from "../../data/blogPosts.json";
 import { Link } from "react-router-dom";
+import sanitizeString from "../../utils/sanitizeString";
 
 export default function Blog() {
   useEffect(() => {
@@ -43,13 +43,11 @@ export default function Blog() {
             <Heading4 theme={ThemeColor.black}>{recentPost.title}</Heading4>
 
             <Paragraph textColor={ThemeColor.black}>
-              {/* apenas o primeiro parágrafo até o "." */}
               {recentPost.text.split("\n")[0]}
             </Paragraph>
 
             <Button buttonType={ButtonType.ReactLink} path="/blog" theme={ButtonTheme.light} size={ButtonSize.small}>
-              {/* linkar para o post */}
-              <Link to={`/blog/${recentPost.id}?${recentPost.title}`} >
+              <Link to={`/blog/${recentPost.id}?${sanitizeString(recentPost.title)}`} >
               Post completo
               </Link>
             </Button>

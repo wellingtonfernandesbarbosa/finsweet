@@ -17,6 +17,7 @@ import { ButtonType } from "../../../enum/ButtonType";
 import locationIcon from "../../../assets/location.svg";
 import clockIcon from "../../../assets/clock.svg";
 import { useUpdateUrl } from "../../../hooks/useUpdateUrl";
+import sanitizeString from "../../../utils/sanitizeString";
 
 export default function SermonEvent() {
   const param = Number(useParams().id);
@@ -31,7 +32,7 @@ export default function SermonEvent() {
 
   if (!sermonEvent) return <div>Evento não encontrado</div>;
 
-  updateUrl(sermonEvent.title);
+  updateUrl(sanitizeString(sermonEvent.title));
 
   return (
     <div className={styles.body}>
