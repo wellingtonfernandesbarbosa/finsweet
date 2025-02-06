@@ -58,7 +58,7 @@ export const PostCard = ({ title, description, link, author, date }: PostCardPro
         {link == null ? (
           <Heading5 theme={ThemeColor.black}>{title}</Heading5>
         ) : (
-          <Link to={`/blog/${link + 1}`}>
+          <Link to={`/blog/${link + 1}?${sanitizeString(title)}`}>
             <Heading5 theme={ThemeColor.black}>{title}</Heading5>
           </Link>
         )}
@@ -95,6 +95,7 @@ import Button from "../Button";
 import { Chapter03 } from "../Chapters";
 import { Link } from "react-router-dom";
 import { ButtonType } from "../../enum/ButtonType";
+import sanitizeString from "../../utils/sanitizeString";
 
 interface EventCardProps {
   backgroundColor?: boolean;
@@ -143,7 +144,7 @@ export const EventCard = ({ backgroundColor = false, upcommingEvent = "", link =
       </div>
 
       {link == "" ? (
-        <Link to={`/sermoes/${id}`}>
+        <Link to={`/sermoes/${id}?${sanitizeString(title)}`}>
           <Heading5 theme={ThemeColor.black}>{title}</Heading5>
         </Link>
       ) : (
