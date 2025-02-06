@@ -58,7 +58,7 @@ export const PostCard = ({ title, description, link, author, date }: PostCardPro
         {link == null ? (
           <Heading5 theme={ThemeColor.black}>{title}</Heading5>
         ) : (
-          <Link to={`/blog/${link + 1}?${sanitizeString(title)}`}>
+          <Link to={`/blog/${link}?${sanitizeString(title)}`}>
             <Heading5 theme={ThemeColor.black}>{title}</Heading5>
           </Link>
         )}
