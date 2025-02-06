@@ -96,12 +96,18 @@
 @media (max-width: 1121px) {
   .container {
     &__recentPost {
+      width: 954px;
+      max-width: fit-content;
       &__content {
         padding: 32px;
+
+        &__info {
+          width: 85%;
+        }
       }
 
       img {
-        max-width: 70%;
+        max-width: 85%;
       }
     }
   }
@@ -116,7 +122,6 @@
 
         &__info {
           padding: 0;
-          width: 70%;
 
           a {
             margin: 0 auto;
@@ -134,10 +139,10 @@
     &__recentPost {
       &__content {
         img {
-          max-width: 90%;
+          max-width: 95%;
         }
         &__info {
-          width: 90%;
+          width: 95%;
         }
       }
     }
