@@ -60,7 +60,7 @@ export default function Blog() {
 
         <div className={styles.container__blogCardsSection__cards}>
           <ul className={styles.container__blogCardsSection__cards__list}>
-            {posts.map((blogPost, index) => <PostCard key={index} link={index} {...blogPost} bgColor={true} />)}
+            {posts.map((blogPost, index) => <PostCard key={index} link={index} {...blogPost} bgColor={true} />).reverse()}
           </ul>
         </div>
       </section>

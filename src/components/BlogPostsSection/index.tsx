@@ -14,7 +14,9 @@ export default function BlogPostsSection() {
       <Heading2 theme={ThemeColor.black}>COMPARTILHE, INSPIRE, INOVE</Heading2>
 
       <ul className={styles.container__cards}>
-        {posts.map((blogPost, index) => index < 4 && <PostCard key={index} link={index} {...blogPost}/>)}
+        {posts.slice(-4).reverse().map((blogPost, index) => (
+          <PostCard key={index} link={index} {...blogPost} />
+        ))}
       </ul>
     </section>
   );
