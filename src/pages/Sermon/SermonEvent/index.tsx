@@ -1,9 +1,10 @@
 import styles from "./SermonEvent.module.scss";
 
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
-import events from "../../../data/sermons.json";
 
+import events from "../../../data/sermons.json";
 import MarkdownToText from "../../../components/MarkdownToText";
 import { ThemeColor } from "../../../enum/ThemeColor";
 import { Heading2, Heading4 } from "../../../components/Heading";
@@ -21,7 +22,6 @@ import sanitizeString from "../../../utils/sanitizeString";
 
 export default function SermonEvent() {
   const param = Number(useParams().id);
-
   const updateUrl = useUpdateUrl;
 
   useEffect(() => {
@@ -36,6 +36,16 @@ export default function SermonEvent() {
 
   return (
     <div className={styles.body}>
+      <Helmet>
+        <title>{sermonEvent.title} | Igreja</title>
+        <meta name="description" content={sermonEvent.description} />
+        <meta property="og:title" content={sermonEvent.title} />
+        <meta property="og:description" content={sermonEvent.description} />
+        <meta property="og:image" content={sermonEvent.image} />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:type" content="event" />
+      </Helmet>
+
       <div className={styles.container}>
         <section className={styles.container__article}>
           <div className={styles.container__article__content}>
