@@ -6,7 +6,7 @@ import { Heading2 } from "../Heading";
 
 import events from "../../data/sermons.json";
 
-export default function SermonEventsSection({ backgroundColor = true, sectionTitle }: { backgroundColor: boolean; sectionTitle: string }) {
+export default function SermonEventsSection({sectionTitle }: {sectionTitle: string }) {
   return (
     <section className={styles.container}>
       <Heading2 theme={ThemeColor.black}>{sectionTitle}</Heading2>
@@ -14,7 +14,7 @@ export default function SermonEventsSection({ backgroundColor = true, sectionTit
       <ul className={styles.container__cards}>
         {events.map((event, index) => (
           <li key={index}>
-            <EventCard {...event} backgroundColor={backgroundColor} id={event.id} />
+            <EventCard {...event} backgroundColor={true} id={event.id} />
           </li>
         ))}
       </ul>
