@@ -30,21 +30,25 @@ export default function Blog() {
         <Heading2 theme={ThemeColor.black}>postagem mais recente</Heading2>
 
         <div className={styles.container__recentPost__content}>
-          <img src={recentPost.image} alt={recentPost.imageAlt} title={recentPost.imageAlt} />
-
           <div className={styles.container__recentPost__content__info}>
             <div className={styles.container__recentPost__content__info__header}>
               <Label2>{recentPost.date}</Label2>
 
               <Label2>{recentPost.author}</Label2>
             </div>
-
             <Heading4 theme={ThemeColor.black}>{recentPost.title}</Heading4>
 
-            <Paragraph textColor={ThemeColor.black}>{recentPost.text.split("\n")[0]}</Paragraph>
-              <Button buttonType={ButtonType.ReactLink} path={`/blog/${recentPost.id}?${sanitizeString(recentPost.title)}`} theme={ButtonTheme.light} size={ButtonSize.small}>
-                Post completo
-              </Button>
+            <div className={styles.container__recentPost__content__info__main}>
+              <img src={recentPost.image} alt={recentPost.imageAlt} title={recentPost.imageAlt} />
+
+              <div className={styles.container__recentPost__content__info__main__text}>
+                <Paragraph textColor={ThemeColor.black}>{recentPost.text.split("\n")[0]}</Paragraph>
+
+                <Button buttonType={ButtonType.ReactLink} path={`/blog/${recentPost.id}?${sanitizeString(recentPost.title)}`} theme={ButtonTheme.light} size={ButtonSize.small}>
+                  Post completo
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
