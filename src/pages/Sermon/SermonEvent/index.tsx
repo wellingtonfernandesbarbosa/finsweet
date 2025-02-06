@@ -1,6 +1,7 @@
 import styles from "./SermonEvent.module.scss";
 
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 
 import events from "../../../data/sermons.json";
@@ -35,6 +36,15 @@ export default function SermonEvent() {
 
   return (
     <div className={styles.body}>
+      <Helmet>
+        <title>{sermonEvent.title} | Igreja</title>
+        <meta name="description" content={sermonEvent.description} />
+        <meta property="og:title" content={sermonEvent.title} />
+        <meta property="og:description" content={sermonEvent.description} />
+        <meta property="og:image" content={sermonEvent.image} />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:type" content="event" />
+      </Helmet>
 
       <div className={styles.container}>
         <section className={styles.container__article}>
