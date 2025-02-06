@@ -13,7 +13,6 @@ import { PostCard } from "../../components/Cards";
 import { ButtonType } from "../../enum/ButtonType";
 
 import posts from "../../data/blogPosts.json";
-import { Link } from "react-router-dom";
 import sanitizeString from "../../utils/sanitizeString";
 
 export default function Blog() {
@@ -22,7 +21,7 @@ export default function Blog() {
   }, []);
 
   const recentPost = posts[posts.length - 1];
-  
+
   return (
     <main className={styles.container}>
       <section className={styles.container__recentPost}>
@@ -42,15 +41,10 @@ export default function Blog() {
 
             <Heading4 theme={ThemeColor.black}>{recentPost.title}</Heading4>
 
-            <Paragraph textColor={ThemeColor.black}>
-              {recentPost.text.split("\n")[0]}
-            </Paragraph>
-
-            <Button buttonType={ButtonType.ReactLink} path="/blog" theme={ButtonTheme.light} size={ButtonSize.small}>
-              <Link to={`/blog/${recentPost.id}?${sanitizeString(recentPost.title)}`} >
-              Post completo
-              </Link>
-            </Button>
+            <Paragraph textColor={ThemeColor.black}>{recentPost.text.split("\n")[0]}</Paragraph>
+              <Button buttonType={ButtonType.ReactLink} path={`/blog/${recentPost.id}?${sanitizeString(recentPost.title)}`} theme={ButtonTheme.light} size={ButtonSize.small}>
+                Post completo
+              </Button>
           </div>
         </div>
       </section>
@@ -59,9 +53,7 @@ export default function Blog() {
         <Heading2 theme={ThemeColor.black}>TODOS OS POSTS DO BLOG</Heading2>
 
         <div className={styles.container__blogCardsSection__cards}>
-          <ul className={styles.container__blogCardsSection__cards__list}>
-            {posts.map((blogPost, index) => <PostCard key={index} link={blogPost.id} {...blogPost} bgColor={true} />).reverse()}
-          </ul>
+          <ul className={styles.container__blogCardsSection__cards__list}>{posts.map((blogPost, index) => <PostCard key={index} link={blogPost.id} {...blogPost} bgColor={true} />).reverse()}</ul>
         </div>
       </section>
     </main>
