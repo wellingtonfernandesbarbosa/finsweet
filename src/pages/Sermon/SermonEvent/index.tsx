@@ -84,7 +84,7 @@ export default function SermonEvent() {
           </div>
         </section>
 
-        <SermonEventsSection sectionTitle="Próximos Sermões" backgroundColor={false} />
+        <SermonEventsSection sectionTitle="Próximos Sermões" />
       </div>
     </div>
   );
