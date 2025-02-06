@@ -1,7 +1,6 @@
 import styles from "./BlogPost.module.scss";
 
 import { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 
 import posts from "../../../data/blogPosts.json";
@@ -25,15 +24,6 @@ export default function BlogPost() {
 
   return (
     <div className={styles.body}>
-      <Helmet>
-        <title>{posts[id].title} | Finsweet</title>
-        <meta name="description" content={posts[id].description} />
-        <meta property="og:title" content={posts[id].title} />
-        <meta property="og:description" content={posts[id].description} />
-        <meta property="og:image" content={posts[id].image} />
-        <meta property="og:url" content={window.location.href} />
-        <meta property="og:type" content="article" />
-      </Helmet>
       <main className={styles.container}>
         <header className={styles.container__header}>
           <Heading2 theme={ThemeColor.black}>{posts[id].title}</Heading2>
