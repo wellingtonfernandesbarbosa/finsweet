@@ -20,11 +20,13 @@
 
     &__info {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       gap: 13px;
       flex-wrap: wrap;
-      margin: 13px 0 13px;
+      margin: 13px auto;
+      width: 100%;
+      max-width: 768px;
     }
   }
 
@@ -38,6 +40,16 @@
 @media (max-width: 1300px) {
   .container {
     padding: 64px 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    &__header {
+      &__info {
+        justify-content: space-around;
+      }
+    }
   }
 }
 
