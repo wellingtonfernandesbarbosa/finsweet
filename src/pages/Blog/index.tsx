@@ -31,12 +31,12 @@ export default function Blog() {
 
         <div className={styles.container__recentPost__content}>
           <div className={styles.container__recentPost__content__info}>
+            <Heading4 theme={ThemeColor.black}>{recentPost.title}</Heading4>
             <div className={styles.container__recentPost__content__info__header}>
               <Label2>{recentPost.date}</Label2>
 
               <Label2>{recentPost.author}</Label2>
             </div>
-            <Heading4 theme={ThemeColor.black}>{recentPost.title}</Heading4>
 
             <div className={styles.container__recentPost__content__info__main}>
               <img src={recentPost.image} alt={recentPost.imageAlt} title={recentPost.imageAlt} />
