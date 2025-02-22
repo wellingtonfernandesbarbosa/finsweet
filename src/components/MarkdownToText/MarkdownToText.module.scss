@@ -5,6 +5,16 @@
   margin: 64px auto 0;
   gap: 24px;
 
+  a {
+    color: blue;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
   p,
   blockquote p,
   blockquote,
