@@ -14,6 +14,7 @@ import { ButtonType } from "../../enum/ButtonType";
 
 import posts from "../../data/blogPosts.json";
 import sanitizeString from "../../utils/sanitizeString";
+import MarkdownToText from "../../components/MarkdownToText";
 
 export default function Blog() {
   useEffect(() => {
@@ -42,7 +43,7 @@ export default function Blog() {
               <img src={recentPost.image} alt={recentPost.imageAlt} title={recentPost.imageAlt} />
 
               <div className={styles.container__recentPost__content__info__main__text}>
-                <Paragraph textColor={ThemeColor.black}>{recentPost.text.split("\n")[0]}</Paragraph>
+                <Paragraph textColor={ThemeColor.black}>{<MarkdownToText>{recentPost.text.split("\n")[0]}</MarkdownToText>}</Paragraph>
 
                 <Button buttonType={ButtonType.ReactLink} path={`/blog/${recentPost.id}?${sanitizeString(recentPost.title)}`} theme={ButtonTheme.light} size={ButtonSize.small}>
                   Post completo
